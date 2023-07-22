@@ -15,32 +15,23 @@ var config = {
     byline: 'By Rob Reid',
     footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
-        {
-            id: 'intro',
-            alignment: 'full',
-            hidden: false,
-            title: 'Awn Broadway',
-            image: './images/riverside_bridge_near.jpeg',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            location: {
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
-            ],
-            onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
-            ]
-        },
+        // {
+        //     id: 'intro',
+        //     alignment: 'full',
+        //     hidden: false,
+        //     title: 'Awn Broadway',
+        //     image: './images/riverside_bridge_near.jpeg',
+        //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        //     location: {
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //     ],
+        //     onChapterExit: [
+        //     ]
+        // },
 
 
 
@@ -94,25 +85,25 @@ var config = {
 
 
 
-        {
-            id: 'broadway_131_view',
-            alignment: 'left',
-            hidden: false,
-            title: 'View to the East from Broadway and 131st',
-            image: './images/broadway_131st_view_east.jpeg',
-            description: 'Copy these sections to add to your story.',
-            location: {
-                center: [-73.95573, 40.81877],
-                zoom: 16.39,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
+        // {
+        //     id: 'broadway_131_view',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     title: 'View to the East from Broadway and 131st',
+        //     image: './images/broadway_131st_view_east.jpeg',
+        //     description: 'Copy these sections to add to your story.',
+        //     location: {
+        //         center: [-73.95573, 40.81877],
+        //         zoom: 16.39,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [],
+        //     onChapterExit: []
+        // },
 
 
 
@@ -140,7 +131,7 @@ var config = {
 
         {
             id: 'broadway_116',
-            alignment: 'full',
+            alignment: 'left',
             hidden: false,
             title: 'Broadway and 116th',
             image: './images/broadway_116th.jpeg',
@@ -160,94 +151,94 @@ var config = {
 
 
 
-        {
-            id: 'riverside_149',
-            alignment: 'full',
-            hidden: false,
-            title: 'The Riverside Alternative',
-            image: './images/riverside_149th.jpeg',
-            description: 'Copy these sections to add to your story.',
-            location: {
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
+        // {
+        //     id: 'riverside_149',
+        //     alignment: 'full',
+        //     hidden: false,
+        //     title: 'The Riverside Alternative',
+        //     image: './images/riverside_149th.jpeg',
+        //     description: 'Copy these sections to add to your story.',
+        //     location: {
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [],
+        //     onChapterExit: []
+        // },
 
 
 
-        {
-            id: 'riverside_149',
-            alignment: 'full',
-            hidden: false,
-            title: 'A Bridge for Your Convenience',
-            image: './images/riverside_bridge_near.jpeg',
-            description: 'Copy these sections to add to your story.',
-            location: {
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
+        // {
+        //     id: 'riverside_149',
+        //     alignment: 'full',
+        //     hidden: false,
+        //     title: 'A Bridge for Your Convenience',
+        //     image: './images/riverside_bridge_near.jpeg',
+        //     description: 'Copy these sections to add to your story.',
+        //     location: {
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [],
+        //     onChapterExit: []
+        // },
         
             
 
 
 
-        {
-            id: 'broadway_elevation',
-            alignment: 'full',
-            hidden: false,
-            title: 'A Bridge for Your Convenience',
-            image: './images/broadway_elevation.svg',
-            description: 'Copy these sections to add to your story.',
-            location: {
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
+        // {
+        //     id: 'broadway_elevation',
+        //     alignment: 'full',
+        //     hidden: false,
+        //     title: 'A Bridge for Your Convenience',
+        //     image: './images/broadway_elevation.svg',
+        //     description: 'Copy these sections to add to your story.',
+        //     location: {
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [],
+        //     onChapterExit: []
+        // },
 
 
 
-        {
-            id: 'riverside_elevation',
-            alignment: 'full',
-            hidden: false,
-            title: 'Third Title',
-            image: './images/riverside_elevation.svg',
-            description: 'Copy these sections to add to your story.',
-            location: {
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
+        // {
+        //     id: 'riverside_elevation',
+        //     alignment: 'full',
+        //     hidden: false,
+        //     title: 'Third Title',
+        //     image: './images/riverside_elevation.svg',
+        //     description: 'Copy these sections to add to your story.',
+        //     location: {
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [],
+        //     onChapterExit: []
+        // },
 
 
 
-        {
-            id: 'energy_comparison',
-            alignment: 'full',
-            hidden: false,
-            title: 'Third Title',
-            image: './images/dw_commute_riverside_v_broadway.png',
-            description: 'Copy these sections to add to your story.',
-            location: {
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        }
+        // {
+        //     id: 'energy_comparison',
+        //     alignment: 'full',
+        //     hidden: false,
+        //     title: 'Third Title',
+        //     image: './images/dw_commute_riverside_v_broadway.png',
+        //     description: 'Copy these sections to add to your story.',
+        //     location: {
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [],
+        //     onChapterExit: []
+        // }
     ]
 };
