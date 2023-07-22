@@ -98,8 +98,8 @@
 
 <div id="map"></div>
 <div id="story"></div>
-<script src="./config.js"></script>
-<script src="./js/drive.js"></script>
+<script src="./private_config.js"></script>
+<script src="../js/drive.js"></script>
 <script>
 
 var layerTypes = {
@@ -354,8 +354,8 @@ window.addEventListener('resize', scroller.resize);
 
 $(document).ready(function (){
     $.ajax({
-      // url:"./data/highwaydrive.geojson",
-      url:"./data/parkstroll.geojson",
+      url:"../data/highwaydrive.geojson",
+      // url:"./data/parkstroll.geojson",
       dataType: "json",
       success: function (data) {
         console.log('data', data.features[0]);
