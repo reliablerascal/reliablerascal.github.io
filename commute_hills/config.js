@@ -1,3 +1,9 @@
+//RR finding apiKey
+const dotenv = require('dotenv');
+dotenv.config();
+
+const apiKey = process.env.API_KEY;
+
 // Number of slides that will drive (more = smoother)
 // If this doesn't match the number of slides named 'drive-slide' in config below you will not complete the full journey
 var driveSlides = 7;
@@ -22,7 +28,7 @@ var config = {
     style: 'mapbox://styles/mapbox/light-v10',
     // style: 'mapbox://styles/mapbox/satellite-v8',
     // style: 'mapbox://styles/mapbox/outdoors-v10',
-    accessToken: 'YOUR_ACCESS_TOKEN',
+    accessToken: apiKey,
     showMarkers: false,
     theme: 'light',
     alignment: 'left',
