@@ -48,7 +48,7 @@ bearing: 28.00
             onChapterExit: []
         },
         {
-            id: 'drive-slide-0',
+            id: 'slide-0',
             title: 'drive 0',
             image: './images/broadway_155th.jpeg',
             description: 'As you can see.',
@@ -60,7 +60,7 @@ bearing: 28.00
             onChapterExit: []
         },
         {
-            id: 'drive-slide-1',
+            id: 'slide-1',
             title: 'drive 1',
             image: './images/broadway_133rd.jpeg',
             description: 'Copy these sections to add to your story.',
@@ -73,7 +73,7 @@ bearing: 28.00
             // If slide ID doesn't contain the word ‘drive-’, it won't be tied to the map
             // You can add these "normal" slides anywhere, including the middle of the drive simulation
             
-                id: 'slide-1',
+                id: 'slide-2',
                 title: 'The Riverside Alternative',
                 image: './images/riverside_149th.jpeg',
                 description: 'Copy these sections to add to your story.',
@@ -87,7 +87,7 @@ bearing: 28.00
                 onChapterExit: []
             },
         {
-            id: 'drive-slide-2',
+            id: 'slide-3',
             title: 'Looking East: There\'s Got to Be a Better Way',
             image: './images/broadway_131st_view_east.jpeg',
             description: 'Copy these sections to add to your story.',
@@ -96,7 +96,7 @@ bearing: 28.00
             onChapterExit: []
         },
         {
-            id: 'drive-slide-3',
+            id: 'slide-4',
             title: 'The Valley',
             image: './images/broadway_125th.jpeg',
             description: 'Copy these sections to add to your story.',
@@ -105,7 +105,7 @@ bearing: 28.00
             onChapterExit: []
         },
         {
-            id: 'drive-slide-4',
+            id: 'slide-5',
             title: 'School Upon the Hill',
             image: './images/broadway_116th.jpeg',
             description: 'Copy these sections to add to your story.',
@@ -114,7 +114,7 @@ bearing: 28.00
             onChapterExit: []
         },
         {
-            id: 'slide-2',
+            id: 'slide-6',
             title: 'A Bridge for Your Walking Convenience',
             image: './images/riverside_bridge_near.jpeg',
             description: 'Really for cars.',
