@@ -1,6 +1,7 @@
+//SATURDAY MORNING VERSION
 // Number of slides that will drive (more = smoother)
 // If this doesn't match the number of slides named 'drive-slide' in config below you will not complete the full journey
-var driveSlides = 7;
+var driveSlides = 5;
 
 // Number of points on drive route (more = higher quality, but slower to process)
 var driveSmoothness = 200;
@@ -33,18 +34,23 @@ var config = {
     chapters: [
         {
             id: 'slide-0',
-            title: 'Display Title',
-            image: './path/to/image/source.png',
+            title: 'On Broadway',
+            image: './images/riverside_bridge_near.jpeg',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: {
+                center: [-73.94594, 40.83288],
+zoom: 16.45,
+pitch: 0.00,
+bearing: 28.00
+
             },
             onChapterEnter: [],
             onChapterExit: []
         },
         {
             id: 'drive-slide-0',
-            title: 'Riverside Bridge',
-            image: './images/view_of_riverside_from_broadway.jpg',
+            title: 'drive 0',
+            image: './images/broadway_155th.jpeg',
             description: 'As you can see.',
             location: {
                 // location information is from the drive route
@@ -54,17 +60,22 @@ var config = {
         },
         {
             id: 'drive-slide-1',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
+            title: 'drive 1',
+            image: './images/broadway_133rd.jpeg',
             description: 'Copy these sections to add to your story.',
-            location: {},
+            location: {
+                center: [-73.95573, 40.81877],
+                zoom: 16.39,
+                pitch: 0.00,
+                bearing: 28.00
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
         {
             id: 'drive-slide-2',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
+            title: 'Looking East: There\'s Got to Be a Better Way',
+            image: './images/broadway_131st_view_east.jpeg',
             description: 'Copy these sections to add to your story.',
             location: {},
             onChapterEnter: [],
@@ -72,8 +83,8 @@ var config = {
         },
         {
             id: 'drive-slide-3',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
+            title: 'The Valley',
+            image: './images/broadway_125th.jpeg',
             description: 'Copy these sections to add to your story.',
             location: {},
             onChapterEnter: [],
@@ -81,19 +92,21 @@ var config = {
         },
         {
             id: 'drive-slide-4',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
+            title: 'School Upon the Hill',
+            image: './images/broadway_116th.jpeg',
             description: 'Copy these sections to add to your story.',
             location: {},
             onChapterEnter: [],
             onChapterExit: []
         },
 
-        // You can add a normal slide in the middle of the drive slides to take a break
+        // If slide ID doesn't contain the word ‘drive-’, it won't be tied to the map
+        // You can add these "normal" slides anywhere, including the middle of the drive simulation
+        
         {
-            id: 'slide-4',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
+            id: 'slide-1',
+            title: 'The Riverside Alternative',
+            image: './images/riverside_149th.jpeg',
             description: 'Copy these sections to add to your story.',
             location: {
             },
@@ -101,29 +114,12 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'drive-slide-5',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'drive-slide-6',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
             id: 'slide-2',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
+            title: 'A Bridge for Your Walking Convenience',
+            image: './images/riverside_bridge_near.jpeg',
+            description: 'Really for cars.',
+            location: {
+            },
             onChapterEnter: [],
             onChapterExit: []
         }
