@@ -53,7 +53,8 @@ bearing: 28.00
             image: './images/broadway_155th.jpeg',
             description: 'As you can see.',
             location: {
-                // location information is from the drive route
+                // this is ignored because location information is
+                // automatically calculated from the drive route
             },
             onChapterEnter: [],
             onChapterExit: []
@@ -64,14 +65,27 @@ bearing: 28.00
             image: './images/broadway_133rd.jpeg',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [-73.95573, 40.81877],
-                zoom: 16.39,
-                pitch: 0.00,
-                bearing: 28.00
             },
             onChapterEnter: [],
             onChapterExit: []
         },
+        {
+            // If slide ID doesn't contain the word ‘drive-’, it won't be tied to the map
+            // You can add these "normal" slides anywhere, including the middle of the drive simulation
+            
+                id: 'slide-1',
+                title: 'The Riverside Alternative',
+                image: './images/riverside_149th.jpeg',
+                description: 'Copy these sections to add to your story.',
+                location: {
+                    center: [-73.95573, 40.81877],
+                    zoom: 16.39,
+                    pitch: 0.00,
+                    bearing: 28.00
+                },
+                onChapterEnter: [],
+                onChapterExit: []
+            },
         {
             id: 'drive-slide-2',
             title: 'Looking East: There\'s Got to Be a Better Way',
@@ -96,20 +110,6 @@ bearing: 28.00
             image: './images/broadway_116th.jpeg',
             description: 'Copy these sections to add to your story.',
             location: {},
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-
-        // If slide ID doesn't contain the word ‘drive-’, it won't be tied to the map
-        // You can add these "normal" slides anywhere, including the middle of the drive simulation
-        
-        {
-            id: 'slide-1',
-            title: 'The Riverside Alternative',
-            image: './images/riverside_149th.jpeg',
-            description: 'Copy these sections to add to your story.',
-            location: {
-            },
             onChapterEnter: [],
             onChapterExit: []
         },
