@@ -1,7 +1,7 @@
 //SATURDAY MORNING VERSION
 // Number of slides that will drive (more = smoother)
 // If this doesn't match the number of slides named 'drive-slide' in config below you will not complete the full journey
-var driveSlides = 5;
+var driveSlides = 0;
 
 // Number of points on drive route (more = higher quality, but slower to process)
 var driveSmoothness = 200;
@@ -55,6 +55,11 @@ bearing: 28.00
             location: {
                 // this is ignored because location information is
                 // automatically calculated from the drive route
+                center: [-73.94594, 40.83288],
+zoom: 16.45,
+pitch: 0.00,
+bearing: 28.00
+
             },
             onChapterEnter: [],
             onChapterExit: []
@@ -65,6 +70,11 @@ bearing: 28.00
             image: './images/broadway_133rd.jpeg',
             description: 'Copy these sections to add to your story.',
             location: {
+                center: [-73.95573, 40.81877],
+zoom: 16.39,
+pitch: 0.00,
+bearing: 28.00
+
             },
             onChapterEnter: [],
             onChapterExit: []
@@ -78,10 +88,11 @@ bearing: 28.00
                 image: './images/riverside_149th.jpeg',
                 description: 'Copy these sections to add to your story.',
                 location: {
-                    center: [-73.95573, 40.81877],
-                    zoom: 16.39,
-                    pitch: 0.00,
-                    bearing: 28.00
+                    center: [-73.95805, 40.81563],
+zoom: 16.36,
+pitch: 0.00,
+bearing: 28.00
+
                 },
                 onChapterEnter: [],
                 onChapterExit: []
@@ -109,7 +120,13 @@ bearing: 28.00
             title: 'School Upon the Hill',
             image: './images/broadway_116th.jpeg',
             description: 'Copy these sections to add to your story.',
-            location: {},
+            location: {
+                center: [-73.96366, 40.80800],
+zoom: 16.44,
+pitch: 0.00,
+bearing: 28.00
+
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
