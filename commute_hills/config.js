@@ -1,8 +1,8 @@
 //RR finding apiKey
-const dotenv = require('dotenv');
-dotenv.config();
+//const dotenv = require('dotenv');
+//dotenv.config();
 
-const apiKey = process.env.API_KEY;
+//const apiKey = process.env.API_KEY;
 
 // Number of slides that will drive (more = smoother)
 // If this doesn't match the number of slides named 'drive-slide' in config below you will not complete the full journey
