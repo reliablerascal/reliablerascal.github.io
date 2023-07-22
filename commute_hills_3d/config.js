@@ -6,7 +6,7 @@ var config = {
     //projection: 'equirectangular',
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
-    inset: true,
+    inset: false,
     theme: 'dark',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
@@ -19,7 +19,7 @@ var config = {
             id: 'slug-style-id',
             alignment: 'left',
             hidden: false,
-            title: 'On Broadway',
+            title: 'Awn Broadway',
             image: './images/riverside_bridge_near.jpeg',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: {
