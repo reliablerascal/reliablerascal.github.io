@@ -28,7 +28,7 @@ var config = {
                 pitch: 45.00,
                 bearing: 0.00
             },
-            mapAnimation: 'flyTo',
+            mapAnimation: 'easeTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
@@ -64,7 +64,7 @@ var config = {
                 //speed: 2, // make the flying slow
                 //curve: 1, // change the speed at which it zooms out
             },
-            mapAnimation: 'flyTo',
+            mapAnimation: 'easeTo',
             rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
@@ -83,7 +83,7 @@ var config = {
                 pitch: 45.00,
                 bearing: 0.00
             },
-            mapAnimation: 'flyTo',
+            mapAnimation: 'easeTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
@@ -97,10 +97,11 @@ var config = {
             image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [-58.54195, -34.71600],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
+                center: [-73.96366, 40.80800],
+                zoom: 16.44,
+                pitch: 0.00,
+                bearing: 28.00
+
             },
             mapAnimation: 'easeTo',
             rotateAnimation: false,
