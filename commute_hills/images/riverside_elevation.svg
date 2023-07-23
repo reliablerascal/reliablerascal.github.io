@@ -1,1 +1,176 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="417" height="347" viewBox="0 0 417 347"><rect width="417" height="347" fill="white"/><g fill="none" stroke-miterlimit="10" transform="translate(39,10)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h300v300h-300Z" stroke="#ddd"/><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,300.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(38,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(75,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(113,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(150,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(188,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(225,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(263,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(300,-300)" x2="0" y2="300" stroke="#ddd" stroke-width="1" opacity="1"/></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,300)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,267)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,233)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,200)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,167)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,133)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,100)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,67)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,33)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/><line transform="translate(0,0)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"/></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled 'distance_sum' for a linear scale with values from 0 to 4,000"><g transform="translate(0.5,300.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(38,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(75,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(113,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(150,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(188,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(225,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(263,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(300,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"/></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="start" transform="translate(0,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0</text><text text-anchor="middle" transform="translate(37.5,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="0">500</text><text text-anchor="middle" transform="translate(75,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">1,000</text><text text-anchor="middle" transform="translate(112.5,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="0">1,500</text><text text-anchor="middle" transform="translate(150,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">2,000</text><text text-anchor="middle" transform="translate(187.5,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="0">2,500</text><text text-anchor="middle" transform="translate(225,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">3,000</text><text text-anchor="middle" transform="translate(262.5,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="0">3,500</text><text text-anchor="end" transform="translate(300,15)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">4,000</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="300" y2="0" stroke="#888" stroke-width="1" opacity="1"/></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(150,30)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">distance_sum</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled 'elev' for a linear scale with values from 0 to 45"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,300)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,267)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,233)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,200)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,167)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,133)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,100)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,67)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,33)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/><line transform="translate(0,0)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"/></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-7,303)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0</text><text text-anchor="end" transform="translate(-7,269.66666666666663)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">5</text><text text-anchor="end" transform="translate(-7,236.33333333333334)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">10</text><text text-anchor="end" transform="translate(-7,203.00000000000003)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">15</text><text text-anchor="end" transform="translate(-7,169.66666666666669)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">20</text><text text-anchor="end" transform="translate(-7,136.33333333333331)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">25</text><text text-anchor="end" transform="translate(-7,103.00000000000001)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">30</text><text text-anchor="end" transform="translate(-7,69.66666666666666)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">35</text><text text-anchor="end" transform="translate(-7,36.33333333333335)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">40</text><text text-anchor="end" transform="translate(-7,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">45</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,300)" x2="0" y2="-300" stroke="#888" stroke-width="1" opacity="1"/></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(-22.123046875,150) rotate(-90) translate(0,-2)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">elev</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g><g class="mark-group role-scope pathgroup" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0,0h300v300h-300Z"/><g><g class="mark-line role-mark marks" role="graphics-object" aria-roledescription="line mark container"><path aria-label="distance_sum: 0; elev: 26.1; segment: 157_139" role="graphics-symbol" aria-roledescription="line mark" d="M0,126L0.266,126.6L2.889,124.867L4.039,126.667L6.654,142.467L8.513,168.867L10.135,186.533L11.582,190.467L12.747,190.333L13.556,185.667L14.219,190.8L27.869,187.733L28.806,172.933L29.402,162.867L31.345,150.533L32.519,146.667L33.105,146.667L34.943,141.667L36.944,141.667L38.029,142.4L38.287,143.067L38.704,143.067L40.564,140L43.434,140.8L44.127,139L45.967,140.733L47.079,140.933L48.179,141.067L49.94,144.8L51.369,146.667L52.122,146.667L53.736,145.067L53.986,144.533L54.091,144.533L54.784,139.467L60.087,127.267L66.117,127.867L72.043,128.267L77.923,131.8L78.55,131.133L78.55,131.133L78.55,131.133L85.053,142.133L90.898,153.333L91.414,153.333L93.415,160L95.18,167.067L96.799,173.333L97.252,173.333L97.67,173.333L103.405,161.267L109.322,167.733L113.356,182.133L114.274,183.333L114.808,182.333L115.244,181.067L115.857,180" stroke="#e45756" stroke-width="2"/></g></g><path class="foreground" aria-hidden="true" d="" display="none"/></g><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0,0h300v300h-300Z"/><g><g class="mark-line role-mark marks" role="graphics-object" aria-roledescription="line mark container"><path aria-label="distance_sum: 1548.49479311; elev: 17.97; segment: 139_125" role="graphics-symbol" aria-roledescription="line mark" d="M116.137,180.2L120.639,174L121.865,173.333L122.4,170.867L124.587,166.667L126.673,155.533L127.16,153.333L133.133,180L139.955,166.667L147.007,146.667L152.837,146.667L158.845,146.667L164.791,146.667L170.795,140L176.702,133.333L184.475,106.667" stroke="#f58518" stroke-width="2"/></g></g><path class="foreground" aria-hidden="true" d="" display="none"/></g><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0,0h300v300h-300Z"/><g><g class="mark-line role-mark marks" role="graphics-object" aria-roledescription="line mark container"><path aria-label="distance_sum: 2463.40099273; elev: 29; segment: 125_116" role="graphics-symbol" aria-roledescription="line mark" d="M184.755,106.667L185.278,108.8L185.945,108.333L186.508,109.6L187.012,107.267L189.125,109.8L190.209,108.267L190.668,107.533L191.191,108.6L191.65,106.667L191.859,106.667L192.486,106.733L192.869,105.467L193.224,106L193.711,108.2L194.272,107.533L194.863,107.533L195.6,106.2L202.964,84.867L211.231,71.8L216.647,66.4L217.717,64.067L218.587,66.133L219.103,63L219.958,63.867L220.718,61.133L221.14,60L221.39,60L221.977,57.2L222.227,55.067L224.811,46.667L225.728,46.667L227.812,46.667L229.147,53.333L230.232,53.333L231.25,56L231.765,60L232.201,60L232.636,60L233.45,60.667L234.29,66.667L238.58,73.333L239.067,73.333L239.524,73.333L246.54,80L256.579,106.667L257.483,106.667L257.483,106.667L257.483,106.667L258.197,104.333L258.855,100L260.94,93.333L264.04,79.4L264.91,80.133L265.624,73.2L266.187,53.6L271.262,26.667L271.44,26.667L272.031,29.467L272.114,30.067" stroke="#4c78a8" stroke-width="2"/></g></g><path class="foreground" aria-hidden="true" d="" display="none"/></g></g><g class="mark-group role-legend" role="graphics-symbol" aria-roledescription="legend" aria-label="Symbol legend titled 'segment' for stroke color with 3 values: 125_116, 139_125, 157_139"><g transform="translate(318,0)"><path class="background" aria-hidden="true" d="M0,0h55v53h-55Z" pointer-events="none"/><g><g class="mark-group role-legend-entry"><g transform="translate(0,16)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/><g><g class="mark-group role-scope" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0,0h54.9306640625v11h-54.9306640625Z" pointer-events="none" opacity="1"/><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path transform="translate(6,6)" d="M-5,0L5,0" stroke="#4c78a8" stroke-width="1.5" opacity="1"/></g><g class="mark-text role-legend-label" pointer-events="none"><text text-anchor="start" transform="translate(16,9)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">125_116</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g><g transform="translate(0,13)"><path class="background" aria-hidden="true" d="M0,0h54.9306640625v11h-54.9306640625Z" pointer-events="none" opacity="1"/><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path transform="translate(6,6)" d="M-5,0L5,0" stroke="#f58518" stroke-width="1.5" opacity="1"/></g><g class="mark-text role-legend-label" pointer-events="none"><text text-anchor="start" transform="translate(16,9)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">139_125</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g><g transform="translate(0,26)"><path class="background" aria-hidden="true" d="M0,0h54.9306640625v11h-54.9306640625Z" pointer-events="none" opacity="1"/><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path transform="translate(6,6)" d="M-5,0L5,0" stroke="#e45756" stroke-width="1.5" opacity="1"/></g><g class="mark-text role-legend-label" pointer-events="none"><text text-anchor="start" transform="translate(16,9)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">157_139</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g><g class="mark-text role-legend-title" pointer-events="none"><text text-anchor="start" transform="translate(0,9)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">segment</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"/></g></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 417 347" style="enable-background:new 0 0 417 347;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#DDDDDD;stroke-miterlimit:10;}
+	.st2{fill:none;}
+	.st3{display:none;fill:none;stroke:#DDDDDD;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#888888;stroke-miterlimit:10;}
+	.st5{font-family:'ArialMT';}
+	.st6{font-size:10px;}
+	.st7{opacity:0;enable-background:new    ;}
+	.st8{font-family:'Arial-BoldMT';}
+	.st9{font-size:11px;}
+	.st10{display:none;}
+	.st11{fill:none;stroke:#E45756;stroke-width:2;stroke-miterlimit:10;}
+	.st12{display:none;fill:none;stroke:#E45756;stroke-width:2;stroke-miterlimit:10;}
+	.st13{fill:none;stroke:#F58518;stroke-width:2;stroke-miterlimit:10;}
+	.st14{display:none;fill:none;stroke:#F58518;stroke-width:2;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#4C78A8;stroke-width:2;stroke-miterlimit:10;}
+	.st16{display:none;fill:none;stroke:#4C78A8;stroke-width:2;stroke-miterlimit:10;}
+	.st17{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st18{fill:none;stroke:#4C78A8;stroke-width:1.5;stroke-miterlimit:10;}
+	.st19{fill:none;stroke:#F58518;stroke-width:1.5;stroke-miterlimit:10;}
+	.st20{fill:none;stroke:#E45756;stroke-width:1.5;stroke-miterlimit:10;}
+</style>
+<rect class="st0" width="417" height="347"/>
+<path class="st1" d="M39.5,10.5h300v300h-300V10.5z"/>
+<path pointer-events="none" class="st2" d="M39.5,310.5L39.5,310.5L39.5,310.5L39.5,310.5z"/>
+<line class="st1" x1="39.5" y1="10.5" x2="39.5" y2="310.5"/>
+<line class="st1" x1="339.5" y1="10.5" x2="339.5" y2="310.5"/>
+<path pointer-events="none" class="st3" d="M39.5,310.5"/>
+<path pointer-events="none" class="st2" d="M39.5,10.5L39.5,10.5L39.5,10.5L39.5,10.5z"/>
+<line class="st1" x1="39.5" y1="310.5" x2="339.5" y2="310.5"/>
+<line class="st1" x1="39.5" y1="10.5" x2="339.5" y2="10.5"/>
+<path pointer-events="none" class="st3" d="M39.5,10.5"/>
+<path pointer-events="none" class="st2" d="M39.5,310.5L39.5,310.5L39.5,310.5L39.5,310.5z"/>
+<line class="st4" x1="39.5" y1="310.5" x2="39.5" y2="315.5"/>
+<line class="st4" x1="77.5" y1="310.5" x2="77.5" y2="315.5"/>
+<line class="st4" x1="114.5" y1="310.5" x2="114.5" y2="315.5"/>
+<line class="st4" x1="152.5" y1="310.5" x2="152.5" y2="315.5"/>
+<line class="st4" x1="189.5" y1="310.5" x2="189.5" y2="315.5"/>
+<line class="st4" x1="227.5" y1="310.5" x2="227.5" y2="315.5"/>
+<line class="st4" x1="264.5" y1="310.5" x2="264.5" y2="315.5"/>
+<line class="st4" x1="302.5" y1="310.5" x2="302.5" y2="315.5"/>
+<line class="st4" x1="339.5" y1="310.5" x2="339.5" y2="315.5"/>
+<text transform="matrix(1 0 0 1 39.5 325.5)" class="st5 st6">0</text>
+<text transform="matrix(1 0 0 1 68.6577 325.5)" class="st7 st5 st6">500</text>
+<text transform="matrix(1 0 0 1 101.9878 325.5)" class="st5 st6">1,000</text>
+<text transform="matrix(1 0 0 1 139.4878 325.5)" class="st7 st5 st6">1,500</text>
+<text transform="matrix(1 0 0 1 176.9878 325.5)" class="st5 st6">2,000</text>
+<text transform="matrix(1 0 0 1 214.4878 325.5)" class="st7 st5 st6">2,500</text>
+<text transform="matrix(1 0 0 1 251.9878 325.5)" class="st5 st6">3,000</text>
+<text transform="matrix(1 0 0 1 289.4878 325.5)" class="st7 st5 st6">3,500</text>
+<text transform="matrix(1 0 0 1 314.4756 325.5)" class="st5 st6">4,000</text>
+<line class="st4" x1="39.5" y1="310.5" x2="339.5" y2="310.5"/>
+<text transform="matrix(1 0 0 1 152.8181 340.5)" class="st8 st9">distance (meters)</text>
+<path pointer-events="none" class="st10" d="M39.5,310.5"/>
+<path pointer-events="none" class="st2" d="M39.5,10.5L39.5,10.5L39.5,10.5L39.5,10.5z"/>
+<line class="st4" x1="39.5" y1="310.5" x2="34.5" y2="310.5"/>
+<line class="st4" x1="39.5" y1="277.5" x2="34.5" y2="277.5"/>
+<line class="st4" x1="39.5" y1="243.5" x2="34.5" y2="243.5"/>
+<line class="st4" x1="39.5" y1="210.5" x2="34.5" y2="210.5"/>
+<line class="st4" x1="39.5" y1="177.5" x2="34.5" y2="177.5"/>
+<line class="st4" x1="39.5" y1="143.5" x2="34.5" y2="143.5"/>
+<line class="st4" x1="39.5" y1="110.5" x2="34.5" y2="110.5"/>
+<line class="st4" x1="39.5" y1="77.5" x2="34.5" y2="77.5"/>
+<line class="st4" x1="39.5" y1="43.5" x2="34.5" y2="43.5"/>
+<line class="st4" x1="39.5" y1="10.5" x2="34.5" y2="10.5"/>
+<text transform="matrix(1 0 0 1 26.9385 313.5)" class="st5 st6">0</text>
+<text transform="matrix(1 0 0 1 26.9385 280.1666)" class="st5 st6">5</text>
+<text transform="matrix(1 0 0 1 21.377 246.8333)" class="st5 st6">10</text>
+<text transform="matrix(1 0 0 1 21.377 213.5)" class="st5 st6">15</text>
+<text transform="matrix(1 0 0 1 21.377 180.1667)" class="st5 st6">20</text>
+<text transform="matrix(1 0 0 1 21.377 146.8333)" class="st5 st6">25</text>
+<text transform="matrix(1 0 0 1 21.377 113.5)" class="st5 st6">30</text>
+<text transform="matrix(1 0 0 1 21.377 80.1667)" class="st5 st6">35</text>
+<text transform="matrix(1 0 0 1 21.377 46.8334)" class="st5 st6">40</text>
+<text transform="matrix(1 0 0 1 21.377 13.5)" class="st5 st6">45</text>
+<line class="st4" x1="39.5" y1="310.5" x2="39.5" y2="10.5"/>
+<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 15.377 171.2051)" class="st8 st9">elevation (meters)</text>
+<path pointer-events="none" class="st10" d="M39.5,10.5"/>
+<path class="st2" d="M39,10h300v300H39V10z"/>
+<path class="st11" d="M39,136l0.3,0.6l2.6-1.7l1.2,1.8l2.6,15.8l1.9,26.4l1.6,17.7l1.4,3.9l1.2-0.1l0.8-4.7l0.7,5.1l13.7-3.1
+	l0.9-14.8l0.6-10.1l1.9-12.3l1.2-3.9h0.6l1.8-5h2l1.1,0.7l0.3,0.7h0.4l1.9-3.1l2.9,0.8l0.7-1.8l1.8,1.7l1.1,0.2l1.1,0.1l1.8,3.7
+	l1.4,1.9h0.8l1.6-1.6l0.2-0.5h0.1l0.7-5.1l5.3-12.2l6,0.6l5.9,0.4l5.9,3.5l0.6-0.7l0,0l0,0l6.5,11l5.8,11.2h0.5l2,6.7l1.8,7.1
+	l1.6,6.3h0.5h0.4l5.7-12.1l5.9,6.5l4,14.4l0.9,1.2l0.5-1l0.4-1.3l0.6-1.1"/>
+<path class="st12" d="M39,10"/>
+<path class="st2" d="M39,10h300v300H39V10z"/>
+<path class="st13" d="M155.1,190.2l4.5-6.2l1.2-0.7l0.5-2.5l2.2-4.2l2.1-11.1l0.5-2.2l6,26.7l6.8-13.3l7.1-20h5.8h6h5.9l6-6.7
+	l5.9-6.7l7.8-26.7"/>
+<path class="st14" d="M39,10"/>
+<path class="st2" d="M39,10h300v300H39V10z"/>
+<path class="st15" d="M223.8,116.7l0.5,2.1l0.7-0.5l0.6,1.3l0.5-2.3l2.1,2.5l1.1-1.5l0.5-0.7l0.5,1.1l0.5-1.9h0.2l0.6,0.1l0.4-1.3
+	l0.4,0.5l0.5,2.2l0.6-0.7h0.6l0.7-1.3l7.4-21.3l8.3-13.1l5.4-5.4l1.1-2.3l0.9,2.1l0.5-3.1l0.9,0.9l0.8-2.7l0.4-1.1h0.2l0.6-2.8
+	l0.2-2.1l2.6-8.4h0.9h2.1l1.3,6.7h1.1l1,2.7l0.5,4h0.4h0.4l0.8,0.7l0.8,6l4.3,6.7h0.5h0.5l7,6.7l10,26.7h0.9l0,0l0,0l0.7-2.3
+	l0.7-4.3l2.1-6.7l3.1-13.9l0.9,0.7l0.7-6.9l0.6-19.6l5.1-26.9h0.2l0.6,2.8l0.1,0.6"/>
+<path class="st16" d="M39,10"/>
+<path pointer-events="none" class="st2" d="M357,10h55v53h-55V10z"/>
+<path pointer-events="none" class="st2" d="M357,26L357,26L357,26L357,26z"/>
+<path pointer-events="none" class="st2" d="M357,26h54.9v11H357V26z"/>
+<path pointer-events="none" class="st10" d="M357,26"/>
+<path pointer-events="none" class="st2" d="M357,39h54.9v11H357V39z"/>
+<path pointer-events="none" class="st10" d="M357,39"/>
+<path pointer-events="none" class="st2" d="M357,52h54.9v11H357V52z"/>
+<path pointer-events="none" class="st10" d="M357,52"/>
+<path pointer-events="none" class="st10" d="M357,26"/>
+<text transform="matrix(1 0 0 1 357 19)" class="st8 st9">segment</text>
+<path pointer-events="none" class="st10" d="M357,10"/>
+<path class="st10" d="M39,10"/>
+<g>
+	<line class="st2" x1="130" y1="227.8" x2="150.6" y2="198.9"/>
+	<g>
+		<line class="st17" x1="130" y1="227.8" x2="146.4" y2="204.7"/>
+		<g>
+			<polygon points="149.6,208.8 150.6,198.9 141.5,203 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<line class="st2" x1="250.1" y1="152.2" x2="226" y2="122.6"/>
+	<g>
+		<line class="st17" x1="250.1" y1="152.2" x2="230.6" y2="128.1"/>
+		<g>
+			<polygon points="235.4,126.1 226,122.6 227.6,132.4 			"/>
+		</g>
+	</g>
+</g>
+<rect x="101.6" y="230.9" class="st2" width="49.8" height="25.3"/>
+<text transform="matrix(1 0 0 1 101.642 237.9612)" class="st5 st6">139th and </text>
+<text transform="matrix(1 0 0 1 101.642 249.9612)" class="st5 st6">Riverside</text>
+<rect x="233.5" y="158.2" class="st2" width="49.8" height="25.3"/>
+<text transform="matrix(1 0 0 1 233.4581 165.3143)" class="st5 st6">125th and </text>
+<text transform="matrix(1 0 0 1 233.4581 177.3143)" class="st5 st6">Riverside</text>
+<rect x="70" y="102.4" class="st2" width="49.8" height="25.3"/>
+<text transform="matrix(1 0 0 1 70.0432 109.5467)" class="st5 st6">156th and </text>
+<text transform="matrix(1 0 0 1 70.0432 121.5467)" class="st5 st6">Riverside</text>
+<g>
+	<line class="st2" x1="67.2" y1="116.7" x2="44.6" y2="132.7"/>
+	<g>
+		<line class="st17" x1="67.2" y1="116.7" x2="50.4" y2="128.5"/>
+		<g>
+			<polygon points="48.8,123.6 44.6,132.7 54.5,131.8 			"/>
+		</g>
+	</g>
+</g>
+<rect x="225.2" y="27" class="st2" width="49.8" height="25.3"/>
+<text transform="matrix(1 0 0 1 225.2299 34.1052)" class="st5 st6">116th and </text>
+<text transform="matrix(1 0 0 1 225.2299 46.1052)" class="st5 st6">Broadway</text>
+<g>
+	<line class="st2" x1="271.2" y1="37" x2="305" y2="36.7"/>
+	<g>
+		<line class="st17" x1="271.2" y1="37" x2="297.8" y2="36.7"/>
+		<g>
+			<polygon points="296.4,41.7 305,36.7 296.3,31.8 			"/>
+		</g>
+	</g>
+</g>
+<path class="st18" d="M357,96.5h10"/>
+<text transform="matrix(1 0 0 1 372 98.4771)" class="st5 st6">125th</text>
+<text transform="matrix(1 0 0 1 372 110.4772)" class="st5 st6">to 116th</text>
+<path class="st19" d="M357,66.5h10"/>
+<text transform="matrix(1 0 0 1 372 69.4771)" class="st5 st6">139th </text>
+<text transform="matrix(1 0 0 1 372 81.4771)" class="st5 st6">to 125th</text>
+<path class="st20" d="M357,35.5h10"/>
+<text transform="matrix(1 0 0 1 372 38.4771)" class="st5 st6">157th</text>
+<text transform="matrix(1 0 0 1 372 50.4771)" class="st5 st6">to 139th</text>
+<line class="st2" x1="152.5" y1="310.5" x2="153.3" y2="10.5"/>
+<path class="st0" d="M223.8,11.3L223.5,310L223.8,11.3z"/>
+<line class="st2" x1="154.9" y1="310" x2="155.1" y2="11.3"/>
+<line class="st2" x1="223.5" y1="310" x2="223.8" y2="11.3"/>
+<path class="st0" d="M175.7,250.1"/>
+<line class="st1" x1="224.5" y1="309.7" x2="224.5" y2="11"/>
+<line class="st1" x1="158.4" y1="309.7" x2="155.8" y2="11"/>
+</svg>
