@@ -20,7 +20,7 @@ var config = {
             alignment: 'full',
             hidden: false,
             //title: '',
-            image: './images/riverside_bridge_near.jpeg',
+            image: './images/riverside_bridge_near_hi_rez.jpeg',
             description: 'The shortest distance between two points is a line, maybe, if you\'re a crow or some other winged creature that can fly right over hills.<p>Google Maps, when it\'s called upon to provide walking directions, at least reckons with the concrete world. It steers us around highway embankments and brick buildings, along proper streets.<p>But it doesn\'t reckon with a basic feature of the earth\'s topography- valleys, and the hills that follow them.',
             location: {
                 center: [-73.94594, 40.83288],
