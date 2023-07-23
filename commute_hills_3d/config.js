@@ -11,17 +11,17 @@ var config = {
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
     title: 'Don\'t Give Me That Altitude',
-    subtitle: 'An Easier Way to Commute on Broadway',
-    byline: 'By Rob Reid',
-    footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    subtitle: 'Pedestrian Commuting on Broadway',
+    byline: 'By Rob Reid | 23 July',
+    footer: 'Methodology: see <a href="https://github.com/reliablerascal/scrollydrive">GitHub repository</a> <br>Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'intro',
             alignment: 'full',
             hidden: false,
-            title: 'Awn Broadway',
+            //title: '',
             image: './images/riverside_bridge_near.jpeg',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            description: 'The shortest distance between two points is a line, sometimes, maybe if you\'re a crow or some other winged creature that can fly right over hills.<p>Google Maps, when it\'s called upon to provide walking directions, at least reckons with the concrete world, steering around highway embankments and brick buildings along proper streets. But it doesn\'t reckon with a basic feature of the earth\'s topography- valleys, and the hills that follow them.',
             location: {
                 center: [-73.94594, 40.83288],
                 zoom: 13.00,
@@ -50,7 +50,7 @@ var config = {
             hidden: false,
             title: 'Broadway and 155th',
             image: './images/broadway_155th.jpeg',
-            description: 'As you can see.',
+            description: 'Several days a week this summer, I walked to class at Columbia\'s Pulitzer Hall at 116th and Broadway. Since I live near Broadway, it makes perfect sense that Google Maps would guide me down the straight and plantain-lined path from Washington Heights to Morningside Heights.',
             location: {
                 center: [-73.94594, 40.83288],
                 zoom: 16.00,
@@ -64,7 +64,7 @@ var config = {
                 // speed: 2, // make the flying slow
                 //curve: 1, // change the speed at which it zooms out
             },
-            mapAnimation: 'easeTo',
+            mapAnimation: 'flyTo',
             rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
@@ -79,7 +79,7 @@ var config = {
             hidden: false,
             title: 'Broadway and 133rd',
             image: './images/broadway_133rd.jpeg',
-            description: 'Copy these sections to add to your story.',
+            description: 'Heading south on Broadway into the mid 130s, the 1 train seems to rise above Broadway. Looked at another way, Broadway descends below the 1 train as it continues into the valley of Manhattanville.',
             location: {
                 center: [-73.95573, 40.81877],
                 zoom: 16.00,
@@ -102,7 +102,7 @@ var config = {
             hidden: false,
             title: 'View to the East from Broadway and 131st',
             image: './images/broadway_131st_view_east.jpeg',
-            description: 'Copy these sections to add to your story.',
+            description: 'Glancing to the east of Broadway, Cliffside Park New Jersey is visible across the Hudson. But there\'s also a high bridge just a couple blocks east before the shoreline.',
             location: {
                 center: [-73.95708, 40.81761],
                 zoom: 16.00,
@@ -122,9 +122,9 @@ var config = {
             id: 'broadway_125',
             alignment: 'left',
             hidden: false,
-            title: 'Broadway and 125th',
+            title: 'Broadway and 125th (Altitude = 7 meters)',
             image: './images/broadway_125th.jpeg',
-            description: 'Copy these sections to add to your story.',
+            description: 'Near the 125th train station, Broadway hits the base of the valley. The train is a good twenty feet off the ground, and continuing to the south Broadway begins a steady uphill ascent. The ascent is notable if you\'re carrying a 20-pound backpack, especially as the summer heat index regularly climbs into the mid to high 90s.',
             location: {
                 center: [-73.95805, 40.81563],
                 zoom: 16.00,
@@ -142,14 +142,14 @@ var config = {
 
 
         {
-            id: 'broadway_116',
+            id: 'broadway_116 (Altitude = 42 meters)',
             alignment: 'left',
             hidden: false,
             title: 'Broadway and 116th',
             image: './images/broadway_116th.jpeg',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [-73.95012, 40.82959],
+                center: [-73.96366, 40.80800],
                 zoom: 16.00,
                 pitch: 0.00,
                 bearing: 28.00,
