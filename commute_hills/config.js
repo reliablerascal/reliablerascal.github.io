@@ -17,14 +17,14 @@ var config = {
     chapters: [
         {
             id: 'intro',
-            alignment: 'full',
+            //alignment: 'full',
             hidden: false,
             //title: '',
             image: './images/riverside_bridge_near_hi_rez.jpeg',
             description: 'The shortest distance between two points is a line, maybe, if you\'re a crow or some other winged creature that can fly right over hills.<p>Google Maps, when it\'s called upon to provide walking directions, at least reckons with the concrete world. It steers us around highway embankments and brick buildings, along proper streets.<p>But it doesn\'t reckon with a basic feature of the earth\'s topography- valleys, and the hills that follow them.',
             location: {
                 center: [-73.94594, 40.83288],
-                zoom: 13.00,
+                zoom: 16.00,
                 pitch: 0.00,
                 bearing: 28.00,
                 speed: 2
@@ -254,7 +254,25 @@ var config = {
             hidden: false,
             title: 'Computing the Commute',
             image: './images/dw_commute_riverside_v_broadway.svg',
-            description: 'My subjective experience is that Riverside is a more pleasant walk than Broadway, despite the slightly longer distance.<p>Calculating the energy required to walk each route by an estimate of calories consumed <a href="https://www.verywellfit.com/how-many-more-calories-do-you-burn-walking-uphill-3975557" target="_blank">based on distance and slope</a>, however, shows that Riverside is slightly longer and requires slightly more energy.<p>Analyzing the walk in three segments, the beginning (157th to 139th), the descent (139th to 125th), and the upward slope (125th to 116th), provides a more nuanced picture. Calculating "effort" as calories per kilometer walked, Broadway gets a little easier in the downward-sloping second segment but more challenging in the uphill third segment. Riverside, in contrast, is a more evenly paced. And unlike so many flatter routes elsewhere, Riverside offers some sweeping views of a vast river and the cliffside border of a state beyond.',
+            description: 'My subjective experience is that Riverside is a more pleasant walk than Broadway, despite the slightly longer distance.<p>Calculating the energy required to walk each route by an estimate of calories consumed <a href="https://www.verywellfit.com/how-many-more-calories-do-you-burn-walking-uphill-3975557" target="_blank">based on distance and slope</a>, however, shows that Riverside is slightly longer and requires slightly more energy.<p>Analyzing the walk in three segments, the beginning (157th to 139th), the descent (139th to 125th), and the upward slope (125th to 116th), provides a more nuanced picture. Calculating "effort" as calories per kilometer walked, Broadway gets a little easier in the downward-sloping second segment but more challenging in the uphill third segment. Riverside, in contrast, is a more evenly paced.',
+            location: {
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+
+
+        {
+            id: 'riverside-155',
+            alignment: 'full',
+            hidden: false,
+            title: 'Putting the River Side in Riverside at 155th',
+            image: './images/riverside_155.jpeg',
+            description: 'And unlike so many flatter routes elsewhere, Riverside offers some sweeping views of a vast river and the cliffside border of a state beyond.',
             location: {
             },
             mapAnimation: 'easeTo',
