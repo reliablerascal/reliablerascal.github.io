@@ -17,7 +17,7 @@ var config = {
     chapters: [
         {
             id: 'intro',
-            //alignment: 'full',
+            alignment: 'full',
             hidden: false,
             //title: '',
             image: './images/riverside_bridge_near_hi_rez.jpeg',
