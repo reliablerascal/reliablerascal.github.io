@@ -11,9 +11,9 @@ var config = {
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
     title: 'Don\'t Give Me That Altitude',
-    subtitle: 'Pedestrian Commuting on Broadway',
+    subtitle: 'A Pedestrian Alternative to Commuting on Broadway',
     byline: 'By Rob Reid | 23 July',
-    footer: 'Methodology: see <a href="https://github.com/reliablerascal/scrollydrive">GitHub repository</a> <br>Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    footer: 'Methodology and data: see <a href="https://github.com/reliablerascal/commute_hills">GitHub repository</a><br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'intro',
@@ -253,7 +253,7 @@ var config = {
             alignment: 'full',
             hidden: false,
             title: 'Computing the Commute',
-            image: './images/dw_commute_riverside_v_broadway.png',
+            image: './images/dw_commute_riverside_v_broadway.svg',
             description: 'My subjective experience is that Riverside is a more pleasant walk than Broadway, despite the slightly longer distance.<p>Calculating the energy required to walk each route by an estimate of calories consumed <a href="https://www.verywellfit.com/how-many-more-calories-do-you-burn-walking-uphill-3975557" target="_blank">based on distance and slope</a>, however, shows that Riverside is slightly longer and requires slightly more energy.<p>Analyzing the walk in three segments, the beginning (157th to 139th), the descent (139th to 125th), and the upward slope (125th to 116th), provides a more nuanced picture. Calculating "effort" as calories per kilometer walked, Broadway gets a little easier in the downward-sloping second segment but more challenging in the uphill third segment. Riverside, in contrast, is a more evenly paced. And unlike so many flatter routes elsewhere, Riverside offers some sweeping views of a vast river and the cliffside border of a state beyond.',
             location: {
             },
