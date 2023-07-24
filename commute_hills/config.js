@@ -24,7 +24,7 @@ var config = {
             description: 'The shortest distance between two points is a line, maybe, if you\'re a crow or some other winged creature that can fly right over hills.<p>Google Maps, when it\'s called upon to provide walking directions, at least reckons with the concrete world. It steers us around highway embankments and brick buildings, along proper streets.<p>But it doesn\'t reckon with a basic feature of the earth\'s topography- valleys, and the hills that follow them.',
             location: {
                 center: [-73.94594, 40.83288],
-                zoom: 16.00,
+                zoom: 13.00,
                 pitch: 0.00,
                 bearing: 28.00,
                 speed: 2
@@ -238,6 +238,11 @@ var config = {
             image: './images/riverside_elevation.svg',
             description: 'Based on GPX track data exported from <a href="https://www.alltrails.com/" target="blank">Alltrails</a> and <a href="https://earth.google.com/web/" target="_blank">Google Earth</a>, Riverside features smaller elevation fluctuations than Broadway while gradually ascending to 42 meters at 116th and Broadway.',
             location: {
+                center: [-73.96366, 40.80800],
+                zoom: 13.00,
+                pitch: 0.00,
+                bearing: 28.00,
+                speed: 2
             },
             mapAnimation: 'easeTo',
             rotateAnimation: false,
@@ -253,9 +258,14 @@ var config = {
             alignment: 'full',
             hidden: false,
             title: 'Computing the Commute',
-            image: './images/dw_commute_riverside_v_broadway.svg',
-            description: 'My subjective experience is that Riverside is a more pleasant walk than Broadway, despite the slightly longer distance.<p>Calculating the energy required to walk each route by an estimate of calories consumed <a href="https://www.verywellfit.com/how-many-more-calories-do-you-burn-walking-uphill-3975557" target="_blank">based on distance and slope</a>, however, shows that Riverside is slightly longer and requires slightly more energy.<p>Analyzing the walk in three segments (see <a href="https://github.com/reliablerascal/commute_hills" target="_blank">GitHub for methodology</a>), the beginning (157th to 139th), the descent (139th to 125th), and the upward slope (125th to 116th), provides a more nuanced picture. Calculating "effort" as calories per kilometer walked, Broadway gets a little easier in the downward-sloping second segment but more challenging in the uphill third segment. Riverside, in contrast, is more evenly paced.',
+            image: './images/dw_commute_distance_calories.svg',
+            description: 'My subjective experience is that Riverside is a more pleasant walk than Broadway, despite the slightly longer distance.<p>Calculating the energy required to walk each route by an estimate of calories consumed <a href="https://www.verywellfit.com/how-many-more-calories-do-you-burn-walking-uphill-3975557" target="_blank">based on distance and slope</a>, however, shows that Riverside is slightly longer and requires slightly more energy.<p>Analyzing the walk in three segments (see <a href="https://github.com/reliablerascal/commute_hills" target="_blank">GitHub for methodology</a>), the beginning (157th to 139th), the descent (139th to 125th), and the upward slope (125th to 116th), provides a more nuanced picture.',
             location: {
+                center: [-73.96366, 40.80800],
+                zoom: 13.00,
+                pitch: 0.00,
+                bearing: 28.00,
+                speed: 2
             },
             mapAnimation: 'easeTo',
             rotateAnimation: false,
@@ -267,6 +277,29 @@ var config = {
 
 
         {
+            id: 'energy_comparison',
+            alignment: 'full',
+            hidden: false,
+            title: 'Computing the Commute',
+            image: './images/dw_commute_effort.svg',
+            description: 'Calculating "effort" as calories per kilometer walked, Broadway gets a little easier in the downward-sloping second segment but more challenging in the uphill third segment. Riverside, in contrast, is more evenly paced.',
+            location: {
+                center: [-73.96366, 40.80800],
+                zoom: 13.00,
+                pitch: 0.00,
+                bearing: 28.00,
+                speed: 2
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        
+        
+        
+        {
             id: 'riverside-153',
             alignment: 'center',
             hidden: false,
@@ -274,6 +307,11 @@ var config = {
             image: './images/riverside_153_view.jpeg',
             description: 'And while Broadway offers brief glimpses of the New Jersey shore at each intersection, Riverside offers New Jersey AND the Hudson River.',
             location: {
+                center: [-73.96366, 40.80800],
+                zoom: 13.00,
+                pitch: 0.00,
+                bearing: 28.00,
+                speed: 2
             },
             mapAnimation: 'easeTo',
             rotateAnimation: false,
