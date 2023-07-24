@@ -254,7 +254,7 @@ var config = {
             hidden: false,
             title: 'Computing the Commute',
             image: './images/dw_commute_riverside_v_broadway.svg',
-            description: 'My subjective experience is that Riverside is a more pleasant walk than Broadway, despite the slightly longer distance.<p>Calculating the energy required to walk each route by an estimate of calories consumed <a href="https://www.verywellfit.com/how-many-more-calories-do-you-burn-walking-uphill-3975557" target="_blank">based on distance and slope</a>, however, shows that Riverside is slightly longer and requires slightly more energy.<p>Analyzing the walk in three segments, the beginning (157th to 139th), the descent (139th to 125th), and the upward slope (125th to 116th), provides a more nuanced picture. Calculating "effort" as calories per kilometer walked, Broadway gets a little easier in the downward-sloping second segment but more challenging in the uphill third segment. Riverside, in contrast, is a more evenly paced.',
+            description: 'My subjective experience is that Riverside is a more pleasant walk than Broadway, despite the slightly longer distance.<p>Calculating the energy required to walk each route by an estimate of calories consumed <a href="https://www.verywellfit.com/how-many-more-calories-do-you-burn-walking-uphill-3975557" target="_blank">based on distance and slope</a>, however, shows that Riverside is slightly longer and requires slightly more energy.<p>Analyzing the walk in three segments (see <a href="https://github.com/reliablerascal/commute_hills" target="_blank">GitHub for methodology</a>), the beginning (157th to 139th), the descent (139th to 125th), and the upward slope (125th to 116th), provides a more nuanced picture. Calculating "effort" as calories per kilometer walked, Broadway gets a little easier in the downward-sloping second segment but more challenging in the uphill third segment. Riverside, in contrast, is more evenly paced.',
             location: {
             },
             mapAnimation: 'easeTo',
@@ -267,12 +267,12 @@ var config = {
 
 
         {
-            id: 'riverside-155',
-            alignment: 'full',
+            id: 'riverside-153',
+            alignment: 'center',
             hidden: false,
-            title: 'Putting the River Side in Riverside at 155th',
-            image: './images/riverside_155.jpeg',
-            description: 'And unlike so many flatter routes elsewhere, Riverside offers some sweeping views of a vast river and the cliffside border of a state beyond.',
+            title: 'Putting the River in Riverside at 153th',
+            image: './images/riverside_153_view.jpeg',
+            description: 'And while Broadway offers brief glimpses of the New Jersey shore at each intersection, Riverside offers New Jersey AND the Hudson River.',
             location: {
             },
             mapAnimation: 'easeTo',
