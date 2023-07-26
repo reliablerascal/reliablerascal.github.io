@@ -1,0 +1,255 @@
+<!--- this *was* animation-scrollama.html-->
+<!--- see https://github.com/Tonejs/Tone.js/blob/dev/README.md for deets on how I set up tone.js-->
+<!--- THIS IS ABSOLUTELY KEY-->
+
+<!doctype html>
+<html>
+  <head>
+
+    <!-- some basic stuff  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Sounds of Toxins</title>
+
+    <!-- 
+      add your stylesheet 
+      base.css loads the basic stuff
+      you can tweak your css in custom.css
+      WARNING: the order of the stylesheets matters
+    -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- add your d3 script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <!-- add Scrollama -->
+    <script src="https://unpkg.com/scrollama"></script>
+    <!--- add sound script-->
+   <!--- tried to follow instrux from https://tonejs.github.io/ 
+    <script type="module" src="./rr_tone.js">--->
+
+     <!--- https://github.com/Tonejs/Tone.js/blob/dev/README.md suggests this --> 
+    <script src="http://unpkg.com/tone"></script>
+    <!---<script src="./rr_tone.js"></script>--->
+
+
+
+
+<!--- RR 7/25/23 adding tone code inline for now, based on example at https://github.com/Tonejs/Tone.js/blob/master/examples/simpleHtml.html-->
+<!---my audio functions here-->
+<script>
+  function playNote() {
+    // create a synth
+    const synth = new Tone.Synth().toDestination();
+    // play a note from that synth       
+    synth.triggerAttackRelease("C4", "8n");
+  }
+
+  function playChord() {
+    // per documentation, POlySynth can handle multiple notes
+    const synth = new Tone.PolySynth().toDestination();
+    const now = Tone.now()
+    // play a note from that synth       
+    synth.triggerAttack("D4", now);
+    synth.triggerAttack("F4", now + 0.5);
+    synth.triggerAttack("A4", now + 1);
+    synth.triggerAttack("C4", now + 1.5);
+    synth.triggerAttack("E4", now + 2);
+    synth.triggerRelease(["D4", "F4", "A4", "C4", "E4"], now + 4);
+  }
+
+  function initSound() {
+  //rr created this 7/25/23
+
+  //initiate
+  //await Tone.start();
+  Tone.start();
+  console.log('audio is ready');//prints a message in inspect-> console confirming audio is ready
+}
+</script>
+
+
+
+
+
+    <!-- your JS code that uses d3 to manipulate data -->
+    <script>
+
+      // Step 4. load your data with d3.csv()
+      d3.csv("happiness-sample-data.csv")
+      // d3.json("happiness-sample-data.json")
+        .then(data => {
+
+
+          const myChart = d3
+            .select('#my-svg-chart')
+            .append('svg')
+            .attr('width', 640)
+            .attr('height', 640)
+
+          const days = myChart
+            .selectAll('rect')
+            .data(data)
+            .join('rect');
+
+          const gridSize = 20, gap = 2;
+
+          days
+            .attr('x', (d,i) => {
+              return Math.floor(i%10)*(gridSize+ gap);
+            })
+            .attr('y', (d,i) => {
+              return Math.floor(i/10)*(gridSize+ gap);
+            })
+            .attr('width', 0)
+            .attr('height', 0)
+            .style('fill','lightgrey')
+          
+          //scrollytelling events based on day
+          const showDay1 = function() {
+            days
+              .transition()
+              .duration(2000)
+              .attr('width', gridSize)
+              .attr('height', gridSize)
+          }
+
+          const showDay2 = function() {
+            days
+              .transition()
+              .duration(2000)
+              .style('fill', d=> {
+                if (d.Happiness == '1') {return 'black'}
+                else if (d.Happiness == '2') {return 'lightgrey'}
+                else {return 'gold'}
+              })
+          }
+
+          const showDay3 = function() {
+            days
+              .transition()
+              .duration(2000)
+              //was change shape, rx
+              //.attr('rx', 10)
+              .style('fill', d=> {
+                if (d.Happiness == '1') {return 'pink'}
+                else if (d.Happiness == '2') {return 'beige'}
+                else {return 'turquoise'}
+              })
+          }
+
+          //play a sound
+          const audioDay4 = function() {
+            playNote();
+            //create a synth and connect it to the main output (your speakers)
+            //const synth = new Tone.Synth().toDestination();
+            //play a middle 'C' for the duration of an 8th note
+            //synth.triggerAttackRelease("C4", "8n");
+          }
+
+          const audioDay5 = function() {
+            playChord();
+          }
+
+          // ======================================
+          // === HERE starts the scrollama code ===
+          // ======================================
+
+          // using d3 for convenience
+          const scrolly = d3.select("#scroll-content");
+          const figure = scrolly.select("#my-svg-chart");
+          const step = scrolly.selectAll(".step"); 
+
+          // initialize the scrollama
+          const scroller = scrollama();
+
+          // generic window resize listener event
+          function handleResize() {
+            
+            // 1. update height of step elements
+            var stepH = Math.floor(window.innerHeight * 0.75);
+            step.style("height", stepH + "px");
+
+            var figureHeight = Math.min(window.innerHeight*0.8,640);
+            var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+            figure
+              .style("height", figureHeight + "px")
+              .style("top", figureMarginTop + "px");
+
+            // 3. tell scrollama to update new element dimensions
+            scroller.resize();
+          }
+
+          // scrollama event handlers
+          function handleStepEnter(response) {
+
+            // add color to current step only
+            step.classed("is-active", function (d, i) {
+              return i === response.index;
+            });
+
+            // update graphic based on step
+            if (response.index == 0) {
+              // 1. Make the charts appear
+              showDay1();
+            } else if (response.index == 1) {
+              // 2. change color
+              showDay2();
+            } else if (response.index == 2) {
+              // 3. initialize sound
+              initSound();
+            } else if (response.index == 3) {
+              // 4. play a sound
+              audioDay4();
+            } else if (response.index == 4) {
+              // 5. play a sound
+              audioDay5();
+            }
+          }
+
+          function init() {
+
+            // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+            handleResize();
+
+            // 2. setup the scroller passing options
+            // 		this will also initialize trigger observations
+            // 3. bind scrollama event handlers (this can be chained like below)
+            scroller
+              .setup({
+                step: "#scroll-content .step",
+                offset: 0.33,
+                debug: true //create a visual line to show where event gets triggered
+              })
+              .onStepEnter(handleStepEnter);
+          }
+
+
+          // kick things off
+          init();
+          
+        })
+
+    </script>
+
+  </head>
+  <body>
+    <h1>10 Days of Toxic Air</h1>
+    <!---<button onclick="playNote()">Click me to play note!</button>--->
+    
+    <p>A sonification of air quality in Minnetonka, MN</p>
+    <div id="scroll-content">
+      <div id="my-svg-chart"></div>
+      <div id="text">
+        <div class="step">TEST DAY 1- Make rectangles appear</div>
+        <div class="step">TEST DAY 2- Change colors based on data</div>
+        <div class="step">DAY 3- initiate sound with Tone.start()</div>
+        <div class="step">DAY 4- Play a sound</div>
+        <div class="step">DAY 5- Play a chord calling PlayChord function</div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
