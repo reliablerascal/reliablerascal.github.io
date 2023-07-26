@@ -45,18 +45,65 @@
     synth.triggerAttackRelease("C4", "8n");
   }
 
-  function playChord() {
-    // per documentation, POlySynth can handle multiple notes
+  function playChord1() {
+    // per documentation, PolySynth can handle multiple notes
+    //major chord
     const synth = new Tone.PolySynth().toDestination();
-    const now = Tone.now()
-    // play a note from that synth       
-    synth.triggerAttack("D4", now);
-    synth.triggerAttack("F4", now + 0.5);
-    synth.triggerAttack("A4", now + 1);
-    synth.triggerAttack("C4", now + 1.5);
-    synth.triggerAttack("E4", now + 2);
-    synth.triggerRelease(["D4", "F4", "A4", "C4", "E4"], now + 4);
+    var now = Tone.now()     
+    var listChord = ["C4","E4","G4","C5","E5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
   }
+
+  function playChord2() {
+    // maj 7
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","E4","G4","B4","C5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+  function playChord3() {
+    // dom 7
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","E4","G4","A#4","C5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+
+  function playChord4() {
+    // minor
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","D#4","F#4","C5","D#5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+  function playChord5() {
+    // horror chord 1
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","C#4","E4","E#4","C5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+  function playChord6() {
+    // horror chord worse
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()
+    // arpeggiate      
+    // synth.triggerAttack(listChord[0], now);
+    // synth.triggerAttack(listChord[1], now + 0.5);
+    var listChord = ["C4","C#4","D5","D#5","E6"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
 
   function initSound() {
   //rr created this 7/25/23
@@ -76,8 +123,8 @@
     <script>
 
       // Step 4. load your data with d3.csv()
-      d3.csv("happiness-sample-data.csv")
-      //d3.csv("aqi-forecast.csv")
+      //d3.csv("data/happiness-sample-data.csv")
+      d3.csv("data/aqi-data-2023-07-24.csv")
       
       // d3.json("happiness-sample-data.json")
         .then(data => {
@@ -121,36 +168,56 @@
               .transition()
               .duration(2000)
               .style('fill', d=> {
-                if (d.Happiness == '1') {return 'black'}
-                else if (d.Happiness == '2') {return 'lightgrey'}
-                else {return 'gold'}
+                if (d.aqi < '51') {return 'green'}
+                else if (d.aqi < '101') {return 'yellow'}
+                else if (d.aqi < '151') {return 'orange'}
+                else if (d.aqi < '201') {return 'red'}
+                else if (d.aqi < '251') {return 'purple'}
+                else if (d.aqi < '301') {return 'maroon'}
+                else {return 'grey'}
               })
           }
 
-          const showDay3 = function() {
-            days
-              .transition()
-              .duration(2000)
-              //was change shape, rx
-              //.attr('rx', 10)
-              .style('fill', d=> {
-                if (d.Happiness == '1') {return 'pink'}
-                else if (d.Happiness == '2') {return 'beige'}
-                else {return 'turquoise'}
-              })
-          }
+          // const showDay3 = function() {
+          //   days
+          //     .transition()
+          //     .duration(2000)
+          //     //was change shape, rx
+          //     //.attr('rx', 10)
+          //     .style('fill', d=> {
+          //       if (d.Happiness == '1') {return 'pink'}
+          //       else if (d.Happiness == '2') {return 'beige'}
+          //       else {return 'turquoise'}
+          //     })
+          // }
 
           //play a sound
-          const audioDay4 = function() {
+          const audioDay0 = function() {
             playNote();
-            //create a synth and connect it to the main output (your speakers)
-            //const synth = new Tone.Synth().toDestination();
-            //play a middle 'C' for the duration of an 8th note
-            //synth.triggerAttackRelease("C4", "8n");
+          }
+
+          const audioDay1 = function() {
+            playChord1();
+          }
+
+          const audioDay2 = function() {
+            playChord2();
+          }
+
+          const audioDay3 = function() {
+            playChord3();
+          }
+
+          const audioDay4 = function() {
+            playChord4();
           }
 
           const audioDay5 = function() {
-            playChord();
+            playChord5();
+          }
+
+          const audioDay6 = function() {
+            playChord6();
           }
 
           // ======================================
@@ -191,7 +258,7 @@
               return i === response.index;
             });
 
-            // update graphic based on step
+            // update sound based on step
             if (response.index == 0) {
               // 1. Make the charts appear
               showDay1();
@@ -202,11 +269,17 @@
               // 3. initialize sound
               initSound();
             } else if (response.index == 3) {
-              // 4. play a sound
-              audioDay4();
+              audioDay1();
             } else if (response.index == 4) {
-              // 5. play a sound
+              audioDay2();
+            } else if (response.index == 5) {
+              audioDay3();
+            } else if (response.index == 6) {
+              audioDay4();
+            } else if (response.index == 7) {
               audioDay5();
+            } else if (response.index == 8) {
+              audioDay6();
             }
           }
 
@@ -231,7 +304,27 @@
           // kick things off
           init();
           
+          d3.select('button#btn1')
+            .on('click', playChord1)
+          
+          d3.select('button#btn2')
+            .on('click', playChord5)
+
+            d3.select('button#btn3')
+            .on('click', playChord3)
+          
+          d3.select('button#btn4')
+            .on('click', playChord6)
+
+            d3.select('button#btn5')
+            .on('click', playChord2)
+          
+          d3.select('button#btn6')
+            .on('click', playChord4)
+
         })
+
+        
 
     </script>
 
@@ -242,15 +335,28 @@
     <p><img width="50%" src="images/nyc-haze.jpeg">
     <p>A sonification of air quality in Minnetonka, MN</p>
     <p>update as of 7:49 AM</p>
-    <p>[some buttons to preview different chords and what they mean]
-    <div id="scroll-content">
+    <h2>chord test</h2>
+    <button id="btn1">chord 1</button>
+    <button id="btn2">chord 2</button>
+    <button id="btn3">chord 3</button>
+    <button id="btn4">chord 4</button>
+    <button id="btn5">chord 5</button>
+    <button id="btn6">chord 6</button>
+
+    <h2>scrollama test</h2>
+    <p>scroll to activate the forecast</p>
+      <div id="scroll-content">
       <div id="my-svg-chart"></div>
       <div id="text">
-        <div class="step">TEST DAY 1- Make rectangles appear (placeholder data)</div>
-        <div class="step">TEST DAY 2- Change colors based on fake data</div>
-        <div class="step">DAY 3- Enable sound with Tone.start() command</div>
-        <div class="step">DAY 4- Play a sound</div>
-        <div class="step">DAY 5- Play a chord calling PlayChord function</div>
+        <div class="step">Show Blank Grid</div>
+        <div class="step">Change Colors Based on AQI Scores</div>
+        <div class="step">Enable sound with Tone.start() command</div>
+        <div class="step">DAY 1 AQI Forecast- Good</div>
+        <div class="step">DAY 2 AQI Forecast- Moderate</div>
+        <div class="step">DAY 3 AQI Forecast- Unhealthy for Sensitive Groups</div>
+        <div class="step">DAY 4 AQI Forecast- Unhealthy</div>
+        <div class="step">DAY 5 AQI Forecast- Very Unhealthy</div>
+        <div class="step">DAY 6 AQI Forecast- Hazardous</div>
       </div>
     </div>
 
