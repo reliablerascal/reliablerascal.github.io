@@ -1,7 +1,6 @@
-<!--- 7/27/23 RR-->
-<!--- this was initially built from Youyou Zhou's animation-scrollama.html template-->
-<!--- at https://github.com/zhoyoyo/lede23-animation-->
+<!--- this *was* animation-scrollama.html-->
 <!--- see https://github.com/Tonejs/Tone.js/blob/dev/README.md for deets on how I set up tone.js-->
+<!--- THIS IS ABSOLUTELY KEY-->
 
 <!doctype html>
 <html>
@@ -12,12 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Sounds of Toxins</title>
 
- <!--- *********************************************************************-->
-<!---                                                                     --->
-<!---                  LOAD STYLESHEETS AND PACKAGES                      --->
-<!---                                                                     --->
-<!--- *********************************************************************-->
-<!--- note the order of my stylesheets matters-->
+    <!-- 
+      add your stylesheet 
+      base.css loads the basic stuff
+      you can tweak your css in custom.css
+      WARNING: the order of the stylesheets matters
+    -->
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="custom.css">
 
@@ -26,7 +25,9 @@
     <!-- add Scrollama -->
     <script src="https://unpkg.com/scrollama"></script>
     <!--- add sound script-->
-   
+   <!--- tried to follow instrux from https://tonejs.github.io/ 
+    <script type="module" src="./rr_tone.js">--->
+
      <!--- https://github.com/Tonejs/Tone.js/blob/dev/README.md suggests this --> 
     <script src="https://unpkg.com/tone"></script>
     <!---<script src="./rr_tone.js"></script>--->
@@ -34,28 +35,9 @@
 
 
 
-<!--- *********************************************************************-->
-<!---                                                                     --->
-<!---                  MY AUDIO FUNCTIONS                                 --->
-<!---                                                                     --->
-<!--- *********************************************************************-->
-<!--- RR 7/25/23 keeping tone code inline for now, based on example at https://github.com/Tonejs/Tone.js/blob/master/examples/simpleHtml.html-->
-
+<!--- RR 7/25/23 adding tone code inline for now, based on example at https://github.com/Tonejs/Tone.js/blob/master/examples/simpleHtml.html-->
+<!---my audio functions here-->
 <script>
-  // to arpeggiate      
-    // synth.triggerAttack(listChord[0], now);
-    // synth.triggerAttack(listChord[1], now + 0.5);
-
-   function initSound() {
-  //rr created this 7/25/23
-
-  //initiate
-  //await Tone.start();
-  //prints a message in inspect-> console confirming audio is ready
-    Tone.start();
-    console.log('audio is ready');
-  }
-  
   function playNote() {
     // create a synth
     const synth = new Tone.Synth().toDestination();
@@ -93,10 +75,10 @@
 
 
   function playChord4() {
-    // minor 7
+    // minor
     const synth = new Tone.PolySynth().toDestination();
     var now = Tone.now()     
-    var listChord = ["C4","D#4","G4","A#4","C5"]
+    var listChord = ["C4","D#4","F#4","C5","D#5"]
     synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
     synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
   }
@@ -114,18 +96,30 @@
     // horror chord worse
     const synth = new Tone.PolySynth().toDestination();
     var now = Tone.now()
+    // arpeggiate      
+    // synth.triggerAttack(listChord[0], now);
+    // synth.triggerAttack(listChord[1], now + 0.5);
     var listChord = ["C4","C#4","D5","D#5","E6"]
     synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
     synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
   }
+
+
+  function initSound() {
+  //rr created this 7/25/23
+
+  //initiate
+  //await Tone.start();
+  Tone.start();
+  console.log('audio is ready');//prints a message in inspect-> console confirming audio is ready
+}
 </script>
 
 
-<!--- *********************************************************************-->
-<!---                                                                     --->
-<!---                  MY VISUAL and MISC SOUND FUNCTIONS                                --->
-<!---                                                                     --->
-<!--- *********************************************************************-->
+
+
+
+    <!-- your JS code that uses d3 to manipulate data -->
     <script>
 
       // Step 4. load your data with d3.csv()
@@ -161,7 +155,7 @@
             .style('fill','lightgrey')
           
           //scrollytelling events based on day
-          const showGrid = function() {
+          const showDay1 = function() {
             days
               //.transition()
               //.duration(2000)
@@ -169,7 +163,7 @@
               .attr('height', gridSize)
           }
 
-          const showForecast = function() {
+          const showDay2 = function() {
             days
               //.transition()
               //.duration(2000)
@@ -194,25 +188,20 @@
               })
           }
 
-          const playForecast = function() {
-            playChord1();
-            setTimeout(function() {
-                playChord2();
-            }, 1000);
-            setTimeout(function() {
-                playChord3();
-            }, 2000);
-            setTimeout(function() {
-                playChord4();
-            }, 3000);
-            setTimeout(function() {
-                playChord5();
-            }, 4000);
-            setTimeout(function() {
-                playChord6();
-            }, 5000);
-          }
+          // const showDay3 = function() {
+          //   days
+          //     .transition()
+          //     .duration(2000)
+          //     //was change shape, rx
+          //     //.attr('rx', 10)
+          //     .style('fill', d=> {
+          //       if (d.Happiness == '1') {return 'pink'}
+          //       else if (d.Happiness == '2') {return 'beige'}
+          //       else {return 'turquoise'}
+          //     })
+          // }
 
+          //play a sound
           const audioDay0 = function() {
             playNote();
           }
@@ -240,6 +229,10 @@
           const audioDay6 = function() {
             playChord6();
           }
+
+          // ======================================
+          // === HERE starts the scrollama code ===
+          // ======================================
 
           // using d3 for convenience
           const scrolly = d3.select("#scroll-content");
@@ -275,17 +268,29 @@
               return i === response.index;
             });
 
-            //Scrollama activated steps
+            // update sound based on step
             if (response.index == 0) {
-              showGrid();
+              // 1. Make the charts appear
+              showDay1();
+            } else if (response.index == 1) {
+              // 2. change color
+              showDay2();
+            } else if (response.index == 2) {
+              // 3. initialize sound
+              initSound();
+            } else if (response.index == 3) {
+              audioDay1();
+            } else if (response.index == 4) {
+              audioDay2();
+            } else if (response.index == 5) {
+              audioDay3();
+            } else if (response.index == 6) {
+              audioDay4();
+            } else if (response.index == 7) {
+              audioDay5();
+            } else if (response.index == 8) {
+              audioDay6();
             }
-            else if (response.index == 1) {
-               showForecast();
-             } else if (response.index == 2) {
-               initSound();
-             } else if (response.index == 3) {
-               playForecast();
-             }
           }
 
           function init() {
@@ -309,18 +314,7 @@
           // kick things off
           init();
           
-          //buttons for interaction
-          d3.select('button#btnEnableSound')
-            .on('click', initSound)
-          d3.select('button#btnShowGrid')
-            .on('click', showGrid)
-          d3.select('button#btnShowForecast')
-            .on('click', showForecast)
-          d3.select('button#btnPlayForecast')
-            .on('click', playForecast)
-          
-
-        //buttons for sound testing
+  //buttons for testing
           d3.select('button#btn1')
             .on('click', playChord1)
           d3.select('button#btn2')
@@ -357,18 +351,19 @@
 
   </head>
   <body>
-    <h1>The Sounds of Toxins</h1>
-    <h5>A Ten Day AQI Forecast for Minnetonka, MN</h5>
+    <h1>10 Days of Toxic Air</h1>
     <!---<button onclick="playNote()">Click me to play note!</button>--->
     <p><img width="50%" src="images/nyc-haze.jpeg">
-    <p>update as of 9:14 AM 7/27/23</p>
- 
-  <h2>play forecast</h2>
-    <button id="btnEnableSound">Enable<br>Sound</button>
-    <button id="btnShowGrid">Show<br>Grid</button>
-    <button id="btnShowForecast">Show<br>Forecast</button>
-    <button id="btnPlayForecast">Play<br>Forecast</button>  
-
+    <p>A sonification of air quality in Minnetonka, MN</p>
+    <p>update as of 3:58 PM</p>
+    <p>
+    <h2>chord perception test (randomly sorted)</h2>
+    <button id="btn1" style="width:100px">chord 1</button>
+    <button id="btn2" style="width:100px">chord 2</button>
+    <button id="btn3" style="width:100px">chord 3</button>
+    <button id="btn4" style="width:100px">chord 4</button>
+    <button id="btn5" style="width:100px">chord 5</button>
+    <button id="btn6" style="width:100px">chord 6</button>
 
 <h2>sound key</h2>
     <button id="btnk1" style="background-color:green; width:100px">Good<br>&nbsp;</button>
@@ -378,33 +373,22 @@
     <button id="btnk5" style="background-color:purple; width:100px">Hazardous<br>&nbsp;</button>
     <button id="btnk6" style="background-color:maroon; width:100px">Very<br>Hazardous</button>
 
-
-  <h2>chord perception test (randomly sorted)</h2>
-    <button id="btn1" style="width:100px">chord 1</button>
-    <button id="btn2" style="width:100px">chord 2</button>
-    <button id="btn3" style="width:100px">chord 3</button>
-    <button id="btn4" style="width:100px">chord 4</button>
-    <button id="btn5" style="width:100px">chord 5</button>
-    <button id="btn6" style="width:100px">chord 6</button>
-
-  <br><br><br>
-    <h2>scrollama test (HIDDEN)</h2>
+    <h2>scrollama test</h2>
     <p>scroll to activate the forecast</p>
       <div id="scroll-content">
       <div id="my-svg-chart"></div>
       <div id="text">
-        <div class="step">1) Show Blank Grid</div>
-        <div class="step">2) Change Colors Based on AQI Scores</div>
-        <div class="step">3) Enable sound with Tone.start() command</div>
-        <div class="step">4) Play Demo Forecast</div>
-        <!-- <div class="step">DAY 1 AQI Forecast- Good</div>
+        <div class="step">Show Blank Grid</div>
+        <div class="step">Change Colors Based on AQI Scores</div>
+        <div class="step">Enable sound with Tone.start() command</div>
+        <div class="step">DAY 1 AQI Forecast- Good</div>
         <div class="step">DAY 2 AQI Forecast- Moderate</div>
         <div class="step">DAY 3 AQI Forecast- Unhealthy for Sensitive Groups</div>
         <div class="step">DAY 4 AQI Forecast- Unhealthy</div>
         <div class="step">DAY 5 AQI Forecast- Very Unhealthy</div>
-        <div class="step">DAY 6 AQI Forecast- Hazardous</div> -->
+        <div class="step">DAY 6 AQI Forecast- Hazardous</div>
       </div>
-    </div> -->
+    </div>
 
 
   </body>
