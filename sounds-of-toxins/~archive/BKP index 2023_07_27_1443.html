@@ -1,7 +1,6 @@
-<!--- 7/27/23 RR-->
-<!--- this was initially built from Youyou Zhou's animation-scrollama.html template-->
-<!--- at https://github.com/zhoyoyo/lede23-animation-->
+<!--- this *was* animation-scrollama.html-->
 <!--- see https://github.com/Tonejs/Tone.js/blob/dev/README.md for deets on how I set up tone.js-->
+<!--- THIS IS ABSOLUTELY KEY-->
 
 <!doctype html>
 <html>
@@ -12,24 +11,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Sounds of Toxins</title>
 
-<!--- *********************************************************************-->
-<!---                                                                     --->
-<!---                  LOAD STYLESHEETS AND PACKAGES                      --->
-<!---                                                                     --->
-<!--- *********************************************************************-->
-<!--- note the order of my stylesheets matters-->
-<link rel="stylesheet" href="base.css">
-<link rel="stylesheet" href="custom.css">
+    <!-- 
+      add your stylesheet 
+      base.css loads the basic stuff
+      you can tweak your css in custom.css
+      WARNING: the order of the stylesheets matters
+    -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="custom.css">
 
-<!-- add your d3, Scrollama, and tone.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="https://unpkg.com/scrollama"></script>
-<script src="https://unpkg.com/tone"></script>
+    <!-- add your d3 script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <!-- add Scrollama -->
+    <script src="https://unpkg.com/scrollama"></script>
+    <!--- add sound script-->
+   <!--- tried to follow instrux from https://tonejs.github.io/ 
+    <script type="module" src="./rr_tone.js">--->
 
-<!--- add my javascript-->
-<script src="weather_chords.js"></script>
+     <!--- https://github.com/Tonejs/Tone.js/blob/dev/README.md suggests this --> 
+    <script src="https://unpkg.com/tone"></script>
+    <!---<script src="./rr_tone.js"></script>--->
 
+
+
+
+<!--- RR 7/25/23 adding tone code inline for now, based on example at https://github.com/Tonejs/Tone.js/blob/master/examples/simpleHtml.html-->
+<!---my audio functions here-->
 <script>
+  function playNote() {
+    // create a synth
+    const synth = new Tone.Synth().toDestination();
+    // play a note from that synth       
+    synth.triggerAttackRelease("C4", "8n");
+  }
+
+  function playChord1() {
+    // per documentation, PolySynth can handle multiple notes
+    //major chord
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","E4","G4","C5","E5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+  function playChord2() {
+    // maj 7
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","E4","G4","B4","C5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+  function playChord3() {
+    // dom 7
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","E4","G4","A#4","C5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+
+  function playChord4() {
+    // minor 7
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","D#4","G4","A#4","C5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+  function playChord5() {
+    // horror chord 1
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()     
+    var listChord = ["C4","C#4","E4","E#4","C5"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+  function playChord6() {
+    // horror chord worse
+    const synth = new Tone.PolySynth().toDestination();
+    var now = Tone.now()
+    // arpeggiate      
+    // synth.triggerAttack(listChord[0], now);
+    // synth.triggerAttack(listChord[1], now + 0.5);
+    var listChord = ["C4","C#4","D5","D#5","E6"]
+    synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
+    synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
+  }
+
+
+  function initSound() {
+  //rr created this 7/25/23
+
+  //initiate
+  //await Tone.start();
+  Tone.start();
+  console.log('audio is ready');//prints a message in inspect-> console confirming audio is ready
+}
+</script>
+
+
+
+
+
+    <!-- your JS code that uses d3 to manipulate data -->
+    <script>
+
       // Step 4. load your data with d3.csv()
       //d3.csv("data/happiness-sample-data.csv")
       d3.csv("data/aqi-data-2023-07-24.csv")
@@ -63,7 +155,7 @@
             .style('fill','lightgrey')
           
           //scrollytelling events based on day
-          const showGrid = function() {
+          const showDay1 = function() {
             days
               //.transition()
               //.duration(2000)
@@ -71,7 +163,7 @@
               .attr('height', gridSize)
           }
 
-          const showForecast = function() {
+          const showDay2 = function() {
             days
               //.transition()
               //.duration(2000)
@@ -97,21 +189,21 @@
           }
 
           const playForecast = function() {
-            playChord(aqiGood);
+            playChord1();
             setTimeout(function() {
-                playChord(aqiModerate);
+                playChord2();
             }, 1000);
             setTimeout(function() {
-                playChord(aqiUnhealthySensitive);
+                playChord3();
             }, 2000);
             setTimeout(function() {
-                playChord(aqiUnhealthy);
+                playChord4();
             }, 3000);
             setTimeout(function() {
-                playChord(aqiHazardous);
+                playChord5();
             }, 4000);
             setTimeout(function() {
-                playChord(aqiVeryHazardous);
+                playChord6();
             }, 5000);
           }
 
@@ -185,10 +277,10 @@
             // update sound based on step
             if (response.index == 0) {
               // 1. Make the charts appear
-              showGrid();
+              showDay1();
             } else if (response.index == 1) {
               // 2. change color
-              showForecast();
+              showDay2();
             } else if (response.index == 2) {
               // 3. initialize sound
               initSound();
@@ -220,61 +312,38 @@
           init();
           
   //buttons for testing
-  d3.select('button#btn1')
-              .on("click", function () {
-                playChord(aqiGood);
-              })
+          d3.select('button#btn1')
+            .on('click', playChord1)
           d3.select('button#btn2')
-              .on("click", function () {
-                playChord(aqiHazardous);
-              })
+            .on('click', playChord5)
           d3.select('button#btn3')
-              .on("click", function () {
-                playChord(aqiUnhealthySensitive);
-              })
+            .on('click', playChord3)
           d3.select('button#btn4')
-              .on("click", function () {
-                playChord(aqiVeryHazardous);
-              })
+            .on('click', playChord6)
           d3.select('button#btn5')
-              .on("click", function () {
-                playChord(aqiModerate);
-              })
+            .on('click', playChord2)
           d3.select('button#btn6')
-              .on("click", function () {
-                playChord(aqiUnhealthy);
-              })
-          
+            .on('click', playChord4)
 
           //buttons for legend
           d3.select('button#btnk1')
-              .on("click", function () {
-                playChord(aqiGood);
-              })
+            .on('click', playChord1)
           d3.select('button#btnk2')
-              .on("click", function () {
-                playChord(aqiModerate);
-              })
+            .on('click', playChord2)
           d3.select('button#btnk3')
-              .on("click", function () {
-                playChord(aqiUnhealthySensitive);
-              })
+            .on('click', playChord3)
           d3.select('button#btnk4')
-              .on("click", function () {
-                playChord(aqiUnhealthy);
-              })
+            .on('click', playChord4)
           d3.select('button#btnk5')
-              .on("click", function () {
-                playChord(aqiHazardous);
-              })
+            .on('click', playChord5)
           d3.select('button#btnk6')
-              .on("click", function () {
-                playChord(aqiVeryHazardous);
-              })
+            .on('click', playChord6)
 
-
-    //end D3      
+          
         })
+
+        
+
     </script>
 
   </head>
@@ -309,7 +378,12 @@
         <div class="step">Show Blank Grid</div>
         <div class="step">Change Colors Based on AQI Scores</div>
         <div class="step">Enable sound with Tone.start() command</div>
-        <div class="step">Play AQI Forecast</div>
+        <div class="step">DAY 1 AQI Forecast- Good</div>
+        <div class="step">DAY 2 AQI Forecast- Moderate</div>
+        <div class="step">DAY 3 AQI Forecast- Unhealthy for Sensitive Groups</div>
+        <div class="step">DAY 4 AQI Forecast- Unhealthy</div>
+        <div class="step">DAY 5 AQI Forecast- Very Unhealthy</div>
+        <div class="step">DAY 6 AQI Forecast- Hazardous</div>
       </div>
     </div>
 
