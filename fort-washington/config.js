@@ -123,11 +123,10 @@ var config = {
             //image: './images/002_topographical_history.jpg',
             description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
-                center: [-73.94490, 40.84534],
-                zoom: 14.66,
+                center: [-73.94631, 40.84451],
+                zoom: 15.18,
                 pitch: 0.00,
                 bearing: 28.00
-
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -146,11 +145,10 @@ var config = {
             //image: './images/002_topographical_history.jpg',
             description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
-                center: [-73.94490, 40.84534],
-                zoom: 14.66,
+                center: [-73.94640, 40.84919],
+                zoom: 15.81,
                 pitch: 0.00,
                 bearing: 28.00
-
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
