@@ -77,7 +77,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Obvious Entries to the Park 15x, 182 (maybe show entry pictures)',
+            description: 'Obvious Entries to the Park 15x, 182 (maybe show entry pictures)Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -99,7 +99,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -121,7 +121,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th. Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
                 center: [-73.94631, 40.84451],
                 zoom: 15.18,
@@ -143,7 +143,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
                 center: [-73.94640, 40.84919],
                 zoom: 15.81,
@@ -165,7 +165,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
                 center: [-73.94161, 40.85336],
                 zoom: 15.07,
