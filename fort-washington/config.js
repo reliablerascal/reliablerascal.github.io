@@ -22,23 +22,23 @@ var config = {
             //title: '',
             image: './images/001_fort_washington_park.jpeg',
             description: 'The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
-            // location: {
-            //     center: [-73.94616, 40.84513],
-            //     zoom: 14.00,
-            //     pitch: 0.00,
-            //     bearing: 28.00
-            //     // flyTo additional controls-
-            //     // These options control the flight curve, making it move
-            //     // slowly and zoom out almost completely before starting
-            //     // to pan.
-            //     // speed: 2, // make the flying slow
-            //     //curve: 1, // change the speed at which it zooms out
-            // },
-            // mapAnimation: 'easeTo',
-            // rotateAnimation: false,
-            // callback: '',
-            // onChapterEnter: [],
-            // onChapterExit: []
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                // speed: 2, // make the flying slow
+                //curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
         },
 
 
@@ -50,23 +50,23 @@ var config = {
             //title: '',
             image: './images/002_topographical_history.jpg',
             description: 'Historical development competition between rail, highway, pedestrian tension still plays out today- access issues (topographical map 1955)',
-            // location: {
-            //     center: [-73.94616, 40.84513],
-            //     zoom: 14.00,
-            //     pitch: 0.00,
-            //     bearing: 28.00
-            //     // flyTo additional controls-
-            //     // These options control the flight curve, making it move
-            //     // slowly and zoom out almost completely before starting
-            //     // to pan.
-            //     // speed: 2, // make the flying slow
-            //     //curve: 1, // change the speed at which it zooms out
-            // },
-            // mapAnimation: 'flyTo',
-            // rotateAnimation: false,
-            // callback: '',
-            // onChapterEnter: [],
-            // onChapterExit: []
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                // speed: 2, // make the flying slow
+                //curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
         },
 
 
