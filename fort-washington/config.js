@@ -160,11 +160,49 @@ var config = {
 
 
         {
-            id: 'C-social trail',
+            id: 'C-zoom',
+            alignment: 'left',
+            hidden: true,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            location: {
+                center: [-73.94161, 40.85336],
+                zoom: 15.07,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'C-social trail_riverside',
             alignment: 'left',
             hidden: false,
             //title: '',
-            //image: './images/002_topographical_history.jpg',
+            image: './images/011_social_riverside.jpeg',
+            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            location: {
+                center: [-73.94161, 40.85336],
+                zoom: 15.07,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'C-social trail_railside',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            image: './images/010_social_outside_rail.jpeg',
             description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
                 center: [-73.94161, 40.85336],
