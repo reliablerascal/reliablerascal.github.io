@@ -1,5 +1,5 @@
 //7/29/23 RR this is based on the original version from Youyou that creates a GRID
-//see AQI_scrollama for the new version
+//see scrollama_aqi for the new version
 // d3.csv("data/aqi-data-2023-07-24.csv", function(data) {
 //   console.log(data);
 // });
@@ -8,37 +8,7 @@
       d3.csv("data/aqi-data-2023-07-24.csv")
         .then(data => {
 
-          const myChart = d3
-            .select('#my-svg-chart')
-            .append('svg')
-            .attr('width', 640)
-            .attr('height', 640)
-
-          const days = myChart
-            .selectAll('rect')
-            .data(data)
-            .join('rect');
-
-          const gridSize = 60, gap = 10;
-
-          days
-            .attr('x', (d,i) => {
-              return Math.floor(i%7)*(gridSize+ gap);
-            })
-            .attr('y', (d,i) => {
-              return Math.floor(i/7)*(gridSize+ gap);
-            })
-            .attr('width', 0)
-            .attr('height', 0)
-            .style('fill','lightgrey')
-          
-          //scrollytelling events based on day
-          const showGrid = function() {
-            days
-              .attr('width', gridSize)
-              .attr('height', gridSize)
-          }
-
+         
           const showForecast = function() {
             days
               .style('fill', d=> {
@@ -102,38 +72,22 @@
             scroller.resize();
           }
 
-          // scrollama event handlers
           function handleStepEnter(response) {
-            // add action to current step only
-            step.classed("is-active", function (d, i) {
-              return i === response.index;
-            });
+            // step.classed("is-active", function (d, i) {
+            //   return i === response.index;
+            // });
+            step.each(function(d, i) {
+              if(i == response.index) {
+                playChordByAQI(d.aqi)
+              }
+            })
+          }
 
-            //step.data(data);
-          
-            // play out the forecast step by step
-            if (response.index == 0) {
-              showGrid();
-              initSound();
-            } else if (response.index == 1) {
-              showForecast();
-            } else if (response.index == 2) {
-              playChord(aqiGood);
-            } else if (response.index == 3) {
-              playChord(d=> {
-                if (d.aqi < 51) {return aqiGood}
-                else if (d.aqi < 101) {return aqiModerate}
-                else if (d.aqi < 151) {return aqiUnhealthy}
-                else if (d.aqi < 201) {return aqiUnhealthySensitive}
-                else if (d.aqi < 251) {return aqiHazardous}
-                else if (d.aqi < 301) {return aqiVeryHazardous}
-              })
-            }  else if (response.index >= 4) {
-              playChordByNum(d=> {
-                d.aqi
-              })
-            }
-        }
+
+
+
+
+
 
           function init() {
 

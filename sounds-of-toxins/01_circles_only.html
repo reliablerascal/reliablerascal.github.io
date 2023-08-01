@@ -1,0 +1,101 @@
+<!---7/29/23 RR developed this from the ground up-->
+<!--from https://website.education.wisc.edu/~swu28/d3t/concept.html-->
+<!DOCTYPE html>
+  <html>
+    <head>
+    <!---<script type="text/javascript" src="https://mbostock.github.com/d3/d3.js">--->
+      <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"> 
+    </script> -->
+<!--- local for OFFLINE work-->
+<script type="text/javascript" src="js_optional/d3.v7.js">
+        
+    </head>
+
+    <body>
+      <h1>Test #01: Circles only</h1>
+      <div id="data_example2">
+      <svg width="375" height="100">
+        <circle id = "myCircle" cx="30" cy="50" r="30" ></circle>
+        <circle id = "myCircle" cx="100" cy="50" r="30" ></circle>
+        <circle id = "myCircle" cx="170" cy="50" r="30" ></circle>
+        <circle id = "myCircle" cx="240" cy="50" r="30" ></circle>
+        <circle id = "myCircle" cx="310" cy="50" r="30"  ></circle>
+      </svg>
+      </div>     
+
+      <div id="sound-key">
+          <button id="Day1" style="background-color:green; width:100px">Day 1</button>
+          <button id="Day2" style="background-color:yellow; width:100px">Day 2</button>
+          <button id="Day3" style="background-color:#ffa500; width:100px">Day 3</button>
+          <button id="Day4" style="background-color:red; width:100px">Day 4</button>
+          <button id="Day5" style="background-color:purple; width:100px">Day 5</button>
+          <br>
+          <button id="Day6" style="background-color:green; width:100px">Day 6</button>
+          <button id="Day7" style="background-color:yellow; width:100px">Day 7</button>
+          <button id="Day8" style="background-color:#ffa500; width:100px">Day 8</button>
+          <button id="Day9" style="background-color:red; width:100px">Day 9</button>
+          <button id="Day10" style="background-color:purple; width:100px">Day 10</button>
+    
+
+<!---*************************-->
+<!-- READ AND LOOK AT THE DATA-->
+<!---*************************-->
+      <script type="text/javascript">
+	  
+      // d3.csv("data/circle-data.csv") 
+      d3.csv("data/aqi-data-2023-07-24.csv")
+      .then(aqiData=> {
+
+	  //radiusData is an array containing the new radius for the circle elements
+      // circleDataLocal = [[10, "rgb(246, 239, 247)"], [15, "rgb(189,201,225)"],
+      // [20, "rgb(103,169,207)"], [25, "rgb(28,144,153)"], [30, "rgb(1,108,89)"]];
+	
+      console.log(aqiData);
+      //console.log(circleDataLocal);
+      //Select the div element
+
+/*
+CHANGE CIRCLES
+*/
+      selectExample = d3.select("#data_example2");
+      //We'll select all the circle from within the selected <div> element
+      selectExample.selectAll("circle")
+        .data(aqiData)
+        .attr("r", function(d){return d.aqi/10})
+        .style("fill", function(d){return d.color});
+        //end of circleData
+
+
+/*
+CHANGE BUTTONS
+*/
+      selectExample = d3.select("#sound-key");
+      selectExample.selectAll("button")
+        .data(aqiData)
+        //.on('click', function(){playChord(aqiModerate)})
+        .on('click', function(d){
+          if (d.aqi < 51) playChord(aqiGood)
+          else if (d.aqi < 101) playChord(aqiModerate)
+          else if (d.aqi < 151) playChord(aqiUnhealthySensitive)
+          else if (d.aqi < 201) playChord(aqiUnhealthy)
+          else if (d.aqi < 251) playChord(aqiHazardous)
+          else if (d.aqi < 301) playChord(aqiVeryHazardous)
+        })
+        .style("background-color", function(d){
+          if (d.aqi < 51) return 'green'
+          else if (d.aqi < 101) return 'yellow'
+          else if (d.aqi < 151) return 'orange'
+          else if (d.aqi < 201) return 'red'
+          else if (d.aqi < 251) return 'purple'
+          else if (d.aqi < 301) return 'maroon'
+          });
+        //end of circleData
+
+      //end of AQI data input  
+      })
+      </script>
+
+
+    </body>
+  </html>
+		

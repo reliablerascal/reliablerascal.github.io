@@ -49,12 +49,43 @@
   function playChord(listChord) {
     // per documentation, PolySynth can handle multiple notes
     //major chord
+    //console.log(listChord)
     const synth = new Tone.PolySynth().toDestination();
     var now = Tone.now()     
     synth.triggerAttack([listChord[0], listChord[1], listChord[2], listChord[3]], now);
     synth.triggerRelease([listChord[0], listChord[1], listChord[2], listChord[3]], now + 1);
   }
 
+
+function playChordByAQI(aqi) {
+  //console.log(aqi)  
+  if (aqi < 51) {playChord(aqiGood)}
+    else if (aqi < 101) {playChord(aqiModerate)}
+    else if (aqi < 151) {playChord(aqiUnhealthy)}
+    else if (aqi < 201) {playChord(aqiUnhealthySensitive)}
+    else if (aqi < 251) {playChord(aqiHazardous)}
+    else if (aqi < 301) {playChord(aqiVeryHazardous)}
+
+}
+
+function displayChord(listChord) {
+  // per documentation, PolySynth can handle multiple notes
+  //major chord
+  console.log(listChord)
+}
+
+function displayChordByAQI(aqi) {
+  console.log(aqi)  
+  if (aqi < 51) {displayChord(aqiGood)}
+    else if (aqi < 101) {displayChord(aqiModerate)}
+    else if (aqi < 151) {displayChord(aqiUnhealthy)}
+    else if (aqi < 201) {displayChord(aqiUnhealthySensitive)}
+    else if (aqi < 251) {displayChord(aqiHazardous)}
+    else if (aqi < 301) {displayChord(aqiVeryHazardous)}
+
+}
+
+  
 
 
 

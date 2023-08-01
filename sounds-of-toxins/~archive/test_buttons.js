@@ -1,10 +1,4 @@
-//7/29/23 RR this is based on the original version from Youyou that creates a GRID
-//see AQI_scrollama for the new version
-// d3.csv("data/aqi-data-2023-07-24.csv", function(data) {
-//   console.log(data);
-// });
 
-     
       d3.csv("data/aqi-data-2023-07-24.csv")
         .then(data => {
 
@@ -35,6 +29,8 @@
           //scrollytelling events based on day
           const showGrid = function() {
             days
+              //.transition()
+              //.duration(2000)
               .attr('width', gridSize)
               .attr('height', gridSize)
           }
@@ -79,7 +75,6 @@
           const scrolly = d3.select("#scroll-content");
           const figure = scrolly.select("#my-svg-chart");
           const step = scrolly.selectAll(".step"); 
-          // const step = scrolly.data(data);
 
           // initialize the scrollama
           const scroller = scrollama();
@@ -104,36 +99,29 @@
 
           // scrollama event handlers
           function handleStepEnter(response) {
-            // add action to current step only
+
+            // add color to current step only
             step.classed("is-active", function (d, i) {
               return i === response.index;
             });
-
-            //step.data(data);
-          
-            // play out the forecast step by step
+/*
+            // update sound based on step
             if (response.index == 0) {
+              // 1. Make the charts appear
               showGrid();
-              initSound();
             } else if (response.index == 1) {
+              // 2. change color
               showForecast();
             } else if (response.index == 2) {
-              playChord(aqiGood);
+              // 3. initialize sound
+              initSound();
             } else if (response.index == 3) {
-              playChord(d=> {
-                if (d.aqi < 51) {return aqiGood}
-                else if (d.aqi < 101) {return aqiModerate}
-                else if (d.aqi < 151) {return aqiUnhealthy}
-                else if (d.aqi < 201) {return aqiUnhealthySensitive}
-                else if (d.aqi < 251) {return aqiHazardous}
-                else if (d.aqi < 301) {return aqiVeryHazardous}
-              })
-            }  else if (response.index >= 4) {
-              playChordByNum(d=> {
-                d.aqi
-              })
+              // play minnetonka data
+              playForecast();
             }
-        }
+*/
+
+          }
 
           function init() {
 
@@ -146,7 +134,7 @@
             scroller
               .setup({
                 step: "#scroll-content .step",
-                offset: 0.10,
+                offset: 0.33,
                 debug: true //create a visual line to show where event gets triggered
               })
               .onStepEnter(handleStepEnter);
@@ -158,25 +146,9 @@
       
 
 
-    //end D3      
-  })
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   //buttons for interaction
-
-  /*
   d3.select('button#btnEnableSound')
             .on('click', initSound)
           d3.select('button#btnShowGrid')
@@ -242,5 +214,7 @@
               .on("click", function () {
                 playChord(aqiVeryHazardous);
               })
-*/
 
+
+    //end D3      
+        })

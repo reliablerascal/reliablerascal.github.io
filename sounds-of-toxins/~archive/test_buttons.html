@@ -1,0 +1,88 @@
+<!--- 7/29/23 RR-->
+<!--- this page is now simply intended to test the buttons on the page
+  I was having intermittent problems, due to interference with scrollama
+  COuldn't see the problem until I did inspect element, looked at elements code to see it wasn't looking right when it was broken.
+
+--->
+
+<!doctype html>
+<html>
+  <head>
+
+    <!-- some basic stuff  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Sounds of Toxins</title>
+
+<!--- *********************************************************************-->
+<!---                                                                     --->
+<!---                  LOAD STYLESHEETS AND PACKAGES                      --->
+<!---                                                                     --->
+<!--- *********************************************************************-->
+<!--- note the order of my stylesheets matters-->
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="custom.css">
+
+<!-- add your d3, Scrollama, and tone.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://unpkg.com/scrollama"></script>
+<script src="https://unpkg.com/tone"></script>
+
+<!--- add my javascript-->
+<script src="weather_chords.js"></script>
+<script src="test_buttons.js"></script>
+
+
+  </head>
+  <body>
+    <h1>10 Days of Toxic Air</h1>
+    <!---<button onclick="playNote()">Click me to play note!</button>--->
+    <p><img width="50%" src="images/nyc-haze.jpeg">
+    <p>A sonification of air quality in Minnetonka, MN</p>
+    <p>update 7/29/23 as of 9:40 AM</p>
+   
+     <p>
+      <h2>sound key</h2>
+          <button id="btnk1" style="background-color:green; width:100px">Good<br>&nbsp;</button>
+          <button id="btnk2" style="background-color:yellow; width:100px">Moderate<br>&nbsp;</button>
+          <button id="btnk3" style="background-color:#ffa500; width:100px">Unhealthy for<br>Sensitive</button>
+          <button id="btnk4" style="background-color:red; width:100px">Unhealthy<br>&nbsp;</button>
+          <button id="btnk5" style="background-color:purple; width:100px">Hazardous<br>&nbsp;</button>
+          <button id="btnk6" style="background-color:maroon; width:100px">Very<br>Hazardous</button>
+    <p>
+      <h2>play forecast</h2>
+      <!-- <button id="btnEnableSound" onClick = "InitSound()">Enable<br>Sound</button>
+      <button id="btnShowGrid" onClick=
+      ShowGrid">Show<br>Grid</button>
+      <button id="btnShowForecast" onClick="ShowForecast()">Show<br>Forecast</button>
+      <button id="btnPlayForecast" onClick="PlayForecast">Play<br>Forecast</button>   -->
+      <button id="btnEnableSound">Enable<br>Sound</button>
+      <button id="btnShowGrid">Show<br>Grid</button>
+      <button id="btnShowForecast">Show<br>Forecast</button>
+      <button id="btnPlayForecast">Play<br>Forecast</button>
+      <p>
+        <h2>chord perception test (randomly sorted)</h2>
+        <button id="btn1" style="width:100px">chord 1</button>
+        <button id="btn2" style="width:100px">chord 2</button>
+        <button id="btn3" style="width:100px">chord 3</button>
+        <button id="btn4" style="width:100px">chord 4</button>
+        <button id="btn5" style="width:100px">chord 5</button>
+        <button id="btn6" style="width:100px">chord 6</button>
+      
+
+<!--
+    <h2>scrollama test</h2>
+    <p>scroll to activate the forecast</p>
+      <div id="scroll-content">
+      <div id="my-svg-chart"></div>
+      <div id="text">
+        <div class="step">Show Blank Grid</div>
+        <div class="step">Change Colors Based on AQI Scores</div>
+        <div class="step">Enable sound with Tone.start() command</div>
+        <div class="step">Play AQI Forecast</div>
+      </div>
+    </div>
+--->
+
+  </body>
+</html>

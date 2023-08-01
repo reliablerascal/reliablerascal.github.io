@@ -20,6 +20,7 @@ button {
 
 
 /* scrollama code */
+/* parent container relatively positioned, child containers absolute to this */
 #scroll-content {
     position: relative;
     padding: 1rem;
