@@ -22,23 +22,23 @@ var config = {
             //title: '',
             image: './images/001_fort_washington_park.jpeg',
             description: 'The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                // speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            // location: {
+            //     center: [-73.94616, 40.84513],
+            //     zoom: 14.00,
+            //     pitch: 0.00,
+            //     bearing: 28.00
+            //     // flyTo additional controls-
+            //     // These options control the flight curve, making it move
+            //     // slowly and zoom out almost completely before starting
+            //     // to pan.
+            //     // speed: 2, // make the flying slow
+            //     //curve: 1, // change the speed at which it zooms out
+            // },
+            // mapAnimation: 'easeTo',
+            // rotateAnimation: false,
+            // callback: '',
+            // onChapterEnter: [],
+            // onChapterExit: []
         },
 
 
@@ -50,6 +50,34 @@ var config = {
             //title: '',
             image: './images/002_topographical_history.jpg',
             description: 'Historical development competition between rail, highway, pedestrian tension still plays out today- access issues (topographical map 1955)',
+            // location: {
+            //     center: [-73.94616, 40.84513],
+            //     zoom: 14.00,
+            //     pitch: 0.00,
+            //     bearing: 28.00
+            //     // flyTo additional controls-
+            //     // These options control the flight curve, making it move
+            //     // slowly and zoom out almost completely before starting
+            //     // to pan.
+            //     // speed: 2, // make the flying slow
+            //     //curve: 1, // change the speed at which it zooms out
+            // },
+            // mapAnimation: 'flyTo',
+            // rotateAnimation: false,
+            // callback: '',
+            // onChapterEnter: [],
+            // onChapterExit: []
+        },
+
+
+
+        {
+            id: 'show map',
+            alignment: 'full',
+            hidden: true,
+            //title: '',
+            // image: './images/002_topographical_history.jpg',
+            // // description: 'Historical development competition between rail, highway, pedestrian tension still plays out today- access issues (topographical map 1955)',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -68,9 +96,9 @@ var config = {
             onChapterEnter: [],
             onChapterExit: []
         },
-
-
-
+        
+        
+        
         {
             id: 'access-easy',
             alignment: 'left',
@@ -116,6 +144,28 @@ var config = {
 
 
         {
+            id: 'A-zoom',
+            alignment: 'left',
+            hidden: true,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            // description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th. Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            location: {
+                center: [-73.94631, 40.84451],
+                zoom: 15.18,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        
+        
+        
+        {
             id: 'A-165th-street-bridge',
             alignment: 'left',
             hidden: false,
@@ -137,6 +187,28 @@ var config = {
 
 
 
+        {
+            id: 'B-zoom',
+            alignment: 'left',
+            hidden: true,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            // description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            location: {
+                center: [-73.94640, 40.84919],
+                zoom: 15.81,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        
+        
+        
         {
             id: 'B-173rd-street-bridge',
             alignment: 'left',
@@ -165,7 +237,7 @@ var config = {
             hidden: true,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
+            // description: 'Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.Other Entries to the Park Social Trail connects 207 165th bridge 176th.',
             location: {
                 center: [-73.94161, 40.85336],
                 zoom: 15.07,
