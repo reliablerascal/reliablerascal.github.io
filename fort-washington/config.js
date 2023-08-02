@@ -42,12 +42,11 @@ var config = {
             mapAnimation: 'easeTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [
-            //     {
+            onChapterEnter: [],
+            //     [{
             //     layer: 'fort-washington-park-access',
             //     opacity:1
-            // }
-        ],
+            // }],
             onChapterExit: []
         },
 
