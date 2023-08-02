@@ -1,6 +1,7 @@
 var config = {
     style: 'mapbox://styles/mapbox/streets-v11',
-    accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
+    //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
+    accessToken: pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrZTBrejIwMHp0YjNmcXZiaWN1enZwNiJ9._g79-Ecyuo5ahLVN3pyZZw',
     showMarkers: true,
     markerColor: '#3FB1CE',
     //projection: 'equirectangular',
@@ -37,10 +38,12 @@ var config = {
             mapAnimation: 'easeTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [{
+            onChapterEnter: [
+                //{
                 //layer: layer-name,
-                opacity:1
-            }],
+                //opacity:1
+            //}
+        ],
             onChapterExit: []
         },
 
