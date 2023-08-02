@@ -1,3 +1,4 @@
+<!---prior to trying to append text differently in sections of STEP elements-->
 <!---7/29/23 RR developed this from the ground up-->
 <!--from https://website.education.wisc.edu/~swu28/d3t/concept.html-->
 <!DOCTYPE html>
@@ -67,42 +68,28 @@
       <p>scroll to activate the forecast</p>
       <div id="scroll-content">
         <div id="my-svg-chart"></div>
-        <div id="step_display">
-          <div class="step" id="step">0. SKIP- how Template & Tone.start()
-            <span class="step_day"></span>
-            <span class="step_aqi"></span>
-            <span class="step_description"></span>
+        <div id="text">
+          <div class="step">0. SKIP- how Template & Tone.start()
+            <div class="step_day"></div>
+            <div class="step_aqi"></div>
+            <div class="step_description"></div>
           </div>
-          <div class="step">1. SKIP- Change Colors Based on AQI Scores
-            <span class="step_day"></span>
-            <span class="step_aqi"></span>
-            <span class="step_description"></span>
-          </div>
+          <div class="step">1. SKIP- Change Colors Based on AQI Scores</div>
+            <!-- <div class="step_day"></div>
+            <div class="step_aqi"></div>
+            <div class="step_description"></div> -->
           <div class="step">2. Play AQI Day 1</div>
-            <span class="step_day"></span>
-            <span class="step_aqi"></span>
-            <span class="step_description"></span>
-          <div class="step">3. Play AQI Day 2
-            <span class="step_day"></span>
-            <span class="step_aqi"></span>
-            <span class="step_description"></span>
-          </div>
+            <!-- <div class="step_day"></div>
+            <div class="step_aqi"></div>
+            <div class="step_description"></div> -->
+          <div class="step">3. Play AQI Day 2</div>
+            <!-- <div class="step_day"></div>
+            <div class="step_aqi"></div>
+            <div class="step_description"></div> -->
           <div class="step">4. Play AQI Day 3</div>
-            <span class="step_day"></span>
-            <span class="step_aqi"></span>
-            <span class="step_description"></span>
           <div class="step">5. Play AQI Day 4</div>
-            <span class="step_day"></span>
-            <span class="step_aqi"></span>
-            <span class="step_description"></span>
           <div class="step">6. Play AQI Day 5</div>
-            <span class="step_day"></span>
-            <span class="step_aqi"></span>
-            <span class="step_description"></span>
           <div class="step">7. Play AQI Day 6</div>
-            <span class="step_day"></span>
-            <span class="step_aqi"></span>
-            <span class="step_description"></span>
         </div>
       </div>
 
@@ -136,30 +123,20 @@ CHANGE CIRCLES
           else if (d.aqi < 201) return 'red'
           else if (d.aqi < 251) return 'purple'
           else if (d.aqi < 301) return 'maroon'
-          })
-        .attr('color', function(d){
-          if (d.aqi < 51) return 'white'
-          else if (d.aqi < 151) return 'black'
-          else if (d.aqi < 301) return 'maroon'
           });
 
 /*
 CHANGE SCROLLAMA STEPS
 */
-selectExample = d3.select("#step_display");
-    //We'll select all the DIV elements from within the selected <div id =text> element
-    selectExample.selectAll(".step")
-      .data(aqiData)
-      .text(function(d){
-        strAQIReading = d.date +
-        " AQI:" + d.aqi
-        return strAQIReading
-        })
-        .style("color", function(d){
-          if (d.aqi < 51) return 'white'
-          else if (d.aqi < 151) return 'black'
-          else if (d.aqi < 301) return 'white'
-        })
+selectExample = d3.select("#text");
+      //We'll select all the STEP elements from within the selected <div> element
+      selectExample.selectAll("div")
+        .data(aqiData)
+        .text(function(d){
+          strAQIReading = d.date +
+          " AQI:" + d.aqi
+          return strAQIReading
+          })
         .style("background-color", function(d){
           if (d.aqi < 51) return 'green'
           else if (d.aqi < 101) return 'yellow'
@@ -167,44 +144,8 @@ selectExample = d3.select("#step_display");
           else if (d.aqi < 201) return 'red'
           else if (d.aqi < 251) return 'purple'
           else if (d.aqi < 301) return 'maroon'
-        });
+          });
 
-      selectExample.selectAll(".step_day")
-      .data(aqiData)
-      .text(function(d){
-        strAQIReading = "DAY OF WEEK"
-        return strAQIReading})
-      .style("font-weight","bold")
-      .style("font-size","36px")
-        ;
-
-      selectExample.selectAll(".step_aqi")
-      .data(aqiData)
-      .text(function(d){
-        return d.aqi})
-      .style("font-size","200px")
-        ;
-
-      //   selectExample.selectAll("div")
-      // .data(aqiData)
-      // .text(function(d){
-      //   strAQIReading = d.date +
-      //   " AQI:" + d.aqi
-      //   return strAQIReading
-      //   })
-      //   .style("color", function(d){
-      //     if (d.aqi < 51) return 'white'
-      //     else if (d.aqi < 151) return 'black'
-      //     else if (d.aqi < 301) return 'white'
-      //   })
-      //   .style("background-color", function(d){
-      //     if (d.aqi < 51) return 'green'
-      //     else if (d.aqi < 101) return 'yellow'
-      //     else if (d.aqi < 151) return 'orange'
-      //     else if (d.aqi < 201) return 'red'
-      //     else if (d.aqi < 251) return 'purple'
-      //     else if (d.aqi < 301) return 'maroon'
-      //   });
 
 
 

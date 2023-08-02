@@ -9,37 +9,37 @@
         .then(data => {
 
          
-          const showForecast = function() {
-            days
-              .style('fill', d=> {
-                if (d.aqi < 51) {return 'green'}
-                else if (d.aqi < 101) {return 'yellow'}
-                else if (d.aqi < 151) {return 'orange'}
-                else if (d.aqi < 201) {return 'red'}
-                else if (d.aqi < 251) {return 'purple'}
-                else if (d.aqi < 301) {return 'maroon'}
-                else {return 'grey'}
-              })
-          }
+          // const showForecast = function() {
+          //   days
+          //     .style('fill', d=> {
+          //       if (d.aqi < 51) {return 'green'}
+          //       else if (d.aqi < 101) {return 'yellow'}
+          //       else if (d.aqi < 151) {return 'orange'}
+          //       else if (d.aqi < 201) {return 'red'}
+          //       else if (d.aqi < 251) {return 'purple'}
+          //       else if (d.aqi < 301) {return 'maroon'}
+          //       else {return 'grey'}
+          //     })
+          // }
 
-          const playForecast = function() {
-            playChord(aqiGood);
-            setTimeout(function() {
-                playChord(aqiModerate);
-            }, 1000);
-            setTimeout(function() {
-                playChord(aqiUnhealthySensitive);
-            }, 2000);
-            setTimeout(function() {
-                playChord(aqiUnhealthy);
-            }, 3000);
-            setTimeout(function() {
-                playChord(aqiHazardous);
-            }, 4000);
-            setTimeout(function() {
-                playChord(aqiVeryHazardous);
-            }, 5000);
-          }
+          // const playForecast = function() {
+          //   playChord(aqiGood);
+          //   setTimeout(function() {
+          //       playChord(aqiModerate);
+          //   }, 1000);
+          //   setTimeout(function() {
+          //       playChord(aqiUnhealthySensitive);
+          //   }, 2000);
+          //   setTimeout(function() {
+          //       playChord(aqiUnhealthy);
+          //   }, 3000);
+          //   setTimeout(function() {
+          //       playChord(aqiHazardous);
+          //   }, 4000);
+          //   setTimeout(function() {
+          //       playChord(aqiVeryHazardous);
+          //   }, 5000);
+          // }
 
           // ======================================
           // === HERE starts the scrollama code ===
