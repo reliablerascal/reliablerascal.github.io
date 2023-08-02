@@ -43,10 +43,10 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                //{
+                {
                 layer: 'fort-washington-park-access',
                 opacity:1
-            //}
+            }
         ],
             onChapterExit: []
         },
