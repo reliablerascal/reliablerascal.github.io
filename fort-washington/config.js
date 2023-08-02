@@ -37,7 +37,10 @@ var config = {
             mapAnimation: 'easeTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [{
+                //layer: layer-name,
+                opacity:1
+            }],
             onChapterExit: []
         },
 
