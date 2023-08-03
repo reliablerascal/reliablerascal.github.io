@@ -1,0 +1,225 @@
+<!---7/29/23 RR developed this from the ground up-->
+<!--from https://website.education.wisc.edu/~swu28/d3t/concept.html-->
+<!DOCTYPE html>
+  <html>
+    <head>
+
+          <!-- some basic stuff  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCROLLAMA- The Sounds of Toxins</title>
+
+<!--- *********************************************************************-->
+<!---                                                                     --->
+<!---                  LOAD STYLESHEETS AND PACKAGES                      --->
+<!---                                                                     --->
+<!--- *********************************************************************-->
+<!--- note the order of my stylesheets matters-->
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="custom.css">
+
+<!--- local for OFFLINE work-->
+<!---
+  <script type="text/javascript" src="js_optional/d3.v7.js"></script>
+<script src="scrollama.js"></script>
+<script src="tone.js"></script>
+--->
+
+<!-- ONLINE-->
+<!---<script type="text/javascript" src="https://mbostock.github.com/d3/d3.js"></script>--->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://unpkg.com/scrollama"></script>
+<script src="https://unpkg.com/tone"></script>
+
+<!--- my scripts-->
+<script src="scrollama_aqi.js"></script>
+<script src="weather_chords.js"></script>
+    </script>
+
+    </head>
+
+<body>
+
+  <h1>Test #03: Scrollama Based on AQI readings</h1>
+<p>
+<ul>
+<li>Read actual AQI data
+  <li>Change circle color from actual data
+    <li>X Trigger hard-coded events based on scrolling
+      <li>X Trigger events coded by AQI readings, based on scrolling
+    </ul>
+  </p>
+  
+
+      <div id="graphic-circles">
+      <svg width="375" height="100">
+        <circle id = "myCircle" cx="30" cy="50" r="30" ></circle>
+        <circle id = "myCircle" cx="100" cy="50" r="30" ></circle>
+        <circle id = "myCircle" cx="170" cy="50" r="30" ></circle>
+        <circle id = "myCircle" cx="240" cy="50" r="30" ></circle>
+        <circle id = "myCircle" cx="310" cy="50" r="30"  ></circle>
+      </svg>
+      </div>     
+
+
+
+      <h2>scrollama test</h2>
+      <p>scroll to activate the forecast</p>
+      <div id="scroll-content">
+        <div id="my-svg-chart"></div>
+        <div id="step_display">
+          <div class="step" id="step">0. SKIP- how Template & Tone.start()
+            <span class="step_day"></span>
+            <span class="step_aqi"></span>
+            <span class="step_description"></span>
+          </div>
+          <div class="step">1. SKIP- Change Colors Based on AQI Scores
+            <span class="step_day"></span>
+            <span class="step_aqi"></span>
+            <span class="step_description"></span>
+          </div>
+          <div class="step">2. Play AQI Day 1</div>
+            <span class="step_day"></span>
+            <span class="step_aqi"></span>
+            <span class="step_description"></span>
+          <div class="step">3. Play AQI Day 2
+            <span class="step_day"></span>
+            <span class="step_aqi"></span>
+            <span class="step_description"></span>
+          </div>
+          <div class="step">4. Play AQI Day 3</div>
+            <span class="step_day"></span>
+            <span class="step_aqi"></span>
+            <span class="step_description"></span>
+          <div class="step">5. Play AQI Day 4</div>
+            <span class="step_day"></span>
+            <span class="step_aqi"></span>
+            <span class="step_description"></span>
+          <div class="step">6. Play AQI Day 5</div>
+            <span class="step_day"></span>
+            <span class="step_aqi"></span>
+            <span class="step_description"></span>
+          <div class="step">7. Play AQI Day 6</div>
+            <span class="step_day"></span>
+            <span class="step_aqi"></span>
+            <span class="step_description"></span>
+        </div>
+      </div>
+
+
+
+<!---*************************-->
+<!-- READ AND LOOK AT THE DATA-->
+<!---*************************-->
+<script type="text/javascript">
+	  
+      // d3.csv("data/circle-data.csv") 
+      d3.csv("data/aqi-data-2023-07-24.csv")
+      .then(aqiData=> {
+
+      console.log(aqiData);
+      //console.log(circleDataLocal);
+      //Select the div element
+
+/*
+CHANGE CIRCLES
+*/
+      selectExample = d3.select("#graphic-circles");
+      //We'll select all the circle from within the selected <div> element
+      selectExample.selectAll("circle")
+        .data(aqiData)
+        .attr("r", function(d){return d.aqi/5})
+        .style("fill", function(d){
+          if (d.aqi < 51) return 'green'
+          else if (d.aqi < 101) return 'yellow'
+          else if (d.aqi < 151) return 'orange'
+          else if (d.aqi < 201) return 'red'
+          else if (d.aqi < 251) return 'purple'
+          else if (d.aqi < 301) return 'maroon'
+          })
+        .attr('color', function(d){
+          if (d.aqi < 51) return 'white'
+          else if (d.aqi < 151) return 'black'
+          else if (d.aqi < 301) return 'maroon'
+          });
+
+/*
+CHANGE SCROLLAMA STEPS
+*/
+selectExample = d3.select("#step_display");
+    //We'll select all the DIV elements from within the selected <div id =text> element
+    selectExample.selectAll(".step")
+      .data(aqiData)
+      .text(function(d){
+        strAQIReading = d.date +
+        " AQI:" + d.aqi
+        return strAQIReading
+        })
+        .style("color", function(d){
+          if (d.aqi < 51) return 'white'
+          else if (d.aqi < 151) return 'black'
+          else if (d.aqi < 301) return 'white'
+        })
+        .style("background-color", function(d){
+          if (d.aqi < 51) return 'green'
+          else if (d.aqi < 101) return 'yellow'
+          else if (d.aqi < 151) return 'orange'
+          else if (d.aqi < 201) return 'red'
+          else if (d.aqi < 251) return 'purple'
+          else if (d.aqi < 301) return 'maroon'
+        });
+
+      selectExample.selectAll(".step_day")
+      .data(aqiData)
+      .text(function(d){
+        strAQIReading = "DAY OF WEEK"
+        return strAQIReading})
+      .style("font-weight","bold")
+      .style("font-size","36px")
+        ;
+
+      selectExample.selectAll(".step_aqi")
+      .data(aqiData)
+      .text(function(d){
+        return d.aqi})
+      .style("font-size","200px")
+        ;
+
+      //   selectExample.selectAll("div")
+      // .data(aqiData)
+      // .text(function(d){
+      //   strAQIReading = d.date +
+      //   " AQI:" + d.aqi
+      //   return strAQIReading
+      //   })
+      //   .style("color", function(d){
+      //     if (d.aqi < 51) return 'white'
+      //     else if (d.aqi < 151) return 'black'
+      //     else if (d.aqi < 301) return 'white'
+      //   })
+      //   .style("background-color", function(d){
+      //     if (d.aqi < 51) return 'green'
+      //     else if (d.aqi < 101) return 'yellow'
+      //     else if (d.aqi < 151) return 'orange'
+      //     else if (d.aqi < 201) return 'red'
+      //     else if (d.aqi < 251) return 'purple'
+      //     else if (d.aqi < 301) return 'maroon'
+      //   });
+
+
+
+
+
+
+      //end of AQI data input  
+      })
+</script>
+
+
+
+
+
+
+    </body>
+  </html>
+		

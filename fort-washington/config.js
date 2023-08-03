@@ -1,6 +1,8 @@
 var config = {
-    style: 'mapbox://styles/mapbox/streets-v11',
-    accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
+    //style: 'mapbox://styles/mapbox/streets-v11',
+    //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
+    style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
+    accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrZTBrejIwMHp0YjNmcXZiaWN1enZwNiJ9._g79-Ecyuo5ahLVN3pyZZw',
 
     //my custom style and mapbox token
     //style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
@@ -59,7 +61,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/001_fort_washington_park.jpeg',
-            description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban expanse above cliffs to the east. Barbecuers, basketball players, bicyclists, and joggers occupy the dirt paths, paved trails, athletic courts, and lawn.',
+            description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban jungle above cliffs to the east. Barbecuers, basketball players, bicyclists, and pedestrians occupy the dirt paths, paved trails, athletic courts, and rocky river bank.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
                 center: [-73.94616, 40.84513],
@@ -226,7 +228,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Access to the park in the 1.5 mile gap between these primary entries is limited. And to this day, there is no \'official\' route through the park connecting the 182nd Street bridge and the northern edge of the park another 1.5 miles north at Dyckman Street without walking alongside automotive traffic on Riverside Drive.',
+            description: 'But access to the park in the 1.5 mile gap between 158th and 182nd is limited. And to this day, there is no \'official\' route through the park connecting the 182nd Street bridge and the northern edge of the park another 1.5 miles north at Dyckman Street without walking alongside automotive traffic on Riverside Drive.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -292,7 +294,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/005_165_hairy_crossing2.jpeg',
-            description: 'Frustratingly, this path requires a <a href="https://nyc.streetsblog.org/2009/07/06/eyes-on-the-street-risking-life-and-limb-for-greenway-access" target="_blank">hairy crossing against relentless oncoming traffic</a> entering an on-ramp to the George Washington Bridge [CONFIRM]. With no crosswalk and no stoplight, rush hour safety depends on an athletic sprint or waiting for a thoughtful driver to wave pedestrians across.<p>This winding trail is somewhat helpful for those heading north. But to get directly to the actual river only 0.1 miles west as the crow flies requires a winding mile-long journey from 165th and Riverside Drive ',
+            description: 'Frustratingly, this path requires a <a href="https://nyc.streetsblog.org/2009/07/06/eyes-on-the-street-risking-life-and-limb-for-greenway-access" target="_blank">treacherous crossing against relentless oncoming traffic</a> entering an on-ramp to the George Washington Bridge [CONFIRM]. With no crosswalk and no stoplight, rush hour safety depends on an athletic sprint or waiting for a thoughtful driver to wave pedestrians across.<p>This winding trail is somewhat helpful for those heading north. But to get directly to the actual river only 0.1 miles west as the crow flies requires a winding mile-long journey from 165th and Riverside Drive ',
             location: {
                 center: [-73.94640, 40.84919],
                 zoom: 15.81,
@@ -314,7 +316,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/006_176_haven_underpass.jpeg',
-            description: 'Even fewer cross at the Haven Avenue underpass- a <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">trek through deserted tunnels</a>. Isolated from both the park and the city, strewn with discarded clothes and luggage cases, the underpass seems to offers temporary escape for the unhoused in between getting swept away or displaced by city officials [MAKE THIS ACCURATE].',
+            description: 'Even fewer cross at the Haven Avenue underpass- a <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">trek through deserted tunnels</a>. Isolated from both the park and the city, strewn with discarded clothes and luggage cases, the underpass offers only a temporary escape for the city\'s unhoused population, who seem to get routinely swept away by city officials.',
             location: {
                 center: [-73.94640, 40.84919],
                 zoom: 15.81,
