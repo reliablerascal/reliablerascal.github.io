@@ -59,7 +59,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/001_fort_washington_park.jpeg',
-            description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers a setting for social gathering as well as solitary escape from the concrete urban expanse above cliffs to the east. Barbecuers, basketball players, bicyclists, and joggers occupy the dirt paths, paved trails, athletic courts, and lawn.',
+            description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban expanse above cliffs to the east. Barbecuers, basketball players, bicyclists, and joggers occupy the dirt paths, paved trails, athletic courts, and lawn.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
                 center: [-73.94616, 40.84513],
@@ -92,7 +92,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Competing interests have long coveted the idyllic riverside land, but the city guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels between 1896 and 1927</a> on behalf of the park district.<p>Transit interests carved into the park shortly thereafter. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s. The predecessor of Amtrak\'s Empire Connection, linking Penn Station to Albany New York, further carved through the land [RESEARCH THIS].',
+            description: 'Competing interests had long coveted the idyllic land across from the New Jersey Palisades, when the city guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels between 1896 and 1927</a> on behalf of the park district. Transit interests staked their claims shortly thereafter.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -115,12 +115,40 @@ var config = {
 
 
         {
+            id: 'history-2',
+            alignment: 'fully',
+            hidden: false,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            description: 'Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s. The predecessor of Amtrak\'s Empire Connection, linking Penn Station to Albany New York, further carved through the land [RESEARCH THIS].</p>',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                // speed: 2, // make the flying slow
+                //curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        
+        
+        
+        {
             id: 'history',
             alignment: 'full',
             hidden: false,
             //title: '',
             image: './images/002_topographical_history.jpg',
-            description: 'As seen in this 1955 map between 173rd and 176th, transit access cleaves the public spaces of Fort Washington Park. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
+            description: 'As seen in this 1955 map of the riverside between 173rd and 176th, transit access cleaves the public land of Fort Washington Park. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -176,7 +204,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Pedestrians and cyclists generally enter the park at 182nd, 158th, or points further south along the riverside trail.',
+            description: 'Pedestrians and cyclists most commonly enter the park at 182nd just north of the George Washington Bridge, at 158th just north of Trinity Cemetery, or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -198,7 +226,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Access to the park in the 1.5 mile [VERIFY ON STRAVA] gap between these main entries is difficult. And to this day, there is no \'official\' connection between the 182nd Street bridge and the northern edge of the park at Dyckman Street, some X miles north. [MEASURE THIS]',
+            description: 'Access to the park in the 1.5 mile gap between these primary entries is limited. And to this day, there is no \'official\' route through the park connecting the 182nd Street bridge and the northern edge of the park another 1.5 miles north at Dyckman Street without walking alongside automotive traffic on Riverside Drive.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -237,12 +265,12 @@ var config = {
         
         
         {
-            id: 'A-165th-street-bridge',
+            id: 'A-165th-bridge',
             alignment: 'left',
             hidden: false,
             //title: '',
-            image: './images/005_165_hairy_crossing2.jpeg',
-            description: '[So-called 165th street bridge. 1990s history, dicey crossing, no stop sign.]',
+            //image: './images/005_165_hairy_crossing2.jpeg',
+            description: 'In the early 1990s, grassroots organizers opposing development of a psychiatric facility on park land west of Riverside Drive <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">won a consolation prize</a>: an access path beginning at 165th street, including a footbridge connecting to Fort Washington Park.',
             location: {
                 center: [-73.94640, 40.84919],
                 zoom: 15.81,
@@ -259,12 +287,34 @@ var config = {
         
         
         {
-            id: 'B2-173rd-street-bridge',
+            id: 'A-165th-hairy-crossing',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            image: './images/005_165_hairy_crossing2.jpeg',
+            description: 'Frustratingly, this path requires a <a href="https://nyc.streetsblog.org/2009/07/06/eyes-on-the-street-risking-life-and-limb-for-greenway-access" target="_blank">hairy crossing against relentless oncoming traffic</a> entering an on-ramp to the George Washington Bridge [CONFIRM]. With no crosswalk and no stoplight, rush hour safety depends on an athletic sprint or waiting for a thoughtful driver to wave pedestrians across.<p>This winding trail is somewhat helpful for those heading north. But to get directly to the actual river only 0.1 miles west as the crow flies requires a winding mile-long journey from 165th and Riverside Drive ',
+            location: {
+                center: [-73.94640, 40.84919],
+                zoom: 15.81,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        
+        
+        
+        {
+            id: 'B-173rd-street-bridge',
             alignment: 'left',
             hidden: false,
             //title: '',
             image: './images/006_176_haven_underpass.jpeg',
-            description: '[Winding entry at 173rd, dark tunnels, possible homeless encampment].',
+            description: 'Even fewer cross at the Haven Avenue underpass- a <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">trek through deserted tunnels</a>. Isolated from both the park and the city, strewn with discarded clothes and luggage cases, the underpass seems to offers temporary escape for the unhoused in between getting swept away or displaced by city officials [MAKE THIS ACCURATE].',
             location: {
                 center: [-73.94640, 40.84919],
                 zoom: 15.81,
