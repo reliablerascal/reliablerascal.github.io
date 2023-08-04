@@ -197,6 +197,7 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'points-entries-158-182', opacity:0},
                 {layer: 'path-main', opacity:0}
             ],
             onChapterExit: []
@@ -247,8 +248,10 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'points-entries-158-182', opacity:1},
                 {layer: 'path-main', opacity:1},
-                {layer: 'path-165th', opacity:0}
+                {layer: 'path-165th', opacity:0},
+                {layer: 'point-165-entry', opacity:0}
             ],
             onChapterExit: [
                 
@@ -274,7 +277,10 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'path-165th', opacity:1}
+                {layer: 'points-entries-158-182', opacity:0},
+                {layer: 'path-165th', opacity:1},
+                {layer: 'point-165-entry', opacity:1},
+                {layer: 'point-165-crossing-1', opacity:0}
             ],
             onChapterExit: [
                 
@@ -301,6 +307,9 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-165th', opacity:1},
+                {layer: 'path-165th', opacity:1},
+                {layer: 'point-165-entry', opacity:0},
+                {layer: 'point-165-crossing-1', opacity:1},
                 {layer: 'path-176th', opacity:0}
             ],
             onChapterExit: []
@@ -326,6 +335,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-165th', opacity:0},
+                {layer: 'point-165-entry', opacity:0},
+                {layer: 'point-165-crossing-1', opacity:0},
                 {layer: 'path-176th', opacity:1},
                 {layer: 'path-dyckman', opacity:0}
             ],
@@ -437,7 +448,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:0}
+                {layer: 'path-social', opacity:0},
+                {layer: 'point-social-entry-south', opacity:0}
             ],
             onChapterExit: []
         },
@@ -459,12 +471,13 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1}
+                {layer: 'path-social', opacity:1},
+                {layer: 'point-social-entry-south', opacity:1}
             ],
             onChapterExit: []
         },
         {
-            id: 'C-social-doc',
+            id: 'C-social-dock',
             alignment: 'left',
             hidden: false,
             //title: '',
@@ -481,7 +494,9 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1}
+                {layer: 'path-social', opacity:1},
+                {layer: 'point-social-entry-south', opacity:0},
+                {layer: 'point-social-riverside', opacity:0}
             ],
             onChapterExit: []
         },
@@ -503,7 +518,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1}
+                {layer: 'path-social', opacity:1},
+                {layer: 'point-social-riverside', opacity:1}
             ],
             onChapterExit: []
         },
@@ -525,7 +541,9 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1}
+                {layer: 'path-social', opacity:1},
+                {layer: 'point-social-riverside', opacity:0},
+                {layer: 'point-social-railside', opacity:0}
             ],
             onChapterExit: []
         },
@@ -549,6 +567,7 @@ var config = {
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-social', opacity:1},
                 {layer: 'path-main', opacity:1},
+                {layer: 'point-social-railside', opacity:1},
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:0}
             ],
@@ -572,7 +591,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1}
+                {layer: 'path-social', opacity:1},
+                {layer: 'point-social-railside', opacity:0}
             ],
             onChapterExit: []
         },
@@ -630,7 +650,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/014_fort_washington_park.jpeg',
-            description: 'To this day, competition with expressway and rail access as well as the cost of maintaining walking trails limits public access to Fort Washington Park along the Hudson shoreline. But perhaps the resulting isolation is part of the park\'s charm.',
+            description: 'To this day, limited crossings over conflicting expressway and rail routes restricts access to Fort Washington Park. Perhaps some day the city will invest in improving this access. For now, the park\'s isolation may be part of the its charm.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
