@@ -20,7 +20,7 @@ var config = {
     title: 'Fort Washington',
     subtitle: 'Rails vs. Roads vs. Nature',
     byline: 'By Rob Reid | 10 August',
-    footer: 'Methodology and data: see <a href="https://github.com/reliablerascal/fort-washington">GitHub repository</a><br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    footer: 'Methodology and data: see <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a>.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'intro_img',
