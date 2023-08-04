@@ -20,7 +20,7 @@ var config = {
     title: 'DRAFT: The Stressful Entry to a Relaxing Fortress',
     subtitle: 'Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive throughways reveals a patchwork of unfinished urban plans.',
     byline: 'By Rob Reid | 10 August',
-    footer: 'Methodology and data: see <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a>.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    footer: 'See <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a> for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'intro_img',
@@ -221,6 +221,7 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'points-entries-158-182', opacity:1},
                 {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
