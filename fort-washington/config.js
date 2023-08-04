@@ -8,7 +8,7 @@ var config = {
     //style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
     //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrZTBrejIwMHp0YjNmcXZiaWN1enZwNiJ9._g79-Ecyuo5ahLVN3pyZZw',
 
-    showMarkers: true,
+    showMarkers: false,
     markerColor: '#3FB1CE',
     //projection: 'equirectangular',
     //Read more about available projections here
@@ -45,11 +45,13 @@ var config = {
             mapAnimation: 'easeTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            //     [{
-            //     layer: 'fort-washington-park-access',
-            //     opacity:1
-            // }],
+            onChapterEnter: [
+                {layer: 'path-main', opacity:0},
+                {layer: 'path-social', opacity:0},
+                {layer: 'path-dyckman', opacity:0},
+                {layer: 'path-165th', opacity:0},
+                {layer: 'path-137rd', opacity:0}
+            ],
             onChapterExit: []
         },
         
@@ -194,7 +196,9 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-main', opacity:0}
+            ],
             onChapterExit: []
         },
         
@@ -216,8 +220,11 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {layer: 'path-main', opacity:1}
+            ],
+            onChapterExit: [
+            ]
         },
 
 
@@ -238,19 +245,24 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {layer: 'path-main', opacity:1},
+                {layer: 'path-165th', opacity:0}
+            ],
+            onChapterExit: [
+                
+            ]
         },
 
 
 
         {
-            id: 'A-zoom',
+            id: 'A-165th-bridge-zoom',
             alignment: 'left',
-            hidden: true,
+            hidden: false,
             //title: '',
-            //image: './images/002_topographical_history.jpg',
-            description: '[Map A 156 to 184? maybe should zoom this earlier].',
+            //image: './images/005_165_hairy_crossing2.jpeg',
+            description: 'In the early 1990s, grassroots organizers opposing development of a psychiatric facility on park land west of Riverside Drive <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">won a consolation prize</a>: an access path beginning at 165th street, including a footbridge connecting to Fort Washington Park.',
             location: {
                 center: [-73.94631, 40.84451],
                 zoom: 15.18,
@@ -260,30 +272,12 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        
-        
-        
-        {
-            id: 'A-165th-bridge',
-            alignment: 'left',
-            hidden: false,
-            //title: '',
-            //image: './images/005_165_hairy_crossing2.jpeg',
-            description: 'In the early 1990s, grassroots organizers opposing development of a psychiatric facility on park land west of Riverside Drive <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">won a consolation prize</a>: an access path beginning at 165th street, including a footbridge connecting to Fort Washington Park.',
-            location: {
-                center: [-73.94640, 40.84919],
-                zoom: 15.81,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {layer: 'path-165th', opacity:1}
+            ],
+            onChapterExit: [
+                
+            ]
         },
         
         
@@ -296,15 +290,18 @@ var config = {
             image: './images/005_165_hairy_crossing2.jpeg',
             description: 'Frustratingly, this path requires a <a href="https://nyc.streetsblog.org/2009/07/06/eyes-on-the-street-risking-life-and-limb-for-greenway-access" target="_blank">treacherous crossing against relentless oncoming traffic</a> entering an on-ramp to the George Washington Bridge [CONFIRM]. With no crosswalk and no stoplight, rush hour safety depends on an athletic sprint or waiting for a thoughtful driver to wave pedestrians across.<p>This winding trail is somewhat helpful for those heading north. But to get directly to the actual river only 0.1 miles west as the crow flies requires a winding mile-long journey from 165th and Riverside Drive ',
             location: {
-                center: [-73.94640, 40.84919],
-                zoom: 15.81,
+                center: [-73.94631, 40.84451],
+                zoom: 15.18,
                 pitch: 0.00,
                 bearing: 28.00
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-165th', opacity:1},
+                {layer: 'path-176th', opacity:0}
+            ],
             onChapterExit: []
         },
         
@@ -326,7 +323,11 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-165th', opacity:0},
+                {layer: 'path-176th', opacity:1},
+                {layer: 'path-dyckman', opacity:0}
+            ],
             onChapterExit: []
         },
 
@@ -348,7 +349,10 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-176th', opacity:0},
+                {layer: 'path-dyckman', opacity:1}
+            ],
             onChapterExit: []
         },
         {
@@ -367,7 +371,9 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-dyckman', opacity:1}
+            ],
             onChapterExit: []
         },
         {
@@ -386,7 +392,9 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-dyckman', opacity:1}
+            ],
             onChapterExit: []
         },
         {
@@ -405,13 +413,16 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-social', opacity:0}
+            ],
             onChapterExit: []
         },
         {
             id: 'C-social-trail-about',
             alignment: 'left',
-            hidden: true,
+            hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
             description: 'show it, describe what a social trail is.',
@@ -424,7 +435,10 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-social', opacity:1}
+            ],
             onChapterExit: []
         },
         {
@@ -443,7 +457,10 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-social', opacity:1}
+            ],
             onChapterExit: []
         },
         {
@@ -462,7 +479,10 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-social', opacity:1}
+            ],
             onChapterExit: []
         },
         {
@@ -481,7 +501,13 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-social', opacity:1},
+                {layer: 'path-main', opacity:1},
+                {layer: 'path-165th', opacity:0},
+                {layer: 'path-176th', opacity:0}
+            ],
             onChapterExit: []
         },
         {
@@ -492,16 +518,23 @@ var config = {
             image: './images/012_fort_washington_park.jpeg',
             description: 'Rehash the land use conflicts: highway traffic (165th), train (social trail), land acquisition (secured!), Limited access makes the park isolated…but isolation may be part of the charm.',
             location: {
-                center: [-73.94161, 40.85336],
-                zoom: 15.07,
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {layer: 'path-main', opacity:1},
+                {layer: 'path-social', opacity:1},
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-165th', opacity:1},
+                {layer: 'path-176th', opacity:1}
+            ],
+            onChapterExit: [
+            ]
         }
 //end chapters
 
