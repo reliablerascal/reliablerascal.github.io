@@ -36,7 +36,7 @@ var config = {
                 //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'easeTo',
-            rotateAnimation: true,
+            rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
@@ -65,7 +65,7 @@ var config = {
                 //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: true,
+            rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
