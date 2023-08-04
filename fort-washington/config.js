@@ -17,8 +17,8 @@ var config = {
     theme: 'dark',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
-    title: 'Fort Washington',
-    subtitle: 'Rails vs. Roads vs. Nature',
+    title: 'DRAFT: The Stressful Entry to a Relaxing Fortress',
+    subtitle: 'Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive throughways reveals a patchwork of unfinished urban plans.',
     byline: 'By Rob Reid | 10 August',
     footer: 'Methodology and data: see <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a>.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
@@ -27,7 +27,7 @@ var config = {
             alignment: 'centered',
             hidden: false,
             //title: '',
-            image: './images/001_fort_washington_park.jpeg',
+            image: './images/001_fort_washington_park-1280-960.jpg',
             //description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers a setting for both social gatherings and solitary escapes from the concrete urban expanse above cliffs to the east. Barbecuers, basketball players, bicyclists, and joggers occupy the dirt paths, paved trails, atheletic courts, and lawn.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
@@ -50,7 +50,7 @@ var config = {
                 {layer: 'path-social', opacity:0},
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'path-165th', opacity:0},
-                {layer: 'path-137rd', opacity:0}
+                {layer: 'path-176th', opacity:0}
             ],
             onChapterExit: []
         },
@@ -147,12 +147,12 @@ var config = {
         
         
         {
-            id: 'history',
+            id: 'history-3',
             alignment: 'full',
             hidden: false,
             //title: '',
-            image: './images/002_topographical_history.jpg',
-            description: 'As seen in this 1955 map of the riverside between 173rd and 176th, transit access cleaves the public land of Fort Washington Park. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
+            image: './images/002_topographical_history_1600_1113.jpg',
+            description: 'As seen in this 1955 map of the riverside between 173rd and 176th, both the New York Central Railroad and the Henry Hudson Parkway block access to the city\'s riverfront park space. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -235,7 +235,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'But access to the park in the 1.5 mile gap between 158th and 182nd is limited. And to this day, there is no \'official\' route through the park connecting the 182nd Street bridge and the northern edge of the park another 1.5 miles north at Dyckman Street without walking alongside automotive traffic on Riverside Drive.',
+            description: 'But access to the park in the 1.5 mile gap between 158th and 182nd is limited. And to this day, there is no \'official\' riverfront trail north of the George Washington Bridge connecting the park to its northern border at Dyckman Street, another 1.5 miles north.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -313,7 +313,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/006_176_haven_underpass.jpeg',
-            description: 'Even fewer cross at the Haven Avenue underpass- a <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">trek through deserted tunnels</a>. Isolated from both the park and the city, strewn with discarded clothes and luggage cases, the underpass offers only a temporary escape for the city\'s unhoused population, who seem to get routinely swept away by city officials.',
+            description: 'Even fewer cross at the Haven Avenue underpass- a <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">trek through deserted tunnels</a>. Isolated from both the park and the city and strewn with discarded clothes and luggage cases, the underpass offers only a temporary escape for the city\'s unhoused population, who seem to get routinely swept away by city officials.',
             location: {
                 center: [-73.94640, 40.84919],
                 zoom: 15.81,
@@ -356,12 +356,33 @@ var config = {
             onChapterExit: []
         },
         {
+            id: 'C-trail-end',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            //image: './images/007a_alltrails_182_gap.png',
+            description: 'North of the George Washington Bridge, the riverfront trail turns inland. Crossing over the Amtrak and under the expressway, it connects to a narrow sidewalk on Riverside Drive alongside traffic.',
+            location: {
+                center: [-73.94161, 40.85336],
+                zoom: 15.07,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'path-dyckman', opacity:1}
+            ],
+            onChapterExit: []
+        },
+        {
             id: 'C-alltrails',
             alignment: 'left',
             hidden: false,
             //title: '',
             image: './images/007a_alltrails_182_gap.png',
-            //description: 'In 1917, John D. Rockefeller Jr. hoped to spur a connection between Fort Washington Park to the north by offering the land for Fort Tryon Park //offering that.',
+            description: 'It\'s not uncommon for Google Maps to exclude or obscure pedestrian walking paths while highlighting automotive routes. But popular hiking app <a href="https://www.alltrails.com/" target="_blank">Alltrails</a>, built on the open-source <a href="https://www.openstreetmap.org/#map=4/38.01/-95.84">Open Street Map</a>, confirms that the official riverside trail terminates north of the bridge.',
             location: {
                 center: [-73.94161, 40.85336],
                 zoom: 15.07,
@@ -382,7 +403,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/007b_strava_heatmap_gwb.png',
-            //description: 'In 1917, John D. Rockefeller Jr. hoped to spur a connection between Fort Washington Park to the north by offering the land for Fort Tryon Park //offering that.',
+            description: 'But a heatmap of <em>actual</em> walking routes tracked by competing app <a href="https://www.strava.com/" target="_blank">Strava</a> shows that some people do continue north, as indicated by a faint maroon line along the riverfront.',
             location: {
                 center: [-73.94161, 40.85336],
                 zoom: 15.07,
@@ -403,7 +424,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/007c_satellite_187th_River.jpg',
-            //description: 'In 1917, John D. Rockefeller Jr. hoped to spur a connection between Fort Washington Park to the north by offering the land for Fort Tryon Park //offering that.',
+            description: 'Satellite imagery from <a href="https://www.google.com/maps" target="_blank">Google Maps</a> clearly shows a path continuing north between the river and the Amtrak rails.',
             location: {
                 center: [-73.94161, 40.85336],
                 zoom: 15.07,
