@@ -14,7 +14,7 @@ var config = {
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: false,
-    theme: 'dark',
+    theme: 'light',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
     title: 'DRAFT: The Stressful Entry to a Relaxing Fortress',
@@ -96,7 +96,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Competing interests had long coveted the idyllic land across from the New Jersey Palisades, when the city guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels between 1896 and 1927</a> on behalf of the park district. Transit interests staked their claims shortly thereafter.',
+            description: 'Competing interests had long coveted the idyllic land across from the New Jersey Palisades, when the city guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels between 1896 and 1927</a> on behalf of the park district. But transit interests staked their own claims to the land shortly thereafter.<p>This past competition over land impacts the park today- sheltering it from bustling commercial districts, but choking off public access.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
