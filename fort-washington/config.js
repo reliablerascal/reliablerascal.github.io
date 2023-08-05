@@ -1,8 +1,9 @@
 var config = {
-    //style: 'mapbox://styles/mapbox/streets-v11',
-    //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
     style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
     accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrZTBrejIwMHp0YjNmcXZiaWN1enZwNiJ9._g79-Ecyuo5ahLVN3pyZZw',
+//style: 'mapbox://styles/mapbox/streets-v11',
+    //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
+    
 
     //my custom style and mapbox token
     //style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
