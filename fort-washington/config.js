@@ -91,12 +91,12 @@ var config = {
 
 
         {
-            id: 'history',
+            id: 'history-1',
             alignment: 'fully',
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Competing interests had long coveted the idyllic land across from the New Jersey Palisades, when the city guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels between 1896 and 1927</a> on behalf of the park district. But transit interests staked their own claims to the land shortly thereafter.<p>This past competition over land impacts the park today- sheltering it from bustling commercial districts, but choking off public access.',
+            description: 'Competing interests had long coveted the idyllic land across from the New Jersey Palisades. A rail company <a href="https://www.nytimes.com/1913/06/29/archives/railroad-and-park-feasible-solution-of-fort-washington-problem-is.html?searchResultPosition=25" target="_blank">acquired a narrow tract of property parallel to the river</a> in 1847. The city later guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels of riverfront land between 1896 and 1927</a> on behalf of the park district, but this land was split down the middle by the train tracks.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -124,7 +124,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s. The predecessor of Amtrak\'s Empire Connection, linking Penn Station to Albany New York, further carved through the land [RESEARCH THIS].</p>',
+            description: 'Automotive routes soon followed. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -148,6 +148,34 @@ var config = {
         
         {
             id: 'history-3',
+            alignment: 'fully',
+            hidden: false,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            description: 'This past competition over land impacts the park today- sheltering it from bustling commercial districts, but choking off public access.',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                // speed: 2, // make the flying slow
+                //curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        
+        
+        
+        {
+            id: 'history-4',
             alignment: 'full',
             hidden: false,
             //title: '',
