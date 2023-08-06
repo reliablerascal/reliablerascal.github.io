@@ -1,6 +1,0 @@
-4:15
-From console window:
-document.querySelectorAll("svg")
-
-4:17
-grab everything first by Text, constants, etc.

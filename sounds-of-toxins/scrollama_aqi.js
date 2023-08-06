@@ -1,45 +1,13 @@
-//7/29/23 RR this is based on the original version from Youyou that creates a GRID
+//7/29/23 RR this is based on the original version from Youyou that created a visual grid from scrolling
+//but is substantially modified from the original code
 //see scrollama_aqi for the new version
 // d3.csv("data/aqi-data-2023-07-24.csv", function(data) {
 //   console.log(data);
 // });
 
      
-      d3.csv("data/aqi-data-2023-07-24.csv")
+      d3.csv("data/aqi-minnetonka-2023-07-20.csv")
         .then(data => {
-
-         
-          // const showForecast = function() {
-          //   days
-          //     .style('fill', d=> {
-          //       if (d.aqi < 51) {return 'green'}
-          //       else if (d.aqi < 101) {return 'yellow'}
-          //       else if (d.aqi < 151) {return 'orange'}
-          //       else if (d.aqi < 201) {return 'red'}
-          //       else if (d.aqi < 251) {return 'purple'}
-          //       else if (d.aqi < 301) {return 'maroon'}
-          //       else {return 'grey'}
-          //     })
-          // }
-
-          // const playForecast = function() {
-          //   playChord(aqiGood);
-          //   setTimeout(function() {
-          //       playChord(aqiModerate);
-          //   }, 1000);
-          //   setTimeout(function() {
-          //       playChord(aqiUnhealthySensitive);
-          //   }, 2000);
-          //   setTimeout(function() {
-          //       playChord(aqiUnhealthy);
-          //   }, 3000);
-          //   setTimeout(function() {
-          //       playChord(aqiHazardous);
-          //   }, 4000);
-          //   setTimeout(function() {
-          //       playChord(aqiVeryHazardous);
-          //   }, 5000);
-          // }
 
           // ======================================
           // === HERE starts the scrollama code ===
@@ -72,16 +40,17 @@
             scroller.resize();
           }
 
+
           function handleStepEnter(response) {
-            // step.classed("is-active", function (d, i) {
-            //   return i === response.index;
-            // });
+          //cycle through dataset index until it matches the current step number
             step.each(function(d, i) {
               if(i == response.index) {
+                console.log('playing day ' + i)
                 playChordByAQI(d.aqi)
               }
             })
           }
+
 
 
 
@@ -114,87 +83,3 @@
 
     //end D3      
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //buttons for interaction
-
-  /*
-  d3.select('button#btnEnableSound')
-            .on('click', initSound)
-          d3.select('button#btnShowGrid')
-            .on('click', showGrid)
-          d3.select('button#btnShowForecast')
-            .on('click', showForecast)
-          d3.select('button#btnPlayForecast')
-            .on('click', playForecast)
-
-
-
-
-
-  //buttons for testing
-  d3.select('button#btn1')
-              .on("click", function () {
-                playChord(aqiGood);
-              })
-          d3.select('button#btn2')
-              .on("click", function () {
-                playChord(aqiHazardous);
-              })
-          d3.select('button#btn3')
-              .on("click", function () {
-                playChord(aqiUnhealthySensitive);
-              })
-          d3.select('button#btn4')
-              .on("click", function () {
-                playChord(aqiVeryHazardous);
-              })
-          d3.select('button#btn5')
-              .on("click", function () {
-                playChord(aqiModerate);
-              })
-          d3.select('button#btn6')
-              .on("click", function () {
-                playChord(aqiUnhealthy);
-              })
-          
-
-          //buttons for legend
-          d3.select('button#btnk1')
-              .on("click", function () {
-                playChord(aqiGood);
-              })
-          d3.select('button#btnk2')
-              .on("click", function () {
-                playChord(aqiModerate);
-              })
-          d3.select('button#btnk3')
-              .on("click", function () {
-                playChord(aqiUnhealthySensitive);
-              })
-          d3.select('button#btnk4')
-              .on("click", function () {
-                playChord(aqiUnhealthy);
-              })
-          d3.select('button#btnk5')
-              .on("click", function () {
-                playChord(aqiHazardous);
-              })
-          d3.select('button#btnk6')
-              .on("click", function () {
-                playChord(aqiVeryHazardous);
-              })
-*/
-

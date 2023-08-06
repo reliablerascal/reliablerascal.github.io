@@ -32,9 +32,9 @@ var config = {
             //description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers a setting for both social gatherings and solitary escapes from the concrete urban expanse above cliffs to the east. Barbecuers, basketball players, bicyclists, and joggers occupy the park'sdirt paths, paved trails, atheletic courts, and lawn.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
+                center: [-73.98059, 40.72522],
+                zoom: 13.20,
+                pitch: 69.50,
                 bearing: 28.00
                 // flyTo additional controls-
                 // These options control the flight curve, making it move
@@ -43,7 +43,7 @@ var config = {
                 // speed: 2, // make the flying slow
                 //curve: 1, // change the speed at which it zooms out
             },
-            mapAnimation: 'easeTo',
+            mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
@@ -78,7 +78,7 @@ var config = {
                 // speed: 2, // make the flying slow
                 //curve: 1, // change the speed at which it zooms out
             },
-            mapAnimation: 'easeTo',
+            mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
@@ -92,12 +92,182 @@ var config = {
 
 
         {
-            id: 'history-1',
-            alignment: 'fully',
+            id: 'show map',
+            alignment: 'full',
+            hidden: true,
+            //title: '',
+            // image: './images/002_topographical_history.jpg',
+            // // description: 'Historical development competition between rail, highway, pedestrian tension still plays out today- access issues (topographical map 1955)',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                // speed: 2, // make the flying slow
+                //curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'points-entries-158-182', opacity:0},
+                {layer: 'path-main', opacity:0}
+            ],
+            onChapterExit: []
+        },
+        
+        
+        
+        {
+            id: 'access-easy-182',
+            alignment: 'left',
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Competing interests had long coveted the idyllic land across from the New Jersey Palisades. A rail company <a href="https://www.nytimes.com/1913/06/29/archives/railroad-and-park-feasible-solution-of-fort-washington-problem-is.html?searchResultPosition=25" target="_blank">acquired a narrow tract of property parallel to the river</a> in 1847. The city later guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels of riverfront land between 1896 and 1927</a> on behalf of the park district, but this land was split down the middle by the train tracks.',
+            description: 'Pedestrians and cyclists most commonly enter the park at 182nd just north of the George Washington Bridge...',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'points-entries-158-182', opacity:1},
+                {layer: 'path-main', opacity:1}
+            ],
+            onChapterExit: [
+            ]
+        },
+
+
+
+        {
+            id: 'access-easy-158',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            description: '...at 158th under Riverside Drive and just north of Trinity Cemetery...',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'points-entries-158-182', opacity:1},
+                {layer: 'path-main', opacity:1}
+            ],
+            onChapterExit: [
+            ]
+        },
+        
+        
+        
+        {
+            id: 'access-easy-158',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            description: '...or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'points-entries-158-182', opacity:1},
+                {layer: 'path-main', opacity:1}
+            ],
+            onChapterExit: [
+            ]
+        },
+        
+        
+        
+        {
+            id: 'secret-paths-overview',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            description: 'Access to the park in the 1.5 mile gap between 158th and 182nd is limited. And there\'s no \'official\' riverfront trail north of the George Washington Bridge connecting the park to its northern border at Dyckman Street, another 1.5 miles north.',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'points-entries-158-182', opacity:1},
+                {layer: 'path-main', opacity:1},
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-165th', opacity:0},
+                {layer: 'point-165-entry', opacity:0},
+                {layer: 'path-social', opacity:0},
+                {layer: 'path-176th', opacity:0}
+            ],
+            onChapterExit: [
+                
+            ]
+        },
+
+
+
+        {
+            id: 'secret-paths-overview-2',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            description: 'But a warren of lesser-known paths provides some indirect access to the park. For historic reasons, each of these paths has to navigate around automotive routes and rail lines to get to the riverside.',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'path-main', opacity:1},
+                {layer: 'path-social', opacity:1},
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-165th', opacity:1},
+                {layer: 'path-176th', opacity:1}
+            ],
+            onChapterExit: [
+            ]
+        },
+        
+        
+        
+        {
+            id: 'history-1',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            //image: './images/002_topographical_history.jpg',
+            description: 'The railroads claimed the coveted riverside property first, with The New York Central & Hudson River Railroad Company <a href="https://www.nytimes.com/1913/06/29/archives/railroad-and-park-feasible-solution-of-fort-washington-problem-is.html?searchResultPosition=25" target="_blank">acquiring a narrow tract of property parallel to the river</a> in 1847.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -113,7 +283,12 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: 'path-165th', opacity:0},
+                {layer: 'point-165-entry', opacity:0},
+                {layer: 'path-social', opacity:0},
+                {layer: 'path-176th', opacity:0}
+            ],
             onChapterExit: []
         },
 
@@ -121,11 +296,11 @@ var config = {
 
         {
             id: 'history-2',
-            alignment: 'fully',
+            alignment: 'left',
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'Automotive routes soon followed. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s.',
+            description: 'The city later guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels of riverfront land between 1896 and 1927</a> on behalf of the park district, but by then this land was already split down the middle by train tracks.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -149,11 +324,11 @@ var config = {
         
         {
             id: 'history-3',
-            alignment: 'fully',
+            alignment: 'left',
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'This past competition over land impacts the park today- sheltering it from bustling commercial districts, but choking off public access.',
+            description: 'Automotive routes carved up the land further. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -181,7 +356,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/002_topographical_history_1600_1113.jpg',
-            description: 'As seen in this 1955 map of the riverside between 173rd and 176th, both the New York Central Railroad and the Henry Hudson Parkway block access to the city\'s riverfront park space. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
+            description: 'The result is a tangled mess of rail, pedestrian, and automotive routes criss-crossing the park, as seen in this 1955 map of the riverside between 173rd and 176th. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -203,92 +378,6 @@ var config = {
         
         
         
-        {
-            id: 'show map',
-            alignment: 'full',
-            hidden: true,
-            //title: '',
-            // image: './images/002_topographical_history.jpg',
-            // // description: 'Historical development competition between rail, highway, pedestrian tension still plays out today- access issues (topographical map 1955)',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                // speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:0},
-                {layer: 'path-main', opacity:0}
-            ],
-            onChapterExit: []
-        },
-        
-        
-        
-        {
-            id: 'access-easy',
-            alignment: 'left',
-            hidden: false,
-            //title: '',
-            //image: './images/002_topographical_history.jpg',
-            description: 'Pedestrians and cyclists most commonly enter the park at 182nd just north of the George Washington Bridge, at 158th just north of Trinity Cemetery, or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:1},
-                {layer: 'path-main', opacity:1}
-            ],
-            onChapterExit: [
-            ]
-        },
-
-
-
-        {
-            id: 'access-hard',
-            alignment: 'left',
-            hidden: false,
-            //title: '',
-            //image: './images/002_topographical_history.jpg',
-            description: 'But access to the park in the 1.5 mile gap between 158th and 182nd is limited. And to this day, there is no \'official\' riverfront trail north of the George Washington Bridge connecting the park to its northern border at Dyckman Street, another 1.5 miles north.',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:1},
-                {layer: 'path-main', opacity:1},
-                {layer: 'path-165th', opacity:0},
-                {layer: 'point-165-entry', opacity:0}
-            ],
-            onChapterExit: [
-                
-            ]
-        },
-
-
-
         {
             id: 'A-165th-bridge-zoom',
             alignment: 'left',

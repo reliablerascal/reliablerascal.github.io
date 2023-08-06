@@ -14,17 +14,18 @@
 
     const CMaj = ["C4","E4","G4","C5"];
     const CMaj7 = ["C4","E4","G4","B4"];
-    const C7 = ["C4","E4","G4","A#4"];
-    const CMin7 = ["C4","D#4","G4","A#4"];
+    const C7 = ["C4","E4","G4","A#4"]; //not used, want a starker contrast
+    const CMin7 = ["C4","D#4","G4","A#4"]; 
     const CHorror = ["C4","C#4","E4","E#4"];
     const CHorrorWorse = ["C4","C#4","D5","D#5"];
+    const CHorrorShrill = ["C4","C#4","D5","D#6"];
 
     const aqiGood = CMaj
     const aqiModerate = CMaj7
-    const aqiUnhealthySensitive = C7
-    const aqiUnhealthy = CMin7
-    const aqiHazardous = CHorror
-    const aqiVeryHazardous = CHorrorWorse
+    const aqiUnhealthySensitive = CMin7
+    const aqiUnhealthy = CHorror
+    const aqiVeryUnhealthy = CHorrorWorse
+    const aqiHazardous = CHorrorShrill
 
   function playNote() {
     // create a synth
@@ -47,6 +48,7 @@
   }
 
   function playChord(listChord) {
+    console.log(listChord);
     // per documentation, PolySynth can handle multiple notes
     //major chord
     //console.log(listChord)
@@ -61,10 +63,10 @@ function playChordByAQI(aqi) {
   //console.log(aqi)  
   if (aqi < 51) {playChord(aqiGood)}
     else if (aqi < 101) {playChord(aqiModerate)}
-    else if (aqi < 151) {playChord(aqiUnhealthy)}
-    else if (aqi < 201) {playChord(aqiUnhealthySensitive)}
-    else if (aqi < 251) {playChord(aqiHazardous)}
-    else if (aqi < 301) {playChord(aqiVeryHazardous)}
+    else if (aqi < 151) {playChord(aqiUnhealthySensitive)}
+    else if (aqi < 201) {playChord(aqiUnhealthy)}
+    else if (aqi < 251) {playChord(aqiVeryUnhealthy)}
+    else if (aqi < 301) {playChord(aqiHazardous)}
 
 }
 
@@ -80,8 +82,8 @@ function displayChordByAQI(aqi) {
     else if (aqi < 101) {displayChord(aqiModerate)}
     else if (aqi < 151) {displayChord(aqiUnhealthy)}
     else if (aqi < 201) {displayChord(aqiUnhealthySensitive)}
-    else if (aqi < 251) {displayChord(aqiHazardous)}
-    else if (aqi < 301) {displayChord(aqiVeryHazardous)}
+    else if (aqi < 251) {displayChord(aqiVeryUnhealthy)}
+    else if (aqi < 301) {displayChord(aqiHazardous)}
 
 }
 
@@ -96,31 +98,23 @@ function displayChordByAQI(aqi) {
 //////////////////////////////////////////////////////////////////////////////
 
       
-          const playForecast = function() {
-          //hardcoded for now to play through all possible forecasts
-          alert('Playing Demo Forecast')  
-          playChord(aqiGood);
-            setTimeout(function() {
-                playChord(aqiModerate);
-            }, 1000);
-            setTimeout(function() {
-                playChord(aqiUnhealthySensitive);
-            }, 2000);
-            setTimeout(function() {
-                playChord(aqiUnhealthy);
-            }, 3000);
-            setTimeout(function() {
-                playChord(aqiHazardous);
-            }, 4000);
-            setTimeout(function() {
-                playChord(aqiVeryHazardous);
-            }, 5000);
-          }
-
-          // const audioDay0 = function() {
-          //   playNote();
-          // }
-
-          // const audioDay1 = function() {
-          //   playChord1();
-          // }
+  const playForecast = function() {
+  //hardcoded for now to play through all possible forecasts
+  alert('Playing Demo Forecast')  
+  playChord(aqiGood);
+    setTimeout(function() {
+        playChord(aqiModerate);
+    }, 1000);
+    setTimeout(function() {
+        playChord(aqiUnhealthySensitive);
+    }, 2000);
+    setTimeout(function() {
+        playChord(aqiUnhealthy);
+    }, 3000);
+    setTimeout(function() {
+        playChord(aqiVeryUnhealthy);
+    }, 4000);
+    setTimeout(function() {
+        playChord(aqiHazardous);
+    }, 5000);
+  }
