@@ -70,7 +70,7 @@
               .setup({
                 step: "#scroll-content .step",
                 offset: 0.10,
-                debug: true //create a visual line to show where event gets triggered
+                debug: false //set to true to create a visual line to show where event gets triggered
               })
               .onStepEnter(handleStepEnter);
           }

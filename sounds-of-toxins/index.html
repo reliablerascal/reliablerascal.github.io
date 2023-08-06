@@ -35,7 +35,6 @@
 <script src="weather_chords.js"></script>
 <script src="scrollama_aqi.js"></script>
 
-
     </head>
 
 <body>
@@ -44,17 +43,17 @@
   <h3><em>A Ten Day Air Quality Index Forecast<br>
     for Minnetonka, MN from 20 July 2023</em></h3>
   <p>by Rob Reid
+    <br>For notes on methodology see repository on GitHub 
     <p><img width="100%" src="images/chief-sounds-of-toxins-930-620.jpg" alt="A photo of a hazy orange sky above highrise apartment buildings">   
 <p>
-  <button id="btnEnableSound" onclick="initSound()">Enable Sound</button>
+  <!---<button id="btnEnableSound" onclick="initSound()">Enable Sound</button>--->
   <br>
-Air Quality Index (AQI) is a measure of air quality developed by the EPA. 50 is good, over 300 is hazardous. six categories
-I'm looking at Minnetonka, Minnesota, wide range of readings over a short period.
-  [some description here of what it's all about and what the AQI is all about...emotional forecast. while visual learners, more emotional]
- 
-
-
-
+Since the enactment of the Clean Air Act in 1970, the quality of air in the United States has <a href="https://gispub.epa.gov/air/trendsreport/2023/#introduction" target="_blank">improved significantly</a> overall due in large part to controls in vehicle and industrial emissions. In 2023, however, air quality issues resulting from Canadian wildfire smoke frequential made headlines in some unexpected places.
+<p>In June, Minnesota's Twin Cities <a href="https://minnesotareformer.com/2023/06/16/this-weeks-record-breaking-air-pollution-in-one-chart/" target="_blank">broke its record for Air Quality Index (AQI)</a>, an EPA-developed measure of the <a href="https://www.nytimes.com/article/air-quality-index.html#:~:text=The%20Air%20Quality%20Index%20measures,they%20are%20breathing%20each%20day" target="_blank">density of five air pollutants</a>- including ground-level ozone, particulates, carbon monoxide, nitrogen dioxide, and sulfur dioxide.
+<p>It's critical to inform the public of the risks of polluted air. Generally, risks range from mild eye and throat irritation to serious respiratory and heart issues. Minnesota's Pollution Control Agency compared the risks of their record-breaking AQI to the equivalent of smoking <a href="https://minnesotareformer.com/2023/06/16/this-weeks-record-breaking-air-pollution-in-one-chart/" target="_blank">four cigarettes over 24 hours</a>. 
+<p>As a guide, the EPA created <a href="https://www.airnow.gov/aqi/aqi-basics/" target="_blank">six color-coded categories of AQI readings</a>, ranging from "Good" (under 50) to Hazardous (over 300).
+<p>To help underscore the risks associated with each level, this article attempts to emotionally convey the risks with sound using musical chords ranging from pleasant and stable, to unstable. Click on the play button for each of the categories below to sample the sonification for each risk level.
+  
  <h3>AQI Daily Ratings for Ozone and Particle Pollution</h3>
 	<table style="border-spacing: 90px;">
 	<thead>
@@ -71,7 +70,7 @@ I'm looking at Minnetonka, Minnesota, wide range of readings over a short period
       <td id="good" style="text-align: center;"><strong>Good</strong></td>
 			<td style="text-align: center;"><strong>0 to 50</strong></td>
 			<td><strong>Air quality is satisfactory, and air pollution poses little or no risk.</strong></td>
-      <td style="text-align: center;"><button id="btnGoodK" onclick="playChord(aqiGood)">&#9658;</button></td>
+      <td style="text-align: center;"><button id="btnGood" onclick="playChord(aqiGood)">&#9658;</button></td>
 		</tr>
 		<tr style="background:yellow;">
 			<td id="mod" style="text-align: center;"><strong>Moderate</strong></td>
@@ -105,18 +104,16 @@ I'm looking at Minnetonka, Minnesota, wide range of readings over a short period
 		</tr>
 	</tbody>
 </table>
-<p>Source: <a href="https://www.airnow.gov/aqi/aqi-basics/" target="_blank">U.S. Environmental Protection Agency, Office of Air Quality Planning and Standards</a>
+<p>Source: <a href="https://www.airnow.gov/aqi/aqi-basics/" target="_blank">U.S. Environmental Protection Agency, Office of Air Quality Planning and Standards</a>, except for auditory rendering produced by Rob Reid.
  
-
-
 <!---**********************************************************************-->
 <!---                                                                      -->
 <!---             SCROLLAMA FORECAST                                       --> 
 <!---                                                                      -->
 <!---**********************************************************************-->
-
-
-<p>Scroll down to queue up the <b>Toxic Pollutant Interpretive Orchestra</b>. Then keep scrolling to hear their sonic ten day AQI forecast.</p>
+<h3>A Closer Look at Minnetonka</h3>
+<p>Data provided by <a href="https://www.iqair.com/us/usa/new-york/new-york-city" target="_blank">IQ Air</a>, a free worldwide air quality information platform, ranked Minnetonka Minnesota amongst the ten worst U.s cities for air quality on July 24. 
+<p>Scroll down to queue up the <b>Toxic Pollutant Interpretive Orchestra</b>, then keep scrolling to hear their instrumental ten day AQI forecast for Minnetonka.</p>
       <div id="scroll-content">
         <div id="my-svg-chart"></div>
         <div id="step_display">
@@ -186,7 +183,7 @@ I'm looking at Minnetonka, Minnesota, wide range of readings over a short period
 
         </div>
       </div>
-
+<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
 
 
 <!---*************************-->
