@@ -4,12 +4,11 @@ var config = {
 //style: 'mapbox://styles/mapbox/streets-v11',
     //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
     
-
     //my custom style and mapbox token
     //style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
     //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrZTBrejIwMHp0YjNmcXZiaWN1enZwNiJ9._g79-Ecyuo5ahLVN3pyZZw',
 
-    showMarkers: false,
+    showMarkers: true,
     markerColor: '#3FB1CE',
     //projection: 'equirectangular',
     //Read more about available projections here
@@ -24,7 +23,7 @@ var config = {
     footer: 'See <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a> for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
-            id: 'intro_img',
+            id: 'header-photo',
             alignment: 'centered',
             hidden: false,
             //title: '',
@@ -47,11 +46,12 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'path-main', opacity:0},
-                {layer: 'path-social', opacity:0},
                 {layer: 'path-dyckman', opacity:0},
+                {layer: 'path-main', opacity:0},
+                {layer: 'social-trail', opacity:0},
                 {layer: 'path-165th', opacity:0},
-                {layer: 'path-176th', opacity:0}
+                {layer: 'path-176th', opacity:0},
+                {layer: 'satellite', opacity:1}
             ],
             onChapterExit: []
         },
@@ -59,38 +59,51 @@ var config = {
         
         
         {
-            id: 'intro',
+            id: 'zoom-to-park',
             alignment: 'fully',
-            hidden: false,
-            //title: '',
-            //image: './images/001_fort_washington_park.jpeg',
-            description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban jungle above cliffs to the east. Barbecuers, basketball players, bicyclists, and pedestrians share the park\'s dirt paths, paved trails, athletic courts, and rocky river bank.',
-            //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
+            hidden: true,
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                // speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            //     [{
-            //     layer: 'fort-washington-park-access',
-            //     opacity:1
-            // }],
+            onChapterEnter: [
+                {layer: 'satellite', opacity:1}   
+            ],
             onChapterExit: []
         },
-
-
-
+        
+        
+        
+        {
+            id: 'park-scene-1',
+            alignment: 'fully',
+            hidden: false,
+            //title: '',
+            image: './images/00x_fort_wash_soccer.jpg',
+            description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban jungle above cliffs to the east. Barbecuers, athletes, and pedestrians share the park\'s dirt paths, paved trails, athletic courts, and rocky river bank.',
+            //',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'satellite', opacity:1}   
+            ],
+            onChapterExit: []
+        },
+        
+        
+        
         {
             id: 'show map',
             alignment: 'full',
@@ -114,8 +127,8 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:0},
-                {layer: 'path-main', opacity:0}
+                {layer: 'path-main', opacity:0},
+                {layer: 'satellite', opacity:0}
             ],
             onChapterExit: []
         },
@@ -127,10 +140,10 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: '',
-            //image: './images/002_topographical_history.jpg',
+            image: './images/entry-182.jpg',
             description: 'Pedestrians and cyclists most commonly enter the park at 182nd just north of the George Washington Bridge...',
             location: {
-                center: [-73.94616, 40.84513],
+                center: [-73.9412, 40.8524],
                 zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
@@ -139,7 +152,6 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:1},
                 {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
@@ -153,10 +165,10 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: '',
-            //image: './images/002_topographical_history.jpg',
+            image: './images/entry-158.jpg',
             description: '...at 158th under Riverside Drive and just north of Trinity Cemetery...',
             location: {
-                center: [-73.94616, 40.84513],
+                center: [-73.9489, 40.8366],
                 zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
@@ -165,7 +177,6 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:1},
                 {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
@@ -175,7 +186,7 @@ var config = {
         
         
         {
-            id: 'access-easy-158',
+            id: 'access-points-south',
             alignment: 'left',
             hidden: false,
             //title: '',
@@ -191,7 +202,6 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:1},
                 {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
@@ -217,12 +227,10 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:1},
                 {layer: 'path-main', opacity:1},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-165th', opacity:0},
-                {layer: 'point-165-entry', opacity:0},
-                {layer: 'path-social', opacity:0},
+                {layer: 'social-trail', opacity:0},
                 {layer: 'path-176th', opacity:0}
             ],
             onChapterExit: [
@@ -249,11 +257,12 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'path-main', opacity:1},
-                {layer: 'path-social', opacity:1},
-                {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-165th', opacity:1},
-                {layer: 'path-176th', opacity:1}
+                {layer: 'path-176th', opacity:1},
+                {layer: 'path-dyckman', opacity:0.3},
+                {layer: 'path-main', opacity:0.3},
+                {layer: 'satellite', opacity:0},
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -285,9 +294,10 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-165th', opacity:0},
-                {layer: 'point-165-entry', opacity:0},
-                {layer: 'path-social', opacity:0},
-                {layer: 'path-176th', opacity:0}
+                {layer: 'path-176th', opacity:0},
+                {layer: 'path-dyckman', opacity:0},
+                {layer: 'path-main', opacity:0},
+                {layer: 'social-trail', opacity:0}
             ],
             onChapterExit: []
         },
@@ -330,7 +340,7 @@ var config = {
             //image: './images/002_topographical_history.jpg',
             description: 'Automotive routes carved up the land further. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s.',
             location: {
-                center: [-73.94616, 40.84513],
+                center: [-73.94335, 40.84803],
                 zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
@@ -344,7 +354,9 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {layer: '1955-nyc-building-map', opacity:0}
+            ],
             onChapterExit: []
         },
         
@@ -352,29 +364,51 @@ var config = {
         
         {
             id: 'history-4',
-            alignment: 'full',
+            alignment: 'left',
             hidden: false,
             //title: '',
-            image: './images/002_topographical_history_1600_1113.jpg',
+            //image: './images/002_topographical_history_1600_1113.jpg',
             description: 'The result is a tangled mess of rail, pedestrian, and automotive routes criss-crossing the park, as seen in this 1955 map of the riverside between 173rd and 176th. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
             location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
+                center: [-73.94440, 40.84723],
+                zoom: 16.00,
                 pitch: 0.00,
                 bearing: 28.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                // speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {layer: '1955-nyc-building-map', opacity:1}
+            ],
+            onChapterExit: [
+            ]
         },
+        
+        
+        
+        // {
+        //     id: 'history-4',
+        //     alignment: 'full',
+        //     hidden: false,
+        //     //title: '',
+        //     image: './images/002_topographical_history_1600_1113.jpg',
+        //     description: 'The result is a tangled mess of rail, pedestrian, and automotive routes criss-crossing the park, as seen in this 1955 map of the riverside between 173rd and 176th. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
+        //     location: {
+        //         center: [-73.94440, 40.84723],
+        //         zoom: 15.00,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: '1955-nyc-building-map', opacity:0}
+        //     ],
+        //     onChapterExit: [
+        //     ]
+        // },
         
         
         
@@ -383,10 +417,10 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: '',
-            //image: './images/005_165_hairy_crossing2.jpeg',
+            image: './images/psych-facility.jpg',
             description: 'In the early 1990s, grassroots organizers opposing development of a psychiatric facility on park land west of Riverside Drive <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">won a consolation prize</a>: an access path beginning at 165th street, including a footbridge connecting to Fort Washington Park.',
             location: {
-                center: [-73.94631, 40.84451],
+                center: [-73.9445, 40.8410],
                 zoom: 15.18,
                 pitch: 0.00,
                 bearing: 28.00
@@ -395,10 +429,8 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'points-entries-158-182', opacity:0},
+                {layer: '1955-nyc-building-map', opacity:0},
                 {layer: 'path-165th', opacity:1},
-                {layer: 'point-165-entry', opacity:1},
-                {layer: 'point-165-crossing-1', opacity:0}
             ],
             onChapterExit: [
                 
@@ -413,9 +445,9 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/005_165_hairy_crossing2.jpeg',
-            description: 'Frustratingly, this path requires a <a href="https://nyc.streetsblog.org/2009/07/06/eyes-on-the-street-risking-life-and-limb-for-greenway-access" target="_blank">treacherous crossing against relentless oncoming traffic</a> entering an on-ramp to the George Washington Bridge [CONFIRM]. With no crosswalk and no stoplight, rush hour safety depends on an athletic sprint or waiting for a thoughtful driver to wave pedestrians across.<p>This winding trail is somewhat helpful for those heading north. But to get directly to the actual river only 0.1 miles west as the crow flies requires a winding mile-long journey from 165th and Riverside Drive ',
+            description: 'Frustratingly, this path requires a <a href="https://nyc.streetsblog.org/2009/07/06/eyes-on-the-street-risking-life-and-limb-for-greenway-access" target="_blank">treacherous crossing against relentless oncoming traffic</a> entering an on-ramp to the George Washington Bridge with no crosswalk and no stoplight.<p>This winding trail is somewhat helpful for those heading north. But to get directly to the actual river only 0.1 miles west as the crow flies requires a winding mile-long journey from 165th and Riverside Drive ',
             location: {
-                center: [-73.94631, 40.84451],
+                center: [-73.9441, 40.8437],
                 zoom: 15.18,
                 pitch: 0.00,
                 bearing: 28.00
@@ -426,8 +458,6 @@ var config = {
             onChapterEnter: [
                 {layer: 'path-165th', opacity:1},
                 {layer: 'path-165th', opacity:1},
-                {layer: 'point-165-entry', opacity:0},
-                {layer: 'point-165-crossing-1', opacity:1},
                 {layer: 'path-176th', opacity:0}
             ],
             onChapterExit: []
@@ -436,14 +466,14 @@ var config = {
         
         
         {
-            id: 'B-173rd-street-bridge',
+            id: 'B-176th-entry',
             alignment: 'left',
             hidden: false,
             //title: '',
-            image: './images/006_176_haven_underpass.jpeg',
-            description: 'Even fewer cross at the Haven Avenue underpass- a <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">trek through deserted tunnels</a>. Isolated from both the park and the city and strewn with discarded clothes and luggage cases, the underpass offers only a temporary escape for the city\'s unhoused population, who seem to get routinely swept away by city officials.',
+            image: './images/entry-176.jpg',
+            description: 'Even fewer cross at the Haven Avenue underpass by 176th.',
             location: {
-                center: [-73.94640, 40.84919],
+                center: [-73.9423,40.8474],
                 zoom: 15.81,
                 pitch: 0.00,
                 bearing: 28.00
@@ -453,8 +483,6 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-165th', opacity:0},
-                {layer: 'point-165-entry', opacity:0},
-                {layer: 'point-165-crossing-1', opacity:0},
                 {layer: 'path-176th', opacity:1},
                 {layer: 'path-dyckman', opacity:0}
             ],
@@ -464,15 +492,15 @@ var config = {
 
 
         {
-            id: 'C-zoom',
+            id: 'B-176th-underpass',
             alignment: 'left',
-            hidden: true,
+            hidden: false,
             //title: '',
-            //image: './images/002_topographical_history.jpg',
-            //description: 'In 1917, John D. Rockefeller Jr. hoped to spur a connection between Fort Washington Park to the north by offering the land for Fort Tryon Park //offering that.',
+            image: './images/176-tunnel.jpg',
+            description: 'This <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">trek through deserted tunnels</a>, isolated from both the park and the city and strewn with discarded clothes and luggage cases, offers only a temporary escape for the city\'s unhoused population, who seem to get routinely swept away by city officials.',
             location: {
-                center: [-73.94161, 40.85336],
-                zoom: 15.07,
+                center: [-73.9434,40.8493],
+                zoom: 15.81,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -480,20 +508,49 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'path-176th', opacity:0},
-                {layer: 'path-dyckman', opacity:1}
+                {layer: 'path-165th', opacity:0},
+                {layer: 'path-176th', opacity:1},
+                {layer: 'path-dyckman', opacity:0}
             ],
             onChapterExit: []
         },
+        
+        
+        
+        // {
+        //     id: 'C-zoom',
+        //     alignment: 'left',
+        //     hidden: true,
+        //     //title: '',
+        //     //image: './images/002_topographical_history.jpg',
+        //     //description: 'In 1917, John D. Rockefeller Jr. hoped to spur a connection between Fort Washington Park to the north by offering the land for Fort Tryon Park //offering that.',
+        //     location: {
+        //         center: [-73.94161, 40.85336],
+        //         zoom: 15.07,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'path-176th', opacity:0},
+        //         {layer: 'path-dyckman', opacity:1}
+        //     ],
+        //     onChapterExit: []
+        // },
+
+
+
         {
             id: 'C-trail-end',
             alignment: 'left',
             hidden: false,
             //title: '',
-            //image: './images/006b_182nd_crossing.jpg',
-            description: 'North of the George Washington Bridge, the riverfront trail turns inland. Crossing over the Amtrak, under the the expressway, it connects to a narrow sidewalk on Riverside Drive alongside traffic.',
+            image: './images/182-underpass.jpg',
+            description: 'North of the George Washington Bridge, the riverfront trail turns inland, crossing over the Amtrak and under the the expressway before connecting to a narrow sidewalk on Riverside Drive.',
             location: {
-                center: [-73.94161, 40.85336],
+                center: [-73.94332788888889,40.85130236108333],
                 zoom: 15.07,
                 pitch: 0.00,
                 bearing: 28.00
@@ -502,16 +559,21 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'path-dyckman', opacity:1}
+                {layer: 'overlay-alltrails', opacity:0},
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-main', opacity:1}
             ],
             onChapterExit: []
         },
+
+
+
         {
             id: 'C-alltrails',
             alignment: 'left',
             hidden: false,
             //title: '',
-            image: './images/007a_alltrails_182_gap.png',
+            //image: './images/007a_alltrails_182_gap.png',
             description: 'It\'s not uncommon for online maps to exclude or obscure pedestrian walking paths while highlighting automotive routes. Popular hiking app <a href="https://www.alltrails.com/" target="_blank">Alltrails</a>, built on the open-source <a href="https://www.openstreetmap.org/#map=4/38.01/-95.84">Open Street Map</a>, confirms that the official riverside trail terminates north of the bridge.',
             location: {
                 center: [-73.94161, 40.85336],
@@ -523,10 +585,14 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'overlay-alltrails', opacity:1},
                 {layer: 'path-dyckman', opacity:1}
             ],
             onChapterExit: []
         },
+
+
+
         {
             id: 'C-strava',
             alignment: 'left',
@@ -544,20 +610,27 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'path-dyckman', opacity:1}
+                {layer: 'overlay-alltrails', opacity:0},
+                {layer: 'satellite', opacity: 0},
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-main', opacity:1}
             ],
             onChapterExit: []
         },
+
+
+
         {
             id: 'C-satellite',
             alignment: 'left',
             hidden: false,
             //title: '',
-            image: './images/007c_satellite_187th_River.jpg',
-            description: 'Satellite imagery from <a href="https://www.google.com/maps" target="_blank">Google Maps</a> clearly shows a path continuing north between the river and the Amtrak rails.',
+            //image: './images/007c_satellite_187th_River.jpg',
+            description: 'Satellite imagery from <a href="https://www.google.com/maps" target="_blank">Mapbox</a> clearly shows a path continuing north between the river and the Amtrak rails.',
             location: {
-                center: [-73.94161, 40.85336],
-                zoom: 15.07,
+                center: [-73.94055, 40.85598],
+                //center: [-73.94055, 40.85578],
+                zoom: 20.00,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -565,12 +638,16 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'satellite', opacity: 1},
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:0},
-                {layer: 'point-social-entry-south', opacity:0}
+                {layer: 'path-main', opacity:1},
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: []
         },
+
+
+
         {
             id: 'C-social-trail-entry',
             alignment: 'left',
@@ -579,7 +656,7 @@ var config = {
             image: './images/009_social_entry_south.jpeg',
             description: 'Once I knew that a riverfront trail existed, it was easy to notice the trail spur alongside the fence just before the bridge crossing the train tracks.',
             location: {
-                center: [-73.94161, 40.85336],
+                center: [-73.9441,40.8515],
                 zoom: 15.07,
                 pitch: 0.00,
                 bearing: 28.00
@@ -588,9 +665,10 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'satellite', opacity: 0},
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1},
-                {layer: 'point-social-entry-south', opacity:1}
+                {layer: 'path-main', opacity:1},
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: []
         },
@@ -602,7 +680,7 @@ var config = {
             image: './images/010_social_dock.jpg',
             description: 'Though I encountered only one other person on the trail, I saw clear signs that it\'d been used extensively. This makeshift dock suggests an ambitious fishing endeavor.',
             location: {
-                center: [-73.94161, 40.85336],
+                center: [-73.9433, 	40.8524],
                 zoom: 15.07,
                 pitch: 0.00,
                 bearing: 28.00
@@ -612,9 +690,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1},
-                {layer: 'point-social-entry-south', opacity:0},
-                {layer: 'point-social-riverside', opacity:0}
+                {layer: 'path-main', opacity:1},
+                {layer: 'social-trail', opacity:1},
             ],
             onChapterExit: []
         },
@@ -626,7 +703,7 @@ var config = {
             image: './images/011_social_riverside.jpeg',
             description: 'Pinched between the Hudson and the fence barricading Amtrak\'s rails, the trail offered unobstructed views of the river, the George Washington Bridge, and the New Jersey Palisades. But it\'s clearly not set up to support heavy traffic. Railroad ballast supporting some especially narrow stretches of the trail threatens to break up into the river.',
             location: {
-                center: [-73.94161, 40.85336],
+                center: [-73.9420, 40.8537],
                 zoom: 15.07,
                 pitch: 0.00,
                 bearing: 28.00
@@ -636,8 +713,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1},
-                {layer: 'point-social-riverside', opacity:1}
+                {layer: 'path-main', opacity:1},
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: []
         },
@@ -646,7 +723,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: '',
-            //image: './images/002_topographical_history.jpg',
+            //image: './panorama.mp4',
             description: 'Though there was no clear indication that this path is prohibited, I would later learn that the connector trail is what is known as a <em>social trail</em>. According to the National Park Service, a <a href="https://www.nps.gov/articles/000/social-trails.htm#:~:text=A%20social%20trail%20is%20an,look%20like%20an%20official%20trail.&text=To%20set%20a%20good%20example,day%2C%20stay%20on%20designated%20trails" target="_blank">social trail is an unofficial detour created by hikers</a> that gets worn down to the point of <em>appearing</em> to be an official trail.<p>The National Park Service warns that use of these trails can result in ecological damage. And park stewards note that <a href="https://www.reddit.com/r/openstreetmap/comments/ozz4zx/comment/h84912u/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=2&utm_content=share_button&rdt=48941&onetap_auto=true" target="_blank">hiding these social trails from official maps is a deliberate choice</a>- reflecting ecological concerns as well as legal public access, safety, and maintenance considerations.',
             location: {
                 center: [-73.94161, 40.85336],
@@ -659,9 +736,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1},
-                {layer: 'point-social-riverside', opacity:0},
-                {layer: 'point-social-railside', opacity:0}
+                {layer: 'path-main', opacity:1},
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: []
         },
@@ -673,7 +749,7 @@ var config = {
             image: './images/012_social_outside_rail.jpeg',
             description: 'At the same time, there\'s clear evidence that the path is widely used, and that public support could exist for developing the trail.',
             location: {
-                center: [-73.94161, 40.85336],
+                center: [-73.9407, 40.8558],
                 zoom: 15.07,
                 pitch: 0.00,
                 bearing: 28.00
@@ -683,9 +759,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1},
+                {layer: 'social-trail', opacity:1},
                 {layer: 'path-main', opacity:1},
-                {layer: 'point-social-railside', opacity:1},
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:0}
             ],
@@ -696,10 +771,10 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: '',
-            image: './images/013_social_north_entry.jpg',
-            description: 'At the other end of the trail, there was a sign clearly stating, "No public access beyond this point." [NEED TO GO BACK AND GET A PHOTO OF THIS] It would seem that the trail is legal going north, but illegal going south. This calls to mind a famous song.',
+            image: './images/entry-social-north.jpg',
+            description: 'Looking behind me after reaching the other end of the trail, I saw a sign clearly stating, "No public access beyond this point." It would seem that the trail is legal going north, but illegal going south. This calls to mind a famous song.',
             location: {
-                center: [-73.94161, 40.85336],
+                center: [-73.939795,40.8569679],
                 zoom: 15.07,
                 pitch: 0.00,
                 bearing: 28.00
@@ -709,8 +784,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1},
-                {layer: 'point-social-railside', opacity:0}
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: []
         },
@@ -732,7 +806,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-social', opacity:1}
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: []
         },
@@ -754,7 +828,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-main', opacity:1},
-                {layer: 'path-social', opacity:1},
+                {layer: 'social-trail', opacity:1},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-165th', opacity:1},
                 {layer: 'path-176th', opacity:1}
@@ -780,7 +854,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-main', opacity:1},
-                {layer: 'path-social', opacity:1},
+                {layer: 'social-trail', opacity:1},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-165th', opacity:1},
                 {layer: 'path-176th', opacity:1}
@@ -806,7 +880,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-main', opacity:1},
-                {layer: 'path-social', opacity:1},
+                {layer: 'social-trail', opacity:1},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-165th', opacity:1},
                 {layer: 'path-176th', opacity:1}
