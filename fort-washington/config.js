@@ -440,9 +440,10 @@ var config = {
             onChapterEnter: [
                 {layer: '1955-nyc-building-map', opacity:0},
                 {layer: 'path-165th', opacity:1},
+                {layer: '165-entry', opacity:1}
             ],
             onChapterExit: [
-                
+                {layer: '165-entry', opacity:0}
             ]
         },
         
@@ -467,9 +468,12 @@ var config = {
             onChapterEnter: [
                 {layer: 'path-165th', opacity:1},
                 {layer: 'path-165th', opacity:1},
-                {layer: 'path-176th', opacity:0}
+                {layer: 'path-176th', opacity:0},
+                {layer: '165-crossing1', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: '165-crossing1', opacity:0}
+            ]
         },
         
         
@@ -493,9 +497,12 @@ var config = {
             onChapterEnter: [
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:1},
-                {layer: 'path-dyckman', opacity:0}
+                {layer: 'path-dyckman', opacity:0},
+                {layer: '176-entry', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: '176-entry', opacity:0}
+            ]
         },
 
 
@@ -519,9 +526,12 @@ var config = {
             onChapterEnter: [
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:1},
-                {layer: 'path-dyckman', opacity:0}
+                {layer: 'path-dyckman', opacity:0},
+                {layer: '176-underpass', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: '176-underpass', opacity:0}
+            ]
         },
         
         
@@ -568,7 +578,7 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'overlay-alltrails', opacity:0},
+                //{layer: 'overlay-alltrails', opacity:0},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-main', opacity:1}
             ],
@@ -598,7 +608,9 @@ var config = {
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'satellite', opacity: 0}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'overlay-alltrails', opacity:0},
+            ]
         },
 
 
@@ -678,9 +690,12 @@ var config = {
                 {layer: 'satellite', opacity: 0},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-main', opacity:1},
-                {layer: 'social-trail', opacity:1}
+                {layer: 'social-trail', opacity:1},
+                {layer: 'social-entry-south', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'social-entry-south', opacity:0}
+            ]
         },
         {
             id: 'C-social-dock',
@@ -702,8 +717,11 @@ var config = {
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-main', opacity:1},
                 {layer: 'social-trail', opacity:1},
+                {layer: 'social-dock', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'social-dock', opacity:0}
+            ]
         },
         {
             id: 'C-social trail_riverside',
@@ -724,9 +742,12 @@ var config = {
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-main', opacity:1},
-                {layer: 'social-trail', opacity:1}
+                {layer: 'social-trail', opacity:1},
+                {layer: 'social-riverside', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'social-riverside', opacity:0}
+            ]
         },
         {
             id: 'C-social-trail-about',
@@ -772,9 +793,12 @@ var config = {
                 {layer: 'social-trail', opacity:1},
                 {layer: 'path-main', opacity:1},
                 {layer: 'path-165th', opacity:0},
-                {layer: 'path-176th', opacity:0}
+                {layer: 'path-176th', opacity:0},
+                {layer: 'social-railside', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'social-railside', opacity:0}
+            ]
         },
         {
             id: 'C-social-Guthrie1',
@@ -794,9 +818,12 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'social-trail', opacity:1}
+                {layer: 'social-trail', opacity:1},
+                {layer: 'social-entry-north', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'social-entry-north', opacity:0}
+            ]
         },
         {
             id: 'C-social-Guthrie2',
@@ -804,7 +831,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/009_social_entry_south.jpeg',
-            description: '<div align="right"><em>As I went walking I saw a sign there,<br>And on the sign it said "No Trespassing."<br>But on the other side it didn\'t say nothing.<br>That side was made for you and me.</em><br>-Arlo Guthrie</div>',
+            description: 'As I went walking I saw a sign there,<br>And on the sign it said "No Trespassing."<br>But on the other side it didn\'t say nothing.<br>That side was made for you and me.<br>-Arlo Guthrie',
             location: {
                 center: [-73.94161, 40.85336],
                 zoom: 15.07,
