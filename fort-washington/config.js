@@ -46,22 +46,24 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'nj-blocker', opacity:0},
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'path-main', opacity:0},
-                {layer: 'social-trail', opacity:0},
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:0},
+                {layer: 'satellite', opacity:1},
+                {layer: 'social-dock', opacity:0},
+                {layer: 'social-entry-north', opacity:0},
+                {layer: 'social-entry-south', opacity:0},
+                {layer: 'social-railside', opacity:0},
+                {layer: 'social-riverside', opacity:0},
+                {layer: 'social-trail', opacity:0},
                 {layer: '158-entry', opacity:0},
                 {layer: '165-entry', opacity:0},
                 {layer: '176-entry', opacity:0},
                 {layer: '182-entry', opacity:0},
                 {layer: '176-underpass', opacity:0},
-                {layer: '165-crossing1', opacity:0},
-                {layer: 'social-entry-north', opacity:0},
-                {layer: 'social-entry-south', opacity:0},
-                {layer: 'social-railside', opacity:0},
-                {layer: 'social-riverside', opacity:0},
-                {layer: 'social-dock', opacity:0}
+                {layer: '165-crossing1', opacity:0}
             ],
             onChapterExit: []
         },
@@ -82,8 +84,7 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [
-                {layer: 'satellite', opacity:1}   
+            onChapterEnter: [   
             ],
             onChapterExit: []
         },
@@ -108,41 +109,34 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [
-                {layer: 'satellite', opacity:1}
-                //{layer: 'trail-markers', opacity:1}   
+            onChapterEnter: [ 
+                {layer: 'nj-blocker', opacity:0.75},
+                {layer: 'satellite', opacity:0} 
             ],
             onChapterExit: []
         },
         
         
         
-        {
-            id: 'show map',
-            alignment: 'full',
-            hidden: true,
-            // // description: 'Historical development competition between rail, highway, pedestrian tension still plays out today- access issues (topographical map 1955)',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                // speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'path-main', opacity:0},
-                {layer: 'satellite', opacity:0}
-            ],
-            onChapterExit: []
-        },
+        // {
+        //     id: 'show map',
+        //     alignment: 'full',
+        //     hidden: true,
+        //     location: {
+        //         center: [-73.94616, 40.84513],
+        //         zoom: 14.00,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'nj-blocker', opacity:1},
+        //         {layer: 'satellite', opacity:0}
+        //     ],
+        //     onChapterExit: []
+        // },
         
         
         
@@ -328,13 +322,7 @@ var config = {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
                 pitch: 0.00,
-                bearing: 28.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                // speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
+                bearing: 28.00 
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -351,16 +339,10 @@ var config = {
             hidden: false,
             description: 'Automotive routes carved up the land further. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s.',
             location: {
-                center: [-73.94335, 40.84803],
+                center: [-73.94616, 40.84513],
                 zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                // speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -751,7 +733,7 @@ var config = {
         },
         {
             id: 'C-social-trail-about',
-            alignment: 'left',
+            alignment: 'full',
             hidden: false,
             //title: '',
             //image: './panorama.mp4',
@@ -849,7 +831,7 @@ var config = {
         },
         {
             id: 'trail-plans',
-            alignment: 'left',
+            alignment: 'full',
             hidden: false,
             //title: '',
             //image: './images/014_fort_washington_park.jpeg',
@@ -875,7 +857,7 @@ var config = {
         },
         {
             id: 'conclusion',
-            alignment: 'left',
+            alignment: 'fully',
             hidden: false,
             //title: '',
             image: './images/014_fort_washington_park.jpeg',
