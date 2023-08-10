@@ -372,26 +372,181 @@ if (config.showMarkers) {
 // instantiate the scrollama
 var scroller = scrollama();
 
-
+//'filter': ["==", "PublicationName", "El Especial / El Especialito"],
 map.on("load", function() {
     //adding code here via Steph to incorporate my own GeoJSON points layer
     map.addSource('trailMarkers', {
          'type': 'geojson',
-         'data': 'fort_wash_access.geojson'
+         'data': 'fort_wash_points.geojson'
      });
+    //   map.addLayer({
+    //      'id': 'trail-markers',
+    //      'type': 'circle',
+    //      'source': 'trailMarkers',
+    //      'paint': {
+    //          'circle-color': 'yellow',
+    //          'circle-stroke-color': '#4d4d4d',
+    //          'circle-stroke-width': 0.5,
+    //          'circle-radius': 5,
+    //          'circle-opacity': 1,
+    //          'circle-stroke-opacity': 1
+    //      },
+    //  });
      map.addLayer({
-         'id': 'trail-markers',
+         'id': '158-entry',
          'type': 'circle',
          'source': 'trailMarkers',
+         'filter': ["==", "name", "158-entry"],
          'paint': {
              'circle-color': 'yellow',
              'circle-stroke-color': '#4d4d4d',
              'circle-stroke-width': 0.5,
-             'circle-radius': 5,
+             'circle-radius': 15,
              'circle-opacity': 1,
              'circle-stroke-opacity': 1
          },
      });
+     map.addLayer({
+         'id': '165-entry',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "165-entry"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': '165-crossing1',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "165-crossing1"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': '176-entry',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "176-entry"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': '176-underpass',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "176-underpass"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': '182-entry',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "182-entry"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': 'social-entry-north',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "social-entry-north"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': 'social-entry-south',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "social-entry-south"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': 'social-dock',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "social-dock"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': 'social-railside',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "social-railside"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+     map.addLayer({
+         'id': 'social-riverside',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'filter': ["==", "name", "social-riverside"],
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 15,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+
 
 
 

@@ -51,7 +51,17 @@ var config = {
                 {layer: 'social-trail', opacity:0},
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:0},
-                {layer: 'satellite', opacity:1}
+                {layer: '158-entry', opacity:0},
+                {layer: '165-entry', opacity:0},
+                {layer: '176-entry', opacity:0},
+                {layer: '182-entry', opacity:0},
+                {layer: '176-underpass', opacity:0},
+                {layer: '165-crossing1', opacity:0},
+                {layer: 'social-entry-north', opacity:0},
+                {layer: 'social-entry-south', opacity:0},
+                {layer: 'social-railside', opacity:0},
+                {layer: 'social-riverside', opacity:0},
+                {layer: 'social-dock', opacity:0}
             ],
             onChapterExit: []
         },
@@ -99,8 +109,8 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'satellite', opacity:1},
-                {layer: 'trail-markers', opacity:1}   
+                {layer: 'satellite', opacity:1}
+                //{layer: 'trail-markers', opacity:1}   
             ],
             onChapterExit: []
         },
@@ -111,8 +121,6 @@ var config = {
             id: 'show map',
             alignment: 'full',
             hidden: true,
-            //title: '',
-            // image: './images/002_topographical_history.jpg',
             // // description: 'Historical development competition between rail, highway, pedestrian tension still plays out today- access issues (topographical map 1955)',
             location: {
                 center: [-73.94616, 40.84513],
@@ -131,8 +139,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-main', opacity:0},
-                {layer: 'satellite', opacity:0},
-                {layer: 'trail-markers', opacity:1}
+                {layer: 'satellite', opacity:0}
             ],
             onChapterExit: []
         },
@@ -145,7 +152,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/entry-182.jpg',
-            description: 'Pedestrians and cyclists most commonly enter the park at 182nd just north of the George Washington Bridge...[HIDE DOTS]',
+            description: 'Pedestrians and cyclists most commonly enter the park at 182nd just north of the George Washington Bridge...',
             location: {
                 center: [-73.9412, 40.8524],
                 zoom: 14.00,
@@ -156,10 +163,11 @@ var config = {
             rotateAnimation: false,
             //callback: 'hideDots',
             onChapterEnter: [
-                {layer: 'path-main', opacity:1},
-                {layer: 'trail-markers', opacity:1}
+                {layer: '182-entry', opacity:1},
+                {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
+                {layer: '182-entry', opacity:0}
             ]
         },
 
@@ -171,7 +179,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/entry-158.jpg',
-            description: '...at 158th under Riverside Drive and just north of Trinity Cemetery...[SHOW DOTS]',
+            description: '...at 158th under Riverside Drive and just north of Trinity Cemetery...',
             location: {
                 center: [-73.9489, 40.8366],
                 zoom: 14.00,
@@ -183,9 +191,10 @@ var config = {
             //callback: 'showDots',
             onChapterEnter: [
                 {layer: 'path-main', opacity:1},
-                {layer: 'trail-markers', opacity:1}
+                {layer: '158-entry', opacity:1}
             ],
             onChapterExit: [
+                {layer: '158-entry', opacity:0}
             ]
         },
         
@@ -197,7 +206,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: '...or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.[GREEN DOTS]',
+            description: '...or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -208,8 +217,8 @@ var config = {
             rotateAnimation: false,
             //callback: 'greenDots',
             onChapterEnter: [
-                {layer: 'path-main', opacity:1},
-                {layer: 'trail-markers', opacity:1}
+                {layer: 'path-main', opacity:1}
+                //{layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -238,8 +247,8 @@ var config = {
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-165th', opacity:0},
                 {layer: 'social-trail', opacity:0},
-                {layer: 'path-176th', opacity:0},
-                {layer: 'trail-markers', opacity:1}
+                {layer: 'path-176th', opacity:0}
+                //{layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
                 
@@ -252,8 +261,6 @@ var config = {
             id: 'secret-paths-overview-2',
             alignment: 'left',
             hidden: false,
-            //title: '',
-            //image: './images/002_topographical_history.jpg',
             description: 'But a warren of lesser-known paths provides some indirect access to the park. For historic reasons, each of these paths has to navigate around automotive routes and rail lines to get to the riverside.',
             location: {
                 center: [-73.94616, 40.84513],
@@ -270,8 +277,8 @@ var config = {
                 {layer: 'path-dyckman', opacity:0.3},
                 {layer: 'path-main', opacity:0.3},
                 {layer: 'satellite', opacity:0},
-                {layer: 'social-trail', opacity:1},
-                {layer: 'trail-markers', opacity:1}
+                {layer: 'social-trail', opacity:1}
+                //{layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -283,8 +290,6 @@ var config = {
             id: 'history-1',
             alignment: 'left',
             hidden: false,
-            //title: '',
-            //image: './images/002_topographical_history.jpg',
             description: 'The railroads claimed the coveted riverside property first, with The New York Central & Hudson River Railroad Company <a href="https://www.nytimes.com/1913/06/29/archives/railroad-and-park-feasible-solution-of-fort-washington-problem-is.html?searchResultPosition=25" target="_blank">acquiring a narrow tract of property parallel to the river</a> in 1847.',
             location: {
                 center: [-73.94616, 40.84513],
@@ -306,8 +311,8 @@ var config = {
                 {layer: 'path-176th', opacity:0},
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'path-main', opacity:0},
-                {layer: 'social-trail', opacity:0},
-                {layer: 'trail-markers', opacity:1}
+                {layer: 'social-trail', opacity:0}
+                //{layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: []
         },
@@ -318,8 +323,6 @@ var config = {
             id: 'history-2',
             alignment: 'left',
             hidden: false,
-            //title: '',
-            //image: './images/002_topographical_history.jpg',
             description: 'The city later guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels of riverfront land between 1896 and 1927</a> on behalf of the park district, but by then this land was already split down the middle by train tracks.',
             location: {
                 center: [-73.94616, 40.84513],
@@ -346,8 +349,6 @@ var config = {
             id: 'history-3',
             alignment: 'left',
             hidden: false,
-            //title: '',
-            //image: './images/002_topographical_history.jpg',
             description: 'Automotive routes carved up the land further. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s.',
             location: {
                 center: [-73.94335, 40.84803],
@@ -376,8 +377,6 @@ var config = {
             id: 'transition',
             alignment: 'left',
             hidden: false,
-            //title: '',
-            //image: './images/002_topographical_history_1600_1113.jpg',
             description: 'In part due to these physical barriers, some of the most direct paths to the park wind through dark and neglected tunnels, across traffic, or along non-public paths.',
             location: {
                 center: [-73.94440, 40.84723],
@@ -389,7 +388,7 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: '1955-nyc-building-map', opacity:1}
+                //{layer: '1955-nyc-building-map', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -596,37 +595,38 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'overlay-alltrails', opacity:1},
-                {layer: 'path-dyckman', opacity:1}
-            ],
-            onChapterExit: []
-        },
-
-
-
-        {
-            id: 'C-strava',
-            alignment: 'left',
-            hidden: false,
-            //title: '',
-            image: './images/007b_strava_heatmap_gwb.png',
-            description: 'But a heatmap of <em>actual</em> walking routes tracked by competing app <a href="https://www.strava.com/" target="_blank">Strava</a> shows that some people do continue north, as indicated by a faint maroon line along the riverfront.',
-            location: {
-                center: [-73.94161, 40.85336],
-                zoom: 15.07,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'overlay-alltrails', opacity:0},
-                {layer: 'satellite', opacity: 0},
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-main', opacity:1}
+                {layer: 'satellite', opacity: 0}
             ],
             onChapterExit: []
         },
+
+
+
+        // {
+        //     id: 'C-strava',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     //title: '',
+        //     image: './images/007b_strava_heatmap_gwb.png',
+        //     description: 'But a heatmap of <em>actual</em> walking routes tracked by competing app <a href="https://www.strava.com/" target="_blank">Strava</a> shows that some people do continue north, as indicated by a faint maroon line along the riverfront.',
+        //     location: {
+        //         center: [-73.94161, 40.85336],
+        //         zoom: 15.07,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'overlay-alltrails', opacity:0},
+        //         {layer: 'satellite', opacity: 0},
+        //         {layer: 'path-dyckman', opacity:1},
+        //         {layer: 'path-main', opacity:1}
+        //     ],
+        //     onChapterExit: []
+        // },
 
 
 
