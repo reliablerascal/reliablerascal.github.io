@@ -8,7 +8,7 @@ var config = {
     //style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
     //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrZTBrejIwMHp0YjNmcXZiaWN1enZwNiJ9._g79-Ecyuo5ahLVN3pyZZw',
 
-    showMarkers: true,
+    showMarkers: false,
     markerColor: '#3FB1CE',
     //projection: 'equirectangular',
     //Read more about available projections here
@@ -62,6 +62,7 @@ var config = {
             id: 'zoom-to-park',
             alignment: 'fully',
             hidden: true,
+            //displayMarker: true, //created this attribute manually RR 8/9/23
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -83,6 +84,7 @@ var config = {
             id: 'park-scene-1',
             alignment: 'fully',
             hidden: false,
+            //displayMarker: false, //created this attribute manually RR 8/9/23
             //title: '',
             image: './images/00x_fort_wash_soccer.jpg',
             description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban jungle above cliffs to the east. Barbecuers, athletes, and pedestrians share the park\'s dirt paths, paved trails, athletic courts, and rocky river bank.',
@@ -97,7 +99,8 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'satellite', opacity:1}   
+                {layer: 'satellite', opacity:1},
+                {layer: 'trail-markers', opacity:1}   
             ],
             onChapterExit: []
         },
@@ -128,7 +131,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'path-main', opacity:0},
-                {layer: 'satellite', opacity:0}
+                {layer: 'satellite', opacity:0},
+                {layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: []
         },
@@ -141,7 +145,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/entry-182.jpg',
-            description: 'Pedestrians and cyclists most commonly enter the park at 182nd just north of the George Washington Bridge...',
+            description: 'Pedestrians and cyclists most commonly enter the park at 182nd just north of the George Washington Bridge...[HIDE DOTS]',
             location: {
                 center: [-73.9412, 40.8524],
                 zoom: 14.00,
@@ -150,9 +154,10 @@ var config = {
             },
             mapAnimation: 'easeTo',
             rotateAnimation: false,
-            callback: '',
+            //callback: 'hideDots',
             onChapterEnter: [
-                {layer: 'path-main', opacity:1}
+                {layer: 'path-main', opacity:1},
+                {layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -166,7 +171,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/entry-158.jpg',
-            description: '...at 158th under Riverside Drive and just north of Trinity Cemetery...',
+            description: '...at 158th under Riverside Drive and just north of Trinity Cemetery...[SHOW DOTS]',
             location: {
                 center: [-73.9489, 40.8366],
                 zoom: 14.00,
@@ -175,9 +180,10 @@ var config = {
             },
             mapAnimation: 'easeTo',
             rotateAnimation: false,
-            callback: '',
+            //callback: 'showDots',
             onChapterEnter: [
-                {layer: 'path-main', opacity:1}
+                {layer: 'path-main', opacity:1},
+                {layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -191,7 +197,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: '...or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.',
+            description: '...or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.[GREEN DOTS]',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -200,9 +206,10 @@ var config = {
             },
             mapAnimation: 'easeTo',
             rotateAnimation: false,
-            callback: '',
+            //callback: 'greenDots',
             onChapterEnter: [
-                {layer: 'path-main', opacity:1}
+                {layer: 'path-main', opacity:1},
+                {layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -231,7 +238,8 @@ var config = {
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-165th', opacity:0},
                 {layer: 'social-trail', opacity:0},
-                {layer: 'path-176th', opacity:0}
+                {layer: 'path-176th', opacity:0},
+                {layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
                 
@@ -262,7 +270,8 @@ var config = {
                 {layer: 'path-dyckman', opacity:0.3},
                 {layer: 'path-main', opacity:0.3},
                 {layer: 'satellite', opacity:0},
-                {layer: 'social-trail', opacity:1}
+                {layer: 'social-trail', opacity:1},
+                {layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -297,7 +306,8 @@ var config = {
                 {layer: 'path-176th', opacity:0},
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'path-main', opacity:0},
-                {layer: 'social-trail', opacity:0}
+                {layer: 'social-trail', opacity:0},
+                {layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: []
         },
@@ -363,12 +373,12 @@ var config = {
         
         
         {
-            id: 'history-4',
+            id: 'transition',
             alignment: 'left',
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history_1600_1113.jpg',
-            description: 'The result is a tangled mess of rail, pedestrian, and automotive routes criss-crossing the park, as seen in this 1955 map of the riverside between 173rd and 176th. (Source: G.W. Bromley, <a href="http://digitalcollections.nypl.org/search/index?utf8=%E2%9C%93&keywords=bromley+1955" target="_blank">Manhattan land book of the city of New York</a>, 1955)',
+            description: 'In part due to these physical barriers, some of the most direct paths to the park wind through dark and neglected tunnels, across traffic, or along non-public paths.',
             location: {
                 center: [-73.94440, 40.84723],
                 zoom: 16.00,

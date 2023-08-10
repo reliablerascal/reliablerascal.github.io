@@ -13,6 +13,11 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
+    
+    <!--D3 STEP 1
+        added this per Aaron re: using D3 to manipulate custom geojson layer-->
+    <!---<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>--->
+
     <style>
         body {
             margin:0;
@@ -187,6 +192,56 @@ function setLayerOpacity(layer) {
     });
 }
 
+
+/////////////////////////////////////////////
+//                                         //
+//         Helper functions for D3         //
+//                                         //
+/////////////////////////////////////////////
+//D3 STEP 2
+
+// Projection method:
+// Project geojson coordinate to the map's current state
+// this is needed to re-render GeoJSON as x/y coordinates recognized by D3
+// function project(d) {
+// return map.project(new mapboxgl.LngLat(d[0], d[1]));
+// }
+
+// // Render method redraws dots
+// function render() {
+// d3.selectAll(".circle")
+// .attr("cx", function(d) {
+// return project(d.geometry.coordinates).x;
+// })
+// .attr("cy", function(d) {
+// return project(d.geometry.coordinates).y;
+// })
+// //Adding ID in d3 NOT WORKING
+// .attr("id", function(d) {
+// return d.properties.id;
+// });
+// }
+
+// //D3 testing function based on Aaron's example
+// function hideDots() {
+//     console.log("hide dots function");
+//     d3.selectAll(".circle").classed('hidden',true);
+// }
+// function showDots() {
+//     console.log("show dots function");
+//     d3.selectAll(".circle").classed('hidden', false);
+// }
+// function greenDots() {
+//     console.log("green dots function");
+//     d3.selectAll(".circle").style("fill","green");
+// }
+
+
+/////////////////////////////////////////////
+//                                         //
+//         Standard Template               //
+//                                         //
+/////////////////////////////////////////////
 var story = document.getElementById('story');
 var features = document.createElement('div');
 features.setAttribute('id', 'features');
@@ -319,6 +374,28 @@ var scroller = scrollama();
 
 
 map.on("load", function() {
+    //adding code here via Steph to incorporate my own GeoJSON points layer
+    map.addSource('trailMarkers', {
+         'type': 'geojson',
+         'data': 'fort_wash_access.geojson'
+     });
+     map.addLayer({
+         'id': 'trail-markers',
+         'type': 'circle',
+         'source': 'trailMarkers',
+         'paint': {
+             'circle-color': 'yellow',
+             'circle-stroke-color': '#4d4d4d',
+             'circle-stroke-width': 0.5,
+             'circle-radius': 5,
+             'circle-opacity': 1,
+             'circle-stroke-opacity': 1
+         },
+     });
+
+
+
+    
     if (config.use3dTerrain) {
         map.addSource('mapbox-dem', {
             'type': 'raster-dem',
@@ -353,9 +430,13 @@ map.on("load", function() {
         progress: true
     })
     .onStepEnter(async response => {
+        //D3 STEP 3
+        //Larry genius makes dots re-render to correct location (added for D3 connection per Aaron)
+        //map.on("move", render);
+
         var current_chapter = config.chapters.findIndex(chap => chap.id === response.element.id);
         var chapter = config.chapters[current_chapter];
-        
+
         response.element.classList.add('active');
         map[chapter.mapAnimation || 'flyTo'](chapter.location);
 
@@ -396,6 +477,7 @@ map.on("load", function() {
              });
         }
     })
+    
     .onStepExit(response => {
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
@@ -410,7 +492,12 @@ map.on("load", function() {
     }
 });
 
-//Helper functions for insetmap
+/////////////////////////////////////////////
+//                                         //
+//         Helper functions for insetmap   //
+//                                         //
+/////////////////////////////////////////////
+
 function getInsetBounds() {
             let bounds = map.getBounds();
 
@@ -490,6 +577,8 @@ function addInsetLayer(bounds) {
 function updateInsetLayer(bounds) {
     insetMap.getSource('boundsSource').setData(bounds);
 }
+
+
 
 
 
