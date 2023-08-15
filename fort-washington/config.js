@@ -63,6 +63,8 @@ var config = {
                 {layer: '165-entry', opacity:0},
                 {layer: '176-entry', opacity:0},
                 {layer: '182-entry', opacity:0},
+                {layer: '182-gwb-split', opacity:0},
+                {layer: '182-hh-merge', opacity:0},
                 {layer: '176-underpass', opacity:0},
                 {layer: '165-crossing1', opacity:0}
             ],
@@ -74,7 +76,7 @@ var config = {
         {
             id: 'zoom-to-park',
             alignment: 'fully',
-            hidden: true,
+            hidden: false,
             description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban jungle above cliffs to the east.',
             location: {
                 center: [-73.94616, 40.84513],
@@ -212,7 +214,6 @@ var config = {
             //callback: 'greenDots',
             onChapterEnter: [
                 {layer: 'path-main', opacity:1}
-                //{layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -220,34 +221,34 @@ var config = {
         
         
         
-        {
-            id: 'secret-paths-overview',
-            alignment: 'left',
-            hidden: false,
-            //title: '',
-            //image: './images/002_topographical_history.jpg',
-            description: 'Access to the park in the 1.5 mile gap between 158th and 182nd is limited. And there\'s no \'official\' riverfront trail north of the George Washington Bridge connecting the park to its northern border at Dyckman Street, another 1.5 miles north.',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'path-main', opacity:1},
-                {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-165th', opacity:0},
-                {layer: 'social-trail', opacity:0},
-                {layer: 'path-176th', opacity:0}
-                //{layer: 'trail-markers', opacity:1}
-            ],
-            onChapterExit: [
+        // {
+        //     id: 'secret-paths-overview',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     //title: '',
+        //     //image: './images/002_topographical_history.jpg',
+        //     description: 'Access to the park in the 1.5 mile gap between 158th and 182nd is limited. And there\'s no \'official\' riverfront trail north of the George Washington Bridge connecting the park to its northern border at Dyckman Street, another 1.5 miles north.',
+        //     location: {
+        //         center: [-73.94616, 40.84513],
+        //         zoom: 15.00,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'easeTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'path-main', opacity:1},
+        //         {layer: 'path-dyckman', opacity:1},
+        //         {layer: 'path-165th', opacity:0},
+        //         {layer: 'social-trail', opacity:0},
+        //         {layer: 'path-176th', opacity:0}
+        //         //{layer: 'trail-markers', opacity:1}
+        //     ],
+        //     onChapterExit: [
                 
-            ]
-        },
+        //     ]
+        // },
 
 
 
@@ -255,10 +256,10 @@ var config = {
             id: 'secret-paths-overview-2',
             alignment: 'left',
             hidden: false,
-            description: 'But a warren of lesser-known paths provides some indirect access to the park. For historic reasons, each of these paths has to navigate around automotive routes and rail lines to get to the riverside.',
+            description: 'Access to the park in the 1.5 mile gap between 158th and 182nd is limited. And there\'s no \'official\' riverfront trail north of the George Washington Bridge connecting the bridge to Washington Park North up to Dyckman Street, another 1.5 miles north.<p>But a warren of lesser-known paths provides some indirect access to the park.',
             location: {
                 center: [-73.94616, 40.84513],
-                zoom: 14.00,
+                zoom: 15.00,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -272,7 +273,6 @@ var config = {
                 {layer: 'path-main', opacity:0.3},
                 {layer: 'satellite', opacity:0},
                 {layer: 'social-trail', opacity:1}
-                //{layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -284,18 +284,12 @@ var config = {
             id: 'history-1',
             alignment: 'left',
             hidden: false,
-            description: 'The railroads claimed the coveted riverside property first, with The New York Central & Hudson River Railroad Company <a href="https://www.nytimes.com/1913/06/29/archives/railroad-and-park-feasible-solution-of-fort-washington-problem-is.html?searchResultPosition=25" target="_blank">acquiring a narrow tract of property parallel to the river</a> in 1847.',
+            description: ' For historic reasons, each of these paths has to navigate around automotive routes and rail lines to get to the riverside. The railroads claimed the coveted riverside property first, with The New York Central & Hudson River Railroad Company <a href="https://www.nytimes.com/1913/06/29/archives/railroad-and-park-feasible-solution-of-fort-washington-problem-is.html?searchResultPosition=25" target="_blank">acquiring a narrow tract of property parallel to the river</a> in 1847.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                // speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -306,7 +300,6 @@ var config = {
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'path-main', opacity:0},
                 {layer: 'social-trail', opacity:0}
-                //{layer: 'trail-markers', opacity:1}
             ],
             onChapterExit: []
         },
@@ -320,7 +313,7 @@ var config = {
             description: 'The city later guaranteed public access by <a href="https://www.nycgovparks.org/parks/fort-washington-park/history" target="_blank">acquiring five parcels of riverfront land between 1896 and 1927</a> on behalf of the park district, but by then this land was already split down the middle by train tracks.',
             location: {
                 center: [-73.94616, 40.84513],
-                zoom: 14.00,
+                zoom: 15.00,
                 pitch: 0.00,
                 bearing: 28.00 
             },
@@ -337,10 +330,10 @@ var config = {
             id: 'history-3',
             alignment: 'left',
             hidden: false,
-            description: 'Automotive routes carved up the land further. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s.',
+            description: 'Automotive routes carved up the land further. Construction of a bridge connecting began in 1927 as provisioned by New York and New Jersey state legislation. The city\'s West Side Improvement Plan spurred the <a href="https://www.nycgovparks.org/parks/X110/history" target="_blank">development of the Henry Hudson Parkway</a> in the 1930s. In part due to these physical barriers, some of the most direct paths to the park wind through dark and neglected tunnels, across traffic, or along non-public paths.',
             location: {
                 center: [-73.94616, 40.84513],
-                zoom: 14.00,
+                zoom: 15.00,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -355,26 +348,26 @@ var config = {
         
         
         
-        {
-            id: 'transition',
-            alignment: 'left',
-            hidden: false,
-            description: 'In part due to these physical barriers, some of the most direct paths to the park wind through dark and neglected tunnels, across traffic, or along non-public paths.',
-            location: {
-                center: [-73.94440, 40.84723],
-                zoom: 16.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                //{layer: '1955-nyc-building-map', opacity:1}
-            ],
-            onChapterExit: [
-            ]
-        },
+        // {
+        //     id: 'transition',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     description: 'In part due to these physical barriers, some of the most direct paths to the park wind through dark and neglected tunnels, across traffic, or along non-public paths.',
+        //     location: {
+        //         center: [-73.94440, 40.84723],
+        //         zoom: 16.00,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         //{layer: '1955-nyc-building-map', opacity:1}
+        //     ],
+        //     onChapterExit: [
+        //     ]
+        // },
         
         
         
@@ -551,7 +544,8 @@ var config = {
             image: './images/182-inland-turn.jpg',
             description: 'North of the George Washington Bridge, the riverfront trail turns inland, crossing over the Amtrak and under the the expressway before connecting to a narrow sidewalk where Riverside Drive transitions into the Henry Hundson Parkway.',
             location: {
-                center: [-73.94332788888889,40.85130236108333],
+                center: [-73.94617029306572,
+                    40.8499500890377],
                 zoom: 15.07,
                 pitch: 0.00,
                 bearing: 28.00
@@ -560,11 +554,13 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                //{layer: 'overlay-alltrails', opacity:0},
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-main', opacity:1}
+                {layer: 'path-main', opacity:1},
+                {layer: '182-gwb-split', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: '182-gwb-split', opacity:0}
+            ]
         },
 
 
@@ -588,9 +584,12 @@ var config = {
             onChapterEnter: [
                 //{layer: 'overlay-alltrails', opacity:0},
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-main', opacity:1}
+                {layer: 'path-main', opacity:1},
+                {layer: '182-hh-merge', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: '182-hh-merge', opacity:0}
+            ]
         },
         
         
@@ -614,6 +613,7 @@ var config = {
             onChapterEnter: [
                 {layer: 'overlay-alltrails', opacity:1},
                 {layer: 'path-dyckman', opacity:1},
+                {layer: 'social-trail', opacity: 0},
                 {layer: 'satellite', opacity: 0}
             ],
             onChapterExit: [
@@ -668,10 +668,8 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'satellite', opacity: 1},
-                {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-main', opacity:1},
-                {layer: 'social-trail', opacity:1}
+                {layer: 'social-trail', opacity:1},
+                {layer: 'satellite', opacity: 1}
             ],
             onChapterExit: []
         },
