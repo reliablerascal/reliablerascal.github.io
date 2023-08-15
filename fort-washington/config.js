@@ -24,10 +24,10 @@ var config = {
     chapters: [
         {
             id: 'header-photo',
-            alignment: 'centered',
+            alignment: 'full',
             hidden: false,
             //title: '',
-            image: './images/001_fort_washington_park-1280-960.jpg',
+            image: './images/wash_park_scene_without_ppl.jpg',
             //description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers a setting for both social gatherings and solitary escapes from the concrete urban expanse above cliffs to the east. Barbecuers, basketball players, bicyclists, and joggers occupy the park'sdirt paths, paved trails, atheletic courts, and lawn.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
@@ -544,12 +544,12 @@ var config = {
 
 
         {
-            id: 'C-trail-end',
+            id: 'C-trail-turn',
             alignment: 'left',
             hidden: false,
             //title: '',
-            image: './images/182-underpass.jpg',
-            description: 'North of the George Washington Bridge, the riverfront trail turns inland, crossing over the Amtrak and under the the expressway before connecting to a narrow sidewalk on Riverside Drive.',
+            image: './images/182-inland-turn.jpg',
+            description: 'North of the George Washington Bridge, the riverfront trail turns inland, crossing over the Amtrak and under the the expressway before connecting to a narrow sidewalk where Riverside Drive transitions into the Henry Hundson Parkway.',
             location: {
                 center: [-73.94332788888889,40.85130236108333],
                 zoom: 15.07,
@@ -569,6 +569,32 @@ var config = {
 
 
 
+        {
+            id: 'C-trail-hh-merge',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            image: './images/182-hh-merge.jpg',
+            description: 'North of the George Washington Bridge, the riverfront trail turns inland, crossing over the Amtrak and under the the expressway before connecting to a narrow sidewalk where Riverside Drive transitions into the Henry Hundson Parkway.',
+            location: {
+                center: [-73.94332788888889,40.85130236108333],
+                zoom: 15.07,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                //{layer: 'overlay-alltrails', opacity:0},
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-main', opacity:1}
+            ],
+            onChapterExit: []
+        },
+        
+        
+        
         {
             id: 'C-alltrails',
             alignment: 'left',
@@ -733,7 +759,7 @@ var config = {
         },
         {
             id: 'C-social-trail-about',
-            alignment: 'full',
+            alignment: 'fully',
             hidden: false,
             //title: '',
             //image: './panorama.mp4',
@@ -831,7 +857,7 @@ var config = {
         },
         {
             id: 'trail-plans',
-            alignment: 'full',
+            alignment: 'fully',
             hidden: false,
             //title: '',
             //image: './images/014_fort_washington_park.jpeg',
@@ -855,6 +881,37 @@ var config = {
             onChapterExit: [
             ]
         },
+
+
+
+        {
+            id: '2017-concept',
+            alignment: 'fully',
+            hidden: false,
+            //title: '',
+            image: './images/fort-washington-park-north-conceptual.png',
+            description: 'As recently as 2017, the nonprofit New York Economic Development Corporation conceptualized <a href="https://edc.nyc/sites/default/files/filemanager/MWG/ManhattanGreenway_book.pdf" target="_blank">development of a trail built above the river</a>, promising community engagement only "as funding becomes available."',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'path-main', opacity:1},
+                {layer: 'social-trail', opacity:1},
+                {layer: 'path-dyckman', opacity:1},
+                {layer: 'path-165th', opacity:1},
+                {layer: 'path-176th', opacity:1}
+            ],
+            onChapterExit: [
+            ]
+        },
+        
+
         {
             id: 'conclusion',
             alignment: 'fully',
@@ -881,6 +938,9 @@ var config = {
             onChapterExit: [
             ]
         },
+
+
+
         {
             id: 'credits',
             alignment: 'left',
