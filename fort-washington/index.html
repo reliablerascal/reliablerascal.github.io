@@ -266,6 +266,12 @@ if (config.byline) {
     header.appendChild(bylineText);
 }
 
+if (config.leadPhoto) {
+    var image = new Image();
+        image.src = config.leadPhoto;
+        header.appendChild(image);
+}
+
 if (header.innerText.length > 0) {
     header.classList.add(config.theme);
     header.setAttribute('id', 'header');

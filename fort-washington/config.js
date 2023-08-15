@@ -17,17 +17,18 @@ var config = {
     theme: 'light',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
-    title: 'DRAFT: The Stressful Entry to a Relaxing Fortress',
+    title: 'DRAFT: The Uneasy Entry to a Relaxing Fortress',
     subtitle: 'Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive throughways reveals a patchwork of unfinished urban plans.',
     byline: 'By Rob Reid | 10 August',
     footer: 'See <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a> for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    leadPhoto: './images/wash_park_scene_without_ppl.jpg',
     chapters: [
         {
             id: 'header-photo',
             alignment: 'full',
-            hidden: false,
+            hidden: true,
             //title: '',
-            image: './images/wash_park_scene_without_ppl.jpg',
+            //image: './images/wash_park_scene_without_ppl.jpg',
             //description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers a setting for both social gatherings and solitary escapes from the concrete urban expanse above cliffs to the east. Barbecuers, basketball players, bicyclists, and joggers occupy the park'sdirt paths, paved trails, atheletic courts, and lawn.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
@@ -74,7 +75,7 @@ var config = {
             id: 'zoom-to-park',
             alignment: 'fully',
             hidden: true,
-            //displayMarker: true, //created this attribute manually RR 8/9/23
+            description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban jungle above cliffs to the east.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -98,8 +99,7 @@ var config = {
             //displayMarker: false, //created this attribute manually RR 8/9/23
             //title: '',
             image: './images/00x_fort_wash_soccer.jpg',
-            description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers both social gathering spaces and solitary escapes from the concrete urban jungle above cliffs to the east. Barbecuers, athletes, and pedestrians share the park\'s dirt paths, paved trails, athletic courts, and rocky river bank.',
-            //',
+            description: 'Barbecuers, athletes, and pedestrians share the park\'s dirt paths, paved trails, athletic courts, and rocky river bank.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
