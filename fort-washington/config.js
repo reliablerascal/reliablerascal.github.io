@@ -48,6 +48,8 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'nj-blocker', opacity:0},
+                {layer: 'park-tryon', opacity:0},
+                {layer: 'park-fort-wash', opacity:0},
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'path-main', opacity:0},
                 {layer: 'path-165th', opacity:0},
@@ -87,9 +89,12 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [   
+            onChapterEnter: [ 
+                {layer: 'park-fort-wash', opacity:0.75}  
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'park-fort-wash', opacity:0}
+            ]
         },
         
         
@@ -113,9 +118,12 @@ var config = {
             callback: '',
             onChapterEnter: [ 
                 {layer: 'nj-blocker', opacity:0.75},
+                {layer: 'park-fort-wash', opacity:0.75},
                 {layer: 'satellite', opacity:0} 
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'park-fort-wash', opacity:0}
+            ]
         },
         
         
@@ -160,10 +168,12 @@ var config = {
             //callback: 'hideDots',
             onChapterEnter: [
                 {layer: '182-entry', opacity:1},
+                {layer: 'park-fort-wash', opacity:0.75},
                 {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
-                {layer: '182-entry', opacity:0}
+                {layer: '182-entry', opacity:0},
+                {layer: 'park-fort-wash', opacity:0}
             ]
         },
 
@@ -287,7 +297,7 @@ var config = {
             description: ' For historic reasons, each of these paths has to navigate around automotive routes and rail lines to get to the riverside. The railroads claimed the coveted riverside property first, with The New York Central & Hudson River Railroad Company <a href="https://www.nytimes.com/1913/06/29/archives/railroad-and-park-feasible-solution-of-fort-washington-problem-is.html?searchResultPosition=25" target="_blank">acquiring a narrow tract of property parallel to the river</a> in 1847.',
             location: {
                 center: [-73.94616, 40.84513],
-                zoom: 14.00,
+                zoom: 15.00,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -862,7 +872,7 @@ var config = {
             description: 'Discussion about extending the path dates back to at least 1917, when the city <a href="https://www.forttryonparktrust.org/wp-content/uploads/2017/05/1983FortTryonPark-LPC.pdf" target="_blank">spurned John D. Rockefeller Jr.\'s conditional offer</a> of the land that\'s now Fort Tryon park. The city could not commit to honor Rockefeller\'s expectation that the park be connected to Fort Washington Park.<p>More recently, the city estimated it would cost $22 million to essentially <a href="https://www.nytimes.com/2014/08/15/nyregion/new-riverside-trail-goes-only-so-far.html" target="_blank">transform the social trail to an official trail</a>- a cost elevated by a need for landfill to create enough space for pavement along the shoreline.',
             location: {
                 center: [-73.94161, 40.85336],
-                zoom: 15.07,
+                zoom: 14,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -870,13 +880,17 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'park-fort-wash', opacity:0.75},
+                {layer: 'park-tryon', opacity:0.75},
                 {layer: 'path-main', opacity:1},
-                {layer: 'social-trail', opacity:1},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-165th', opacity:1},
-                {layer: 'path-176th', opacity:1}
+                {layer: 'path-176th', opacity:1},
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: [
+                {layer: 'park-fort-wash', opacity:0},
+                {layer: 'park-tryon', opacity:0}
             ]
         },
 
