@@ -1,5 +1,6 @@
 var config = {
-    style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
+    style: 'mapbox://styles/robcat26/clle01vvz01h601qn2h7i05ei',
+    //style: 'mapbox://styles/robcat26/clku8rcck001l01qgen1j4j2h',
     accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrZTBrejIwMHp0YjNmcXZiaWN1enZwNiJ9._g79-Ecyuo5ahLVN3pyZZw',
 //style: 'mapbox://styles/mapbox/streets-v11',
     //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
@@ -19,7 +20,7 @@ var config = {
     auto: false,
     title: 'DRAFT: The Uneasy Entry to a Relaxing Fortress',
     subtitle: 'Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive throughways reveals a patchwork of unfinished urban plans.',
-    byline: 'By Rob Reid | 10 August',
+    byline: 'By Rob Reid | 16 August',
     footer: 'See <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a> for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     leadPhoto: './images/wash_park_scene_without_ppl.jpg',
     chapters: [
@@ -47,14 +48,14 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'nj-blocker', opacity:0},
+                //{layer: 'nj-blocker', opacity:0},
                 {layer: 'park-tryon', opacity:0},
-                {layer: 'park-fort-wash', opacity:0},
+                {layer: 'park-fort-wash', opacity:1},
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'path-main', opacity:0},
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:0},
-                {layer: 'satellite', opacity:1},
+                {layer: 'mapbox-satellite', opacity:1},
                 {layer: 'social-dock', opacity:0},
                 {layer: 'social-entry-north', opacity:0},
                 {layer: 'social-entry-south', opacity:0},
@@ -90,10 +91,10 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [ 
-                {layer: 'park-fort-wash', opacity:0.75}  
+                {layer: 'park-fort-wash', opacity:1}  
             ],
             onChapterExit: [
-                {layer: 'park-fort-wash', opacity:0}
+                //{layer: 'park-fort-wash', opacity:0}
             ]
         },
         
@@ -117,12 +118,12 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [ 
-                {layer: 'nj-blocker', opacity:0.75},
-                {layer: 'park-fort-wash', opacity:0.75},
-                {layer: 'satellite', opacity:0} 
+                //{layer: 'nj-blocker', opacity:0.75},
+                //{layer: 'park-fort-wash', opacity:1},
+                {layer: 'mapbox-satellite', opacity:0} 
             ],
             onChapterExit: [
-                {layer: 'park-fort-wash', opacity:0}
+                //{layer: 'park-fort-wash', opacity:0}
             ]
         },
         
@@ -168,12 +169,12 @@ var config = {
             //callback: 'hideDots',
             onChapterEnter: [
                 {layer: '182-entry', opacity:1},
-                {layer: 'park-fort-wash', opacity:0.75},
+                //{layer: 'park-fort-wash', opacity:1},
                 {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
-                {layer: '182-entry', opacity:0},
-                {layer: 'park-fort-wash', opacity:0}
+                // {layer: 'park-fort-wash', opacity:0},
+                {layer: '182-entry', opacity:0}
             ]
         },
 
@@ -214,7 +215,7 @@ var config = {
             //image: './images/002_topographical_history.jpg',
             description: '...or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.',
             location: {
-                center: [-73.94616, 40.84513],
+                center: [-73.9489, 40.8366],
                 zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
@@ -281,7 +282,7 @@ var config = {
                 {layer: 'path-176th', opacity:1},
                 {layer: 'path-dyckman', opacity:0.3},
                 {layer: 'path-main', opacity:0.3},
-                {layer: 'satellite', opacity:0},
+                {layer: 'mapbox-satellite', opacity:0},
                 {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: [
@@ -423,7 +424,6 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: '1955-nyc-building-map', opacity:0},
                 {layer: 'path-165th', opacity:1},
                 {layer: '165-entry', opacity:1}
             ],
@@ -623,8 +623,7 @@ var config = {
             onChapterEnter: [
                 {layer: 'overlay-alltrails', opacity:1},
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'social-trail', opacity: 0},
-                {layer: 'satellite', opacity: 0}
+                {layer: 'mapbox-satellite', opacity: 0}
             ],
             onChapterExit: [
                 {layer: 'overlay-alltrails', opacity:0},
@@ -678,10 +677,13 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'social-trail', opacity:1},
-                {layer: 'satellite', opacity: 1}
+                {layer: 'mapbox-satellite', opacity:1},
+                {layer: 'social-trail', opacity:1}
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {layer: 'mapbox-satellite', opacity: 0},
+                {layer: 'social-trail', opacity: 0}
+            ]
         },
 
 
@@ -703,7 +705,6 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'satellite', opacity: 0},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-main', opacity:1},
                 {layer: 'social-trail', opacity:1},
@@ -880,7 +881,7 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'park-fort-wash', opacity:0.75},
+                //{layer: 'park-fort-wash', opacity:1},
                 {layer: 'park-tryon', opacity:0.75},
                 {layer: 'path-main', opacity:1},
                 {layer: 'path-dyckman', opacity:1},
@@ -889,8 +890,8 @@ var config = {
                 {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: [
-                {layer: 'park-fort-wash', opacity:0},
-                {layer: 'park-tryon', opacity:0}
+                //{layer: 'park-fort-wash', opacity:0},
+                {layer: 'park-tryon', opacity:0}, 
             ]
         },
 
