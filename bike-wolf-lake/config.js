@@ -12,7 +12,7 @@ var config = {
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
     title: 'PROTOTYPE- Far South Side Bike Access',
-    subtitle: 'Though Chicago\'s Southeast Side possesses a natural wealth of waterfront and park space which bikers can\'t yet safely access.',
+    subtitle: 'Chicago\'s Southeast Side possesses a natural wealth of waterfront and park space, but bikers can\'t yet safely access it.',
     byline: 'By Rob Reid | 18 August',
     footer: 'See GitHub repository for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     leadPhoto: './images/wolf-lake.png',
