@@ -552,7 +552,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/182-inland-turn.jpg',
-            description: 'North of the George Washington Bridge, the riverfront trail turns inland, crossing over the Amtrak and under the the expressway before connecting to a narrow sidewalk where Riverside Drive transitions into the Henry Hundson Parkway.',
+            description: 'North of the George Washington Bridge, the riverfront trail turns inland, crossing over the Amtrak and under the expressway...',
             location: {
                 center: [-73.94617029306572,
                     40.8499500890377],
@@ -581,7 +581,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/182-hh-merge.jpg',
-            description: 'North of the George Washington Bridge, the riverfront trail turns inland, crossing over the Amtrak and under the the expressway before connecting to a narrow sidewalk where Riverside Drive transitions into the Henry Hundson Parkway.',
+            description: '...before connecting to a narrow sidewalk where Riverside Drive transitions into the Henry Hudson Parkway.',
             location: {
                 center: [-73.94332788888889,40.85130236108333],
                 zoom: 15.07,
