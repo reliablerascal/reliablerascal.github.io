@@ -12,10 +12,11 @@ var config = {
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
     title: 'PROTOTYPE- Far South Side Bike Access',
-    subtitle: 'Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive throughways reveals a patchwork of unfinished urban plans.',
+    subtitle: 'Though Chicago\'s Southeast Side possesses a natural wealth of waterfront and park space which bikers can\'t yet safely access.',
     byline: 'By Rob Reid | 18 August',
     footer: 'See GitHub repository for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     leadPhoto: './images/wolf-lake.png',
+    // leadParagraph: 'Hegewisch and East Side, Chicago’s southeasternmost neighborhoods, possess an abundance of park space, including Eggers Grove, Wolf Lake, Calumet Park, and Hegewisch Marsh Park. The I-90 expressway and major streets including 106th Street and Ewing Avenue facilitate automobile access for far away visitors. But these resources remain underutilized, in part because access remains treacherous for local residents– especially cyclists.',
     chapters: [
         {
             id: 'header-photo',
@@ -23,7 +24,6 @@ var config = {
             hidden: true,
             //title: '',
             //image: './images/wash_park_scene_without_ppl.jpg',
-            //description: 'Nestled between the Hudson River and the ceaseless flow of automotive traffic on the Henry Hudson Expressway, Fort Washington Park offers a setting for both social gatherings and solitary escapes from the concrete urban expanse above cliffs to the east. Barbecuers, basketball players, bicyclists, and joggers occupy the park'sdirt paths, paved trails, atheletic courts, and lawn.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
                 center: [-87.61265, 41.85399],
@@ -50,10 +50,13 @@ var config = {
         
         
         {
-            id: 'zoom-to-scene',
+            id: 'zoom-scene',
             alignment: 'left',
             hidden: false,
-            description: 'something something southeast side industrial wetlands.',
+            //title: '',
+            //image: './images/wash_park_scene_without_ppl.jpg',
+            description: 'Hegewisch and East Side, Chicago\'s southeasternmost neighborhoods, possess an abundance of park space, including Eggers Grove, Wolf Lake, Calumet Park, and Hegewisch Marsh Park. The I-90 expressway and major streets including 106th Street and Ewing Avenue facilitate automobile access for far away visitors. But these resources remain underutilized, in part because access remains treacherous for local residents-- especially cyclists.',
+            //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
                 center: [-87.54426, 41.68283],
                 zoom: 12.75,
@@ -63,22 +66,83 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [ 
-                {layer: 'mapbox-satellite', opacity:0}  
-            ],
-            onChapterExit: [
+            onChapterEnter: [
+                {layer: 'bike-path-dot', opacity:0},
                 {layer: 'mapbox-satellite', opacity:0}
-            ]
+            ],
+            onChapterExit: []
         },
 
 
 
         {
+            id: 'hegewisch-marsh-park',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            //image: './images/wash_park_scene_without_ppl.jpg',
+            description: 'Amongst the region\'s highlights, Hegewisch Marsh Park recently received a <a href="https://news.wttw.com/2022/12/09/feds-pour-big-money-coastal-restoration-projects-and-chicago-s-hegewisch-marsh-comes-out" target="_blank">$500,000 grant from the National Coastal Resilience Fund</a>. The <a href="https://ehq-production-us-california.s3.us-west-1.amazonaws.com/f899c722147d541e6b15b182d3519ecc550bf3e1/original/1692321554/a0eb09f778546029e629f366b3c32366_Hegewisch_Neighborhood_Plan_FINAL.pdf" target="_blank">Hegewisch Neighborhood Plan</a> released this month considers this park an "underutilized" resource, and recognizes the potential value of improved bike access for local businesses.',
+            //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
+            location: {
+                center: [-87.56236604152772, 41.6556252316896],
+                zoom: 12.75,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'bike-path-dot', opacity:0},
+                {layer: 'mapbox-satellite', opacity:0},
+                {layer: 'park-hegewisch', opacity:0.5}
+            ],
+            onChapterExit: [
+                {layer: 'park-hegewisch', opacity:0}
+            ]
+        },
+        
+        
+        
+        
+        
+
+        {
+            id: 'dot-bike-ride',
+            alignment: 'left',
+            hidden: false,
+            //image: './images/henry-booth-house.png',
+            description: 'To build awareness of the potential for biking on the southeast side, Chicago and Cook County departments of transportation planned a <a href="https://blockclubchicago.org/2023/08/16/bike-the-southeast-side-this-weekend-and-tell-officials-how-to-make-future-rides-safer/" target="_blank">bike tour through Chicago\'s Southeast side</a>. Cook County, whose recently-released <a href="https://www.cookcountyil.gov/bikeplan" target="_blank">Bike Plan</a> expansion of low-stress bike routes reaching within a mile of 96% of Cook County residents, envisions improved bike access in this area.',
+            location: {
+                center: [-87.55685590723697,
+                    41.659210130018266],
+                zoom: 12,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [ 
+                {layer: 'bike-path-dot', opacity:1},
+                {layer: 'mapbox-satellite', opacity:0},
+                {layer: 'park-calumet', opacity:0.5},
+                {layer: 'park-hegewisch', opacity:0.5} 
+            ],
+            onChapterExit: [
+                {layer: 'park-calumet', opacity:0},
+                {layer: 'park-hegewisch', opacity:0}
+            ]
+        },
+        
+        
+        
+        {
             id: 'henry-booth',
             alignment: 'left',
             hidden: false,
             image: './images/henry-booth-house.png',
-            description: 'The route begins at Henry Booth House.',
+            description: 'The route begins at Henry Booth House- close to Hegewisch Marsh Park but difficult to access across Torrence.',
             location: {
                 center: [-87.55685590723697,
                     41.659210130018266],
@@ -106,7 +170,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             image: './images/baltimore-130th-bike-lane.png',
-            description: 'bike path on bmore.',
+            description: 'The route continued south on Baltimore, a quieter road with a dedicated bike lane.',
             location: {
                 center: [-87.54712353449469,
                     41.65908775402073],
@@ -134,7 +198,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             image: './images/wolf-lake.png',
-            description: 'wolf lake share w cars.',
+            description: 'Turning north, the route entered the park along Wolf Lake Boulevard, where bikes share the road with automobile traffic.',
             location: {
                 center: [-87.53725587019011,
                     41.66690509686575],
@@ -162,7 +226,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             image: './images/106-ewing.png',
-            description: 'need to walk 106th.',
+            description: 'Turning west along 106th, bikers were instructed to walk their bikes (for safety reasons?).',
             location: {
                 center: [-87.53512142817937,
                     41.70275978503426],
@@ -190,7 +254,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             image: './images/100th-viaduct.png',
-            description: 'viaduct under expressway and rail.',
+            description: 'Ewing intersects with 100th Street at the I-90 underpass. A public commenter on the <a href="https://storymaps.arcgis.com/stories/56fd791cb1fa4cf69cd67411c345442a" target="_blank">Lake Calumet Bike Network Study</a> suggested that this intersection needs "better signage/markings...in these strange intersections."',
             location: {
                 center: [-87.53510682861177,
                     41.71358357592675],
@@ -218,7 +282,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             image: './images/calumet-park-beach.png',
-            description: 'calumet beach.',
+            description: 'The ride ended at Calumet Beach.',
             location: {
                 center: [-87.52929693758914,
                     41.714936581261895],
@@ -232,10 +296,12 @@ var config = {
             onChapterEnter: [ 
                 {layer: 'calumet-beach', opacity:1},
                 {layer: 'bike-path-dot', opacity:1},
-                {layer: 'mapbox-satellite', opacity:0} 
+                {layer: 'mapbox-satellite', opacity:0},
+                {layer: 'park-calumet', opacity:0.5}                 
             ],
             onChapterExit: [
-                {layer: 'calumet-beach', opacity:0}
+                {layer: 'calumet-beach', opacity:0},
+                {layer: 'park-calumet', opacity:0}
             ]
         }
         
