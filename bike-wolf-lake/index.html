@@ -268,11 +268,11 @@ if (config.leadPhoto) {
         header.appendChild(image);
 }
 
-if (config.leadParagraph) {
-    var leadText = document.createElement('p');
-    leadText.innerText = config.leadParagraph;
-    header.appendChild(leadText);
-}
+// if (config.leadParagraph) {
+//     var leadText = document.createElement('p');
+//     leadText.innerText = config.leadParagraph;
+//     header.appendChild(leadText);
+// }
 
 if (header.innerText.length > 0) {
     header.classList.add(config.theme);

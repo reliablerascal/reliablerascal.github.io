@@ -93,6 +93,7 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {layer: 'bike-lanes', opacity:0},
                 {layer: 'bike-path-dot', opacity:0},
                 {layer: 'mapbox-satellite', opacity:0},
                 {layer: 'park-hegewisch', opacity:0.5}
@@ -104,15 +105,12 @@ var config = {
         
         
         
-        
-        
-
         {
-            id: 'dot-bike-ride',
+            id: 'existing bike lanes',
             alignment: 'left',
             hidden: false,
             //image: './images/henry-booth-house.png',
-            description: 'To build awareness of the potential for biking on the southeast side, Chicago and Cook County departments of transportation planned a <a href="https://blockclubchicago.org/2023/08/16/bike-the-southeast-side-this-weekend-and-tell-officials-how-to-make-future-rides-safer/" target="_blank">bike tour through Chicago\'s Southeast side</a>. Cook County, whose recently-released <a href="https://www.cookcountyil.gov/bikeplan" target="_blank">Bike Plan</a> expansion of low-stress bike routes reaching within a mile of 96% of Cook County residents, envisions improved bike access in this area.',
+            description: 'The area has some bike lanes, mostly shared and buffered lanes along city streets. But not all of these feel safe. For example, the Hegewisch Neighborhood Plan noted that resident felt unsafe on 134th Street near Avenue O due to "excessive speeding by cars" and large trucks which are supposed to be legally prohibited from the road.',
             location: {
                 center: [-87.55685590723697,
                     41.659210130018266],
@@ -124,12 +122,41 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [ 
+                {layer: 'bike-lanes', opacity:1},
+                {layer: 'bike-path-dot', opacity:0},
+                {layer: 'mapbox-satellite', opacity:0}
+            ],
+            onChapterExit: [
+            ]
+        },
+        
+        
+        
+        {
+            id: 'dot-bike-ride',
+            alignment: 'left',
+            hidden: false,
+            //image: './images/henry-booth-house.png',
+            description: 'To build awareness of the potential for biking on the southeast side, Chicago and Cook County departments of transportation planned a <a href="https://blockclubchicago.org/2023/08/16/bike-the-southeast-side-this-weekend-and-tell-officials-how-to-make-future-rides-safer/" target="_blank">bike tour through Chicago\'s Southeast side</a>, from Hegewisch Marsh Park to Calumet Park Beach. Cook County, whose recently-released <a href="https://www.cookcountyil.gov/bikeplan" target="_blank">Bike Plan</a> expansion of low-stress bike routes reaching within a mile of 96% of Cook County residents, envisions improved bike access in this area.',
+            location: {
+                center: [-87.55685590723697,
+                    41.659210130018266],
+                zoom: 12,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [ 
+                {layer: 'bike-lanes', opacity:1},
                 {layer: 'bike-path-dot', opacity:1},
                 {layer: 'mapbox-satellite', opacity:0},
                 {layer: 'park-calumet', opacity:0.5},
                 {layer: 'park-hegewisch', opacity:0.5} 
             ],
             onChapterExit: [
+                {layer: 'bike-lanes', opacity:0},
                 {layer: 'park-calumet', opacity:0},
                 {layer: 'park-hegewisch', opacity:0}
             ]
