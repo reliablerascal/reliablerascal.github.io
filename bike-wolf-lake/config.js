@@ -15,7 +15,7 @@ var config = {
     subtitle: 'Chicago\'s Southeast Side possesses a natural wealth of waterfront and park space, but bikers can\'t yet safely access it.',
     byline: 'By Rob Reid | 18 August',
     footer: 'See GitHub repository for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
-    leadPhoto: './images/wolf-lake.png',
+    leadPhoto: './images/calumet-park-beach-fence-16-9.jpg',
     // leadParagraph: 'Hegewisch and East Side, Chicago’s southeasternmost neighborhoods, possess an abundance of park space, including Eggers Grove, Wolf Lake, Calumet Park, and Hegewisch Marsh Park. The I-90 expressway and major streets including 106th Street and Ewing Avenue facilitate automobile access for far away visitors. But these resources remain underutilized, in part because access remains treacherous for local residents– especially cyclists.',
     chapters: [
         {
@@ -80,7 +80,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: '',
-            //image: './images/wash_park_scene_without_ppl.jpg',
+            image: './images/hegewisch-marsh-park.jpg',
             description: 'Amongst the region\'s highlights, Hegewisch Marsh Park recently received a <a href="https://news.wttw.com/2022/12/09/feds-pour-big-money-coastal-restoration-projects-and-chicago-s-hegewisch-marsh-comes-out" target="_blank">$500,000 grant from the National Coastal Resilience Fund</a>. The <a href="https://ehq-production-us-california.s3.us-west-1.amazonaws.com/f899c722147d541e6b15b182d3519ecc550bf3e1/original/1692321554/a0eb09f778546029e629f366b3c32366_Hegewisch_Neighborhood_Plan_FINAL.pdf" target="_blank">Hegewisch Neighborhood Plan</a> released this month considers this park an "underutilized" resource, and recognizes the potential value of improved bike access for local businesses.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
@@ -224,7 +224,7 @@ var config = {
             id: 'wolf-lake',
             alignment: 'left',
             hidden: false,
-            image: './images/wolf-lake.png',
+            image: './images/wolf-lake-turn.jpg',
             description: 'Turning north, the route entered the park along Wolf Lake Boulevard, where bikes share the road with automobile traffic.',
             location: {
                 center: [-87.53725587019011,
@@ -308,7 +308,7 @@ var config = {
             id: 'calumet-beach',
             alignment: 'left',
             hidden: false,
-            image: './images/calumet-park-beach.png',
+            image: './images/calumet-park-beach.jpg',
             description: 'The ride ended at Calumet Beach.',
             location: {
                 center: [-87.52929693758914,
