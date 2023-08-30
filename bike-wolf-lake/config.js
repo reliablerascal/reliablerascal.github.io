@@ -55,7 +55,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/wash_park_scene_without_ppl.jpg',
-            description: 'Hegewisch and East Side, Chicago\'s southeasternmost neighborhoods, possess an abundance of park space, including Eggers Grove, Wolf Lake, Calumet Park, and Hegewisch Marsh Park. The I-90 expressway and major streets including 106th Street and Ewing Avenue facilitate automobile access for far away visitors. But these resources remain underutilized, in part because access remains treacherous for local residents-- especially cyclists.',
+            description: 'NOTE: THIS IS AN OLD VERSION, DEVELOPED FOR THE PURPOSE OF PITCHING THE STORY ONLY. Hegewisch and East Side, Chicago\'s southeasternmost neighborhoods, possess an abundance of park space, including Eggers Grove, Wolf Lake, Calumet Park, and Hegewisch Marsh Park. The I-90 expressway and major streets including 106th Street and Ewing Avenue facilitate automobile access for far away visitors. But these resources remain underutilized, in part because access remains treacherous for local residents-- especially cyclists.',
             //and the The Oxford English dictionary defines a fort as a person or thing not susceptible to outside influence or disturbance.',
             location: {
                 center: [-87.54426, 41.68283],
