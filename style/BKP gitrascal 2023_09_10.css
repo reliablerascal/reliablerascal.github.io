@@ -8376,14 +8376,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     }
 }
 
-/* </style> */
+</style>
 
 
 
 
 
 
-/* <style id='otter-leaflet-map-style-inline-css' type='text/css'> */
+<style id='otter-leaflet-map-style-inline-css' type='text/css'>
 .wp-block-themeisle-leaflet-blocks-map {
     --height: 400px;
     --height-tablet: var(--height);
@@ -8425,14 +8425,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 /*# sourceMappingURL=style.css.map */
-/* </style><style id='core-block-supports-inline-css' type='text/css'> */
-.wp-container-7.wp-container-7,
+</style><style id='core-block-supports-inline-css' type='text/css'>.wp-container-7.wp-container-7,
 .wp-container-11.wp-container-11,
 .wp-container-13.wp-container-13 {
     flex-wrap: nowrap;
 }
 
-/* </style><script defer type='text/javascript' src='https://humboldtparkmoon.com/wp-content/plugins/sg-cachepress/assets/js/lazysizes.min.js#038;ver=7.3.1' id='siteground-optimizer-lazy-sizes-js-js'></script><script type='text/javascript' id='neve-script-js-extra'> */
+</style><script defer type='text/javascript' src='https://humboldtparkmoon.com/wp-content/plugins/sg-cachepress/assets/js/lazysizes.min.js#038;ver=7.3.1' id='siteground-optimizer-lazy-sizes-js-js'></script><script type='text/javascript' id='neve-script-js-extra'>
 
 /* <![CDATA[ */
 var NeveProperties= {
@@ -8441,6 +8440,5 @@ var NeveProperties= {
 
 ;
 /* ]]> */
-/* </script><script defer type='text/javascript' src='https://humboldtparkmoon.com/wp-content/uploads/siteground-optimizer-assets/neve-script.min.js#038;ver=3.1.6' id='neve-script-js' async></script><script defer type='text/javascript' id='neve-script-js-after'> */
-var html=document.documentElement;
+</script><script defer type='text/javascript' src='https://humboldtparkmoon.com/wp-content/uploads/siteground-optimizer-assets/neve-script.min.js#038;ver=3.1.6' id='neve-script-js' async></script><script defer type='text/javascript' id='neve-script-js-after'>var html=document.documentElement;
 var theme=html.getAttribute('data-neve-theme') || 'light';
