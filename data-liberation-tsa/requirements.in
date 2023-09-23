@@ -1,9 +1,0 @@
-beautifulsoup4
-pandas
-requests
-pdfplumber
-jupyterlab
-flake8
-black
-isort
-mypy
