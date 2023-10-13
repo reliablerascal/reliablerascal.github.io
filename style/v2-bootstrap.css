@@ -26,8 +26,6 @@
     font-feature-settings: "lnum";
     font-weight: 400;
     line-height: 1.5;
-    /* font-family: Lato, 'Source Sans Pro', Helvetica, sans-serif; */
-    /* font-family: 'Source Sans Pro', Helvetica, sans-serif; */
     font-family: clarendon-urw, serif !important;
     color: #F4F7D9;
 }
@@ -35,13 +33,20 @@
 .heading,
 .name,
 .skills {
-    /*font-family: Poppins, Lato, 'Source Sans Pro', Helvetica, sans-serif;*/
-    /*font-family: Poppins, 'Source Sans Pro', Helvetica, sans-serif; */
     font-family: clarendon-urw, serif !important;
     
 }
 
 .skills a {
+    color: #E3AE50;
+}
+
+.toc {
+    font-family: clarendon-urw, serif !important;
+    
+}
+
+.toc a {
     color: #E3AE50;
 }
 
@@ -553,6 +558,13 @@ header .img_div {
     font-size: min(2.25vw, 30px);
 }
 
+.header-intro-text .toc {    
+    font-size: 1.5vw;
+    font-weight: 200; 
+    letter-spacing: 0.5px;
+    font-size: min(1.5vw, 24px);
+}
+
 #about .hello {
     text-align: left;
     text-transform: none;
@@ -779,6 +791,25 @@ header .img_div {
     flex: 1 1 45%;
 }
 
+.arcadia-book-item {
+    width: 285px;
+    max-width: 285px;
+    /* height: 411px;
+    max-height: 411px;
+    /* height: -moz-fit-content; */
+    /* height: -webkit-fit-content;
+    height: fit-content; */
+    /* flex: 0 0 auto; */
+    /* width: 50%; */
+    
+    /* height: 700px; */
+    
+    margin: 0;
+    padding: 30px 25px;
+    display: flex;
+    flex: 1 1 45%;
+}
+
 .masonry-item img,
 .masonry-item picture {
     width: 100%;
@@ -927,9 +958,7 @@ header .img_div {
         font-size: 4rem;
         padding-bottom: 0.5rem;
     }   
-    .header-intro-text .skills {    
-        font-size: 1.75rem;
-    }
+
     #about .about-col {
         padding: 0;
     }
@@ -1042,6 +1071,10 @@ header .img_div {
     }
     .header-intro-text .skills {    
         font-size: 1.25rem;
+        font-weight: normal;
+    }
+    .header-intro-text .toc {    
+        font-size: 1rem;
         font-weight: normal;
     }
     section {   

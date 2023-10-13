@@ -1,20 +1,12 @@
 ~archive/
-projects/
-stories/
-bike-far-southeast/
-fort-washington/
+~projects/
 
-# 911-mental-mindsite/
-# bike-wolf-lake/
-# bike-wolf-lake2/
-# commute_hills/
-# cps-2023-migrants/
-# cta_ridership/
-# dev-tsa-prototyping/
-# fort-washington-dw-photos/
-# garfield-gardens/
-# ma-80th/
-# sounds-of-toxins/
-# synchronicity/
-# tsa-prototyping/
+bike-far-southeast/
+commute_hills/
+cta_ridership/
+fort-washington/
+garfield-gardens/
+ma-80th/
+sounds-of-toxins/
+synchronicity/
 
