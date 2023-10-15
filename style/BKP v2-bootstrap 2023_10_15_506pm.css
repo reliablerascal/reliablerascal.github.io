@@ -1,8 +1,5 @@
 /* 12 October 2023
 /* RR adapted and simplified/modified from stylesheet at https://tejalwakchoure.github.io/, which has the basic elements I need (two columns, good text size on mobile)
-/* # is an ID selector
-/* . is a class selector
-
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -12,11 +9,7 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 @charset "UTF-8";
 
-/******************************/
-/*                            */
-/*  GENERAL CSS               */
-/*                            */
-/******************************/
+
  html,body   
 {
     height: -moz-fit-content;
@@ -37,6 +30,34 @@
     color: #F4F7D9;
 }
 
+.heading,
+.name,
+.skills {
+    font-family: clarendon-urw, serif !important;
+    
+}
+
+.skills a {
+    color: #E3AE50;
+}
+
+.toc {
+    font-family: clarendon-urw, serif !important;
+    
+}
+
+.toc a {
+    color: #E3AE50;
+}
+
+.heading {
+    font-size: 6.5rem;
+    word-spacing: 2px;
+    color: #F4F7D9; 
+    
+    /* font-style: italic; */
+    font-weight: 600;
+}
 
 .btn {  
     -moz-appearance: none;
@@ -157,15 +178,141 @@ hr {
     border: 0;
     border-top: 1px solid #F4F7D9; /*#393939*/
 }
+hr.light {   
+    border-color: #000000;
+}   
+
+hr.primary { 
+    border-color: #000000;
+} 
 
 .img-centered { 
     margin: 0 auto; 
 }
+
+.coloured_front {
+    color: #0D506D !important;
+}
+a.coloured_hover:hover,
+a.coloured_hover:active,
+a.coloured_hover:focus {
+    color: #0D506D !important;
+}
 .transparent_back {
     background-color: transparent !important;
 }
+.coloured_back {
+    background-color: #0D506D !important;
+}
+.coloured_front_light {
+    color: #CDE1FF !important;
+}
 
-/* this sets the box-sizing property for every element on the webpage, dependent on browser versions. not sure if I need it */
+/******************************/
+/*                            */
+/*     NAVBAR                 */
+/*                            */
+/******************************/
+.navbar-brand {   
+    padding: 0;    
+    height: auto;   
+    /*font-family: 'Raleway',Lato,sans-serif;*/
+    /* font-family: 'Raleway', 'Source Sans Pro', sans-serif; */
+    font-family: clarendon-urw, serif !important;
+    font-variant: none !important;
+    /* text-transform: lowercase !important; */
+    letter-spacing: -0.08em;
+    font-weight: 100;
+    font-size: 2.5em;
+    margin: 0;
+    writing-mode: horizontal-tb;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    color: #ffffff;
+    
+    position: fixed;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.brand-shadow {
+    color: #393939;
+    z-index: -1;
+    transform: translate(0.06em, 0.06em);
+}
+
+
+
+.navbar-brand-scroll {
+    padding-top: 15px;
+    
+    height: 10%;
+    width: 4vw;
+    position: relative;
+}
+.navbar-toggler-icon {
+    width: auto;
+}
+.navbar-toggle {
+    margin-top: 0;
+    border: 0;
+}
+
+.navbar-toggler {
+    padding: 0.5rem 0.75em;
+}
+
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus {
+    background-color: transparent;
+}
+
+.navbar-text {
+    font-weight: 300;
+    font-size: 0.75em;
+    -ms-transform: rotate(90deg) !important;
+    -o-transform: rotate(90deg) !important;
+    -webkit-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important;
+    line-height: 100%;
+    padding: 15px !important;
+}
+
+.navbar {
+    align-items: end;
+}
+
+.navbar-nav {
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    height: 100%;
+    justify-content: space-around;
+    /*padding: 200% 0 300%;*/
+    padding: 150% 0 ;
+}
+
+/*.navbar-nav a:hover,
+.navbar-nav a:focus,
+.navbar-nav a:active {
+    text-decoration: underline;
+}*/
+
+#navbarContent {
+    flex-basis: 100% !important;
+    width: 100%;
+    height: 90%;
+}
+
+/******************************/
+/*                            */
+/*                      */
+/*                            */
+/******************************/
+/* sidenav was here */
 *{      
     -moz-box-sizing: border-box; /* Firefox 1+ */
     -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
@@ -177,13 +324,12 @@ hr {
 /*                            */
 /******************************/
 
-
 section {   
     padding: 0 0 0 6vw; /* nav accounted for */
     width: 100%;    
     display: grid;
     margin: 0;  
-    color: #F4F7D9;
+    color: #393939;    
     align-content: space-between;
     grid-auto-rows: 1fr;
 }   
@@ -193,40 +339,15 @@ section .container {
     vertical-align: middle;   
 }   
 
-/* section h2, #projectDetails h3 {    
+section h2, #projectDetails h3 {    
     margin: 0;  
     font-size: 2.5rem; 
-    /* color: #F4F7D9;
-}
-*/
-
-/* section h3 {    
-    margin: 0;  
-    font-size: 2.5rem; 
-    color: green;
-} */
-
-/******************************/
-/*                            */
-/* IMAGES                     */
-/*                            */
-/******************************/
-/* RR 10/15/23 added this myself */
-
-.image-standard {
-    max-width: calc(95vw - 20px);  /* Maximize image width at 1000 pixels */
-    max-height: 100vh;  /* Ensures image height does not expand beyond screen height */
-    width: auto;        /* By default, it takes the natural width of the image */
-    height: auto;       /* By default, it takes the natural height of the image */
-    display: block;     /* Prevents inline gaps */
-    margin-right: auto;     /* Centers the image horizontally within the wrapper */
+    color: #F4F7D9;
 }
 
-
-
 /******************************/
 /*                            */
-/* HEADER - only used now in homepage                    */
+/* HEADER                     */
 /*                            */
 /******************************/
 header {    
@@ -297,7 +418,7 @@ header .img_div {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;    
     /* font-style: italic; */
-    color: #000000;
+    color: #F4F7D9;
 }
 
 .header-intro-text {
@@ -470,7 +591,7 @@ header .img_div {
     height: 100%; 
     width: 100%;
     /* visibility: hidden; */
-    color: #393939;
+    color: #F4F7D9;
 }
 
 #portfolio .portfolio-link-wrapper img {
@@ -519,7 +640,7 @@ header .img_div {
 
 /******************************/
 /*                            */
-/* MASONRY (2 column layout for index                    */
+/* MASONRY                    */
 /*                            */
 /******************************/
 .masonry-grid {
@@ -588,41 +709,6 @@ header .img_div {
 .masonry-item picture {
     width: 100%;
     height: 500px;
-}
-
-/******************************/
-/*                            */
-/*  INDEX PAGE ONLY           */
-/*                            */
-/******************************/
-.heading,
-.name,
-.skills {
-    font-family: clarendon-urw, serif !important;
-    
-}
-
-.skills a {
-    color: #E3AE50;
-}
-
-.toc {
-    font-family: clarendon-urw, serif !important;
-    
-}
-
-.toc a {
-    color: #E3AE50;
-}
-
-.heading {
-    font-size: 6.5rem;
-    word-spacing: 2px;
-    /* text-transform: lowercase; */
-    color: #F4F7D9;
-    
-    /* font-style: italic; */
-    font-weight: 600;
 }
 
 
