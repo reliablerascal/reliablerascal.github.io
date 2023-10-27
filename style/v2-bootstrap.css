@@ -179,7 +179,7 @@ hr {
 
 
 section {   
-    padding: 0 0 0 6vw; /* nav accounted for */
+    padding: 0 3vw 0 3vw;
     width: 100%;    
     display: grid;
     margin: 0;  
@@ -602,6 +602,12 @@ second styles images or videos within the container */
 .image-container img {
     width: 100%;
     height: auto;
+}
+
+/* using this version in cps-near-south-side to center Chicago Community Area map and set max width to 600 */
+.image-container2 {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .video-container {
