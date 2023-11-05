@@ -508,16 +508,9 @@ header .img_div {
     width: 100%;
     margin: auto;
     padding: 0;
-    
-    /* display: flex; */
-    /* flex-flow: column wrap; */
-    /* align-content: center; */
-    /* height: calc( 720px * 4 ); */
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* gap: 10%; */
 }
 
 .mt10 {
