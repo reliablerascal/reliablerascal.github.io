@@ -12,6 +12,26 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 @charset "UTF-8";
 
+
+/******************************/
+/*                            */
+/*  NEW CSS- NOV 2023         */
+/*                            */
+/******************************/
+/* RR 11/5/23 trying to get the text below article thumbnails in portfolio index is aligned to the top */
+.portfolio-section-desc {
+    margin: 0; /* This removes any default margins on the paragraph tags */
+    padding-top: 0;
+}
+.portfolio-article-desc {
+    /* margin: 0;
+    padding-top: 0; */
+    margin-top: auto;
+}
+
+
+
+
 /******************************/
 /*                            */
 /*  GENERAL CSS               */
@@ -505,20 +525,15 @@ header .img_div {
 }
 
 .masonry-item {
+    display: flex;
+    flex-direction: column; /* adding this two lines enabled text to appear below (not beside) the photos */
     width: 500px;
     max-width: 500px;
-    /* height: -moz-fit-content;
-    height: -webkit-fit-content;
-    height: fit-content;*/
-    /* flex: 0 0 auto; */
-    /* width: 50%; */
-    
-    /* height: 700px; */
-    
     margin: 0;
     padding: 30px 25px;
-    display: flex;
     flex: 1 1 45%;
+/*    adding this to align descriptive text to the top */
+    /* align-items: flex-start; 
 }
 
 .arcadia-book-item {
@@ -695,6 +710,9 @@ video {
     }
     .masonry-item {
         /* height: 400px !important; */
+        /* display: block; */
+        /* display: flex;
+        flex-direction: column; */
     }
     .masonry-item img,
     .masonry-item picture {
